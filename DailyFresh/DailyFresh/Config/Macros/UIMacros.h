@@ -12,8 +12,20 @@
 #define LBXScan_Define_Native  //包含native库
 #define LBXScan_Define_UI     //包含界面库
 
+/** 屏幕宽度 */
+#define kVAScreenWidth        [UIScreen mainScreen].bounds.size.width
+
+/** 屏幕高度 */
+#define kVASCreenHeight       [UIScreen mainScreen].bounds.size.height
+
 //16进制颜色转换
 #define UIColorFromRGB(rgbValue) [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
+
+#define VARandom(r, g, b, a) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:(a)/255.0]
+#define VARandomColor random(arc4random_uniform(256), arc4random_uniform(256), arc4random_uniform(256), arc4random_uniform(256))
+
+#define KColorRandomColor [UIColor colorWithRed:arc4random()%255/255.0 green:arc4random()%255/255.0 blue:arc4random()%255/255.0 alpha:1.0]
+
 
 //color
 #define kUITitleColor           UIColorFromRGB(0x4A4A4A)

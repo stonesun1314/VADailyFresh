@@ -1,0 +1,75 @@
+//
+//  HomeNavigationBar.m
+//  DailyFresh
+//
+//  Created by Mac on 2019/5/15.
+//  Copyright © 2019年 Mac. All rights reserved.
+//
+
+#import "HomeNavigationBar.h"
+
+@interface HomeNavigationBar ()
+
+@property (nonatomic, strong) UIImageView *iconImageView;
+@property (nonatomic, strong) UIButton *locationBtn;
+
+@property (nonatomic, strong) UIButton *scanBtn;
+
+@property (nonatomic, strong) UISearchBar *searchBar;
+
+
+@end
+
+@implementation HomeNavigationBar
+
+- (instancetype)initWithFrame:(CGRect)frame{
+    self = [super initWithFrame:frame];
+    if (self) {
+        [self setupUI];
+    }
+    return self;
+}
+
+- (void)setupUI{
+    _iconImageView = [[UIImageView alloc] init];
+    _iconImageView.image = [UIImage imageNamed:@"df_jisuda"];
+    _iconImageView.contentMode = UIViewContentModeScaleAspectFit;
+    [self addSubview:_iconImageView];
+    
+    _locationBtn = [[UIButton alloc] init];
+//    [_locationBtn setImage:[UIImage imageNamed:@"df_orderDownImage"] forState:UIControlStateNormal];
+    [_locationBtn setTitle:@"万科大厦" forState:UIControlStateNormal];
+    [_locationBtn setTitleColor:kUITitleColor forState:UIControlStateNormal];
+    [self addSubview:_locationBtn];
+    
+    
+    
+    _scanBtn = [[UIButton alloc] init];
+    [_scanBtn setImage:[UIImage imageNamed:@"df_qrcode_black"] forState:UIControlStateNormal];
+    [self addSubview:_scanBtn];
+    
+    
+    _iconImageView.sd_layout.leftSpaceToView(self, VAMargin).topSpaceToView(self, 10.f).widthIs(55).heightIs(40.f);
+    _locationBtn.sd_layout.leftSpaceToView(_iconImageView, 5.f).centerYEqualToView(_iconImageView).heightIs(40.f);
+    
+    [_locationBtn setupAutoSizeWithHorizontalPadding:20 buttonHeight:40.f];
+    
+    [_locationBtn SG_imagePositionStyle:SGImagePositionStyleDefault spacing:10.f];
+    
+    _scanBtn.sd_layout.rightSpaceToView(self, VAMargin).centerYEqualToView(_iconImageView).widthIs(48.f).heightIs(48.f);
+    
+    _searchBar = [[UISearchBar alloc] init];
+//    _searchBar.barStyle = UIBarStyleBlack;
+    _searchBar.searchBarStyle = UISearchBarStyleMinimal;
+    [self addSubview:_searchBar];
+    
+    _searchBar.sd_layout.leftSpaceToView(self, VAMargin).rightSpaceToView(self, VAMargin).topSpaceToView(_iconImageView, 5.f).heightIs(40.f);
+//    [[self.searchBar.subviews objectAtIndex:0] removeFromSuperview];
+    self.searchBar.backgroundColor = [UIColor clearColor];
+    
+    
+}
+
+
+
+@end

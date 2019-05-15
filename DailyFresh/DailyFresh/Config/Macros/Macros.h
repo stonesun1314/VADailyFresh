@@ -50,6 +50,22 @@
 //#import "NSOperationQueueCJHelper.h"
 //#import "WebCJHelper.h"
 
+//转化为weak对象（block循环引用使用时）
+#define WeakObj(o) __weak typeof(o) obj##Weak = o;
+#define WeakSelf __weak typeof(self) weakSelf = self;
+
+#define DEBUGGER 1 //上线版本屏蔽此宏
+
+#ifdef DEBUGGER
+/* 自定义log 可以输出所在的类名,方法名,位置(行数)*/
+#define VALog(format, ...) NSLog((@"%s [Line %d] " format), __FUNCTION__, __LINE__, ##__VA_ARGS__)
+
+#else
+
+#define VALog(...)
+
+#endif
+
 
 #define kPhoneNumerError        @"请输入正确的手机号"
 #define kPasswordError          @"请输入6-20位数字和字母的组合"
