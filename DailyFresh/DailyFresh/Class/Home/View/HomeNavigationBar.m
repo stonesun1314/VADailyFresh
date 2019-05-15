@@ -62,9 +62,12 @@
     _searchBar = [[UISearchBar alloc] init];
 //    _searchBar.barStyle = UIBarStyleBlack;
     _searchBar.searchBarStyle = UISearchBarStyleMinimal;
+//    [self.searchBar setImage:[UIImage imageNamed:@"df_searchIconImage"]
+//                  forSearchBarIcon:UISearchBarIconSearch
+//                             state:UIControlStateNormal];
     [self addSubview:_searchBar];
     
-    _searchBar.sd_layout.leftSpaceToView(self, VAMargin).rightSpaceToView(self, VAMargin).topSpaceToView(_iconImageView, 5.f).heightIs(30.f);
+    _searchBar.sd_layout.leftSpaceToView(self, 0).rightSpaceToView(self, 0).topSpaceToView(_iconImageView, 5.f).heightIs(30.f);
 //    [[self.searchBar.subviews objectAtIndex:0] removeFromSuperview];
     self.searchBar.backgroundColor = [UIColor clearColor];
     
