@@ -12,6 +12,7 @@
 
 @property (nonatomic, strong) UIImageView *iconImageView;
 @property (nonatomic, strong) UIButton *locationBtn;
+//@property (nonatomic, strong) UIImageView 
 
 @property (nonatomic, strong) UIButton *scanBtn;
 
@@ -49,8 +50,8 @@
     [self addSubview:_scanBtn];
     
     
-    _iconImageView.sd_layout.leftSpaceToView(self, VAMargin).topSpaceToView(self, 10.f).widthIs(55).heightIs(40.f);
-    _locationBtn.sd_layout.leftSpaceToView(_iconImageView, 5.f).centerYEqualToView(_iconImageView).heightIs(40.f);
+    _iconImageView.sd_layout.leftSpaceToView(self, VAMargin).topSpaceToView(self, 10.f).widthIs(55).heightIs(30.f);
+    _locationBtn.sd_layout.leftSpaceToView(_iconImageView, 0.f).centerYEqualToView(_iconImageView).heightIs(40.f);
     
     [_locationBtn setupAutoSizeWithHorizontalPadding:20 buttonHeight:40.f];
     
@@ -63,7 +64,7 @@
     _searchBar.searchBarStyle = UISearchBarStyleMinimal;
     [self addSubview:_searchBar];
     
-    _searchBar.sd_layout.leftSpaceToView(self, VAMargin).rightSpaceToView(self, VAMargin).topSpaceToView(_iconImageView, 5.f).heightIs(40.f);
+    _searchBar.sd_layout.leftSpaceToView(self, VAMargin).rightSpaceToView(self, VAMargin).topSpaceToView(_iconImageView, 5.f).heightIs(30.f);
 //    [[self.searchBar.subviews objectAtIndex:0] removeFromSuperview];
     self.searchBar.backgroundColor = [UIColor clearColor];
     

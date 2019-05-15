@@ -25,12 +25,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    self.edgesForExtendedLayout = UIRectEdgeTop;
-//    if (@available(iOS 11.0, *)) {
-//        [NSLayoutConstraint constraintWithItem:someView attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeTop multiplier:1.0 constant:0];
-//    } else {
-//        [NSLayoutConstraint constraintWithItem:someView attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:self.view.safeAreaLayoutGuide attribute:NSLayoutAttributeTop multiplier:1.0 constant:0];
-//    }
+    self.edgesForExtendedLayout = UIRectEdgeNone;
     
     
     [self.navigationController setNavigationBarHidden:YES];
@@ -38,36 +33,25 @@
 //    self.view.safeAreaInsets = UIEdgeInsetsMake(0, 0, 0, 0);
 //    self.additionalSafeAreaInsets = UIEdgeInsetsMake(0, 0, 0, 0);
     [self setupUI];
-    self.view.backgroundColor = [UIColor redColor];
     
-    
-    VALog(@"%@",self.view);
-    VALog(@"%@",NSStringFromUIEdgeInsets(self.view.safeAreaInsets));
     
 }
-
-//+ (UIEdgeInsets)safeAreaInset:(UIView *)view {
-//    if (@available(iOS 11.0, *)) {
-//        return view.safeAreaInsets;
-//    }
-//    return UIEdgeInsetsZero;
-//}
 
 
 - (void)setupUI{
     
     _navigationBar = [[HomeNavigationBar alloc] init];
+    _navigationBar.backgroundColor = [UIColor whiteColor];
     [self.view addSubview:_navigationBar];
     
-    _navigationBar.sd_layout.leftEqualToView(self.view).rightEqualToView(self.view).topEqualToView(self.view).heightIs(120.f);
+    _navigationBar.sd_layout.leftEqualToView(self.view).rightEqualToView(self.view).topSpaceToView(self.view, Height_StatusBar).heightIs(100.f);
     
     _viewController = [[HomeSubViewController alloc] init];
     [self addChildViewController:_viewController];
     
-
     [self.view addSubview:_viewController.view];
     
-    _viewController.view.sd_layout.leftEqualToView(self.view).rightEqualToView(self.view).bottomSpaceToView(self.view, -30.f).topSpaceToView(_navigationBar, 10.f);
+    _viewController.view.sd_layout.leftEqualToView(self.view).rightEqualToView(self.view).bottomSpaceToView(self.view, -30.f).topSpaceToView(_navigationBar, 0.f);
 }
 
 
@@ -78,9 +62,6 @@
 
 - (void)viewSafeAreaInsetsDidChange{
     [super viewSafeAreaInsetsDidChange];
-    VALog(@"%@",self.view);
-//    VALog(@"%@",self.view.safe)
-    VALog(@"%@",NSStringFromUIEdgeInsets(self.view.safeAreaInsets));
 }
 
 
