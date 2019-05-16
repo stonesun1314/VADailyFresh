@@ -32,9 +32,12 @@
 #define kUISubTitleColor        UIColorFromRGB(0x9B9B9B)
 #define kMainColor              UIColorFromRGB(0xFC4C91) //UIColorFromRGB(0xF06A41)
 #define kSeparatorLineColor     UIColorFromRGB(0xD8D8D8)
-#define kMainBackgroundColor    UIColorFromRGB(0xFAFAFC)
+#define kMainBackgroundColor    UIColorFromRGB(0xFEFEFE)
 #define kUITipColor             UIColorFromRGB(0xF27E52)
 #define kUIDisableTextColor     UIColorFromRGB(0xC9C9C9)
+
+//temp
+#define kDarkMainBackgroundColor    UIColorFromRGB(0xFAFAFA)
 
 
 #define kUIAccountTipColor      UIColorFromRGB(0xC0C0C0)

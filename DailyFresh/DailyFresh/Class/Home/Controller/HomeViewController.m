@@ -35,7 +35,6 @@
     
     
     [self.navigationController setNavigationBarHidden:YES];
-    VIEWSAFEAREAINSETS(self.view);
 //    self.view.safeAreaInsets = UIEdgeInsetsMake(0, 0, 0, 0);
 //    self.additionalSafeAreaInsets = UIEdgeInsetsMake(0, 0, 0, 0);
     [self setupUI];
@@ -47,13 +46,12 @@
 - (void)setupUI{
     
     _headerView = [[UIView alloc] init];
-//    _headerView.backgroundColor = [UIColor greenColor];
     [self.view addSubview:_headerView];
     
     _headerView.sd_layout.leftEqualToView(self.view).rightEqualToView(self.view).topSpaceToView(self.view, Height_StatusBar).heightIs(124.f);
     
     _navigationBar = [[HomeNavigationBar alloc] init];
-    _navigationBar.backgroundColor = [UIColor whiteColor];
+//    _navigationBar.backgroundColor = [UIColor whiteColor];
     [_headerView addSubview:_navigationBar];
     
     _navigationBar.sd_layout.leftEqualToView(_headerView).rightEqualToView(_headerView).topSpaceToView(_headerView, 0).heightIs(80.f);
@@ -91,10 +89,8 @@
     _pageContentScrollView.delegatePageContentScrollView = self;
     [self.view addSubview:_pageContentScrollView];
     
-    
 //    _viewController = [[HomeSubViewController alloc] init];
 //    [self addChildViewController:_viewController];
-
 //    [_pageContentScrollView addSubview:_viewController.view];
 //
 //    _viewController.view.sd_layout.leftEqualToView(self.pageContentScrollView).widthRatioToView(self.pageContentScrollView, 1.0).bottomSpaceToView(self.pageContentScrollView, 0).topSpaceToView(self.pageContentScrollView, 0.f);

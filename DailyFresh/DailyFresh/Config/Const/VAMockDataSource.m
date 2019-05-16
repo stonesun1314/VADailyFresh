@@ -96,4 +96,9 @@ static VAMockDataSource *_instance;
     return temp;
 }
 
+
+- (NSArray *)classifyFirstCateList{
+    return @[@"热卖",@"会员特价",@"水果",@"蔬菜",@"肉蛋",@"水产",@"乳品",@"零食",@"酒饮",@"糕点",@"速食",@"熟食",@"粮油",@"日百",@"0元菜场",@"冰凉小卖铺",@"小龙虾",@"水果销售榜",@"粽子食街",@"石头食铺",];
+}
+
 @end

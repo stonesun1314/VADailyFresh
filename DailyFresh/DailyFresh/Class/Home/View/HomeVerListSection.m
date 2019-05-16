@@ -56,6 +56,7 @@ static NSString *CellIdentiifer = @"CellIdentiifer";
     
     _collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 0, self.bounds.size.width,kVASCreenHeight) collectionViewLayout:flowLayout];
     self.collectionView.delegate = self;
+    self.collectionView.scrollEnabled = NO;
     self.collectionView.dataSource = self;
     self.clipsToBounds = YES;
     self.collectionView.showsHorizontalScrollIndicator = NO;

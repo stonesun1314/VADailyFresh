@@ -12,9 +12,10 @@
 
 @property (nonatomic, strong) UIImageView *iconImageView;
 @property (nonatomic, strong) UIButton *locationBtn;
-//@property (nonatomic, strong) UIImageView 
+@property (nonatomic, strong) UIImageView *locationArrow;
 
 @property (nonatomic, strong) UIButton *scanBtn;
+
 
 @property (nonatomic, strong) UISearchBar *searchBar;
 
@@ -41,7 +42,14 @@
 //    [_locationBtn setImage:[UIImage imageNamed:@"df_orderDownImage"] forState:UIControlStateNormal];
     [_locationBtn setTitle:@"万科大厦" forState:UIControlStateNormal];
     [_locationBtn setTitleColor:kUITitleColor forState:UIControlStateNormal];
+    _locationBtn.titleLabel.font = [UIFont systemFontOfSize:kUISubtitleFontSize];
     [self addSubview:_locationBtn];
+    
+    _locationArrow = [[UIImageView alloc] init];
+    _locationArrow.image = [UIImage imageNamed:@"df_orderDownImage"];
+    [self addSubview:_locationArrow];
+    
+    
     
     
     
@@ -53,9 +61,11 @@
     _iconImageView.sd_layout.leftSpaceToView(self, VAMargin).topSpaceToView(self, 10.f).widthIs(55).heightIs(30.f);
     _locationBtn.sd_layout.leftSpaceToView(_iconImageView, 0.f).centerYEqualToView(_iconImageView).heightIs(40.f);
     
-    [_locationBtn setupAutoSizeWithHorizontalPadding:20 buttonHeight:40.f];
+    [_locationBtn setupAutoSizeWithHorizontalPadding:10 buttonHeight:40.f];
     
     [_locationBtn SG_imagePositionStyle:SGImagePositionStyleDefault spacing:10.f];
+    
+    _locationArrow.sd_layout.leftSpaceToView(_locationBtn, -5.f).centerYEqualToView(_locationBtn).widthIs(10.f).heightIs(6.f);
     
     _scanBtn.sd_layout.rightSpaceToView(self, VAMargin).centerYEqualToView(_iconImageView).widthIs(48.f).heightIs(48.f);
     

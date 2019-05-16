@@ -20,6 +20,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (NSArray *)homeVerGoodsItemList;
 
+- (NSArray *)classifyFirstCateList;
+
 @end
 
 NS_ASSUME_NONNULL_END

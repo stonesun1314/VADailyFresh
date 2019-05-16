@@ -21,6 +21,7 @@
 #import <SDWebImage/UIView+WebCache.h>
 #import <SDWebImage/UIImageView+WebCache.h>
 #import <SDWebImage/UIButton+WebCache.h>
+#import <Masonry/Masonry.h>
 
 #import "SGPagingView.h"
 

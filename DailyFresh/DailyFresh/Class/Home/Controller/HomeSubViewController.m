@@ -39,6 +39,14 @@
     _contentView = [[UIScrollView alloc] initWithFrame:self.view.bounds];
     [self.view addSubview:_contentView];
     
+    WeakSelf
+    _contentView.mj_header= [MJRefreshNormalHeader headerWithRefreshingBlock:^{
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            [weakSelf.contentView.mj_header endRefreshing];
+        });
+    }];
+    _contentView.mj_header.automaticallyChangeAlpha = YES;
+    
     _contentView.sd_layout.spaceToSuperView(UIEdgeInsetsZero);
     
     _headerView = [[HomeHeaderView alloc] init];
@@ -53,7 +61,6 @@
     section1.goodsItemList = goodsItemList;
     
     section1.sd_layout.leftEqualToView(section1).topSpaceToView(_headerView, 20.f).widthRatioToView(_contentView, 1.0).heightIs(220.f);
-    
     
     HomeVerListSection *section2 = [[HomeVerListSection alloc] init];
     [_contentView addSubview:section2];

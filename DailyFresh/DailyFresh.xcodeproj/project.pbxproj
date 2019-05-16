@@ -16,6 +16,10 @@
 		040E77BE228408B100CDED15 /* HomeHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 040E77BD228408B100CDED15 /* HomeHeaderView.m */; };
 		040E77C4228408FF00CDED15 /* HomeHorListView.m in Sources */ = {isa = PBXBuildFile; fileRef = 040E77C3228408FF00CDED15 /* HomeHorListView.m */; };
 		040E77C72284090E00CDED15 /* HomeVerListView.m in Sources */ = {isa = PBXBuildFile; fileRef = 040E77C62284090E00CDED15 /* HomeVerListView.m */; };
+		04108D5A228D4C350065FB4F /* ClassifyLeftViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04108D59228D4C350065FB4F /* ClassifyLeftViewController.m */; };
+		04108D5D228D4C420065FB4F /* ClassifyRightViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04108D5C228D4C420065FB4F /* ClassifyRightViewController.m */; };
+		04108D60228D5BE90065FB4F /* LeftTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04108D5F228D5BE90065FB4F /* LeftTableViewCell.m */; };
+		04108D63228D5BF50065FB4F /* RightTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04108D62228D5BF50065FB4F /* RightTableViewCell.m */; };
 		04333F3A22852A5400ECC489 /* DLLRUCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 04333F2B22852A5400ECC489 /* DLLRUCache.m */; };
 		04333F3B22852A5400ECC489 /* DLCustomSlideView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04333F2D22852A5400ECC489 /* DLCustomSlideView.m */; };
 		04333F3C22852A5400ECC489 /* DLSlideView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04333F2F22852A5400ECC489 /* DLSlideView.m */; };
@@ -54,6 +58,7 @@
 		04D1A357228C130B00C3F597 /* SGPageTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04D1A34E228C130B00C3F597 /* SGPageTitleView.m */; };
 		04D1A358228C130B00C3F597 /* SGPageTitleViewConfigure.m in Sources */ = {isa = PBXBuildFile; fileRef = 04D1A350228C130B00C3F597 /* SGPageTitleViewConfigure.m */; };
 		04D1A35B228CF0EA00C3F597 /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04D1A35A228CF0EA00C3F597 /* TestViewController.m */; };
+		04D1A35E228D0CB700C3F597 /* ClassifyNavView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04D1A35D228D0CB700C3F597 /* ClassifyNavView.m */; };
 		04E6C325228A6941007C9548 /* VAMockDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E6C324228A6941007C9548 /* VAMockDataSource.m */; };
 		04E6C328228ABB5B007C9548 /* HomeVerListSection.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E6C327228ABB5B007C9548 /* HomeVerListSection.m */; };
 		04E6C32B228ABD07007C9548 /* HomeVerCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E6C32A228ABD07007C9548 /* HomeVerCollectionViewCell.m */; };
@@ -110,6 +115,14 @@
 		040E77C3228408FF00CDED15 /* HomeHorListView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeHorListView.m; sourceTree = "<group>"; };
 		040E77C52284090E00CDED15 /* HomeVerListView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeVerListView.h; sourceTree = "<group>"; };
 		040E77C62284090E00CDED15 /* HomeVerListView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeVerListView.m; sourceTree = "<group>"; };
+		04108D58228D4C350065FB4F /* ClassifyLeftViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ClassifyLeftViewController.h; sourceTree = "<group>"; };
+		04108D59228D4C350065FB4F /* ClassifyLeftViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ClassifyLeftViewController.m; sourceTree = "<group>"; };
+		04108D5B228D4C420065FB4F /* ClassifyRightViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ClassifyRightViewController.h; sourceTree = "<group>"; };
+		04108D5C228D4C420065FB4F /* ClassifyRightViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ClassifyRightViewController.m; sourceTree = "<group>"; };
+		04108D5E228D5BE90065FB4F /* LeftTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LeftTableViewCell.h; sourceTree = "<group>"; };
+		04108D5F228D5BE90065FB4F /* LeftTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LeftTableViewCell.m; sourceTree = "<group>"; };
+		04108D61228D5BF50065FB4F /* RightTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RightTableViewCell.h; sourceTree = "<group>"; };
+		04108D62228D5BF50065FB4F /* RightTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RightTableViewCell.m; sourceTree = "<group>"; };
 		04333F2922852A5400ECC489 /* DLCacheProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLCacheProtocol.h; sourceTree = "<group>"; };
 		04333F2A22852A5400ECC489 /* DLLRUCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLLRUCache.h; sourceTree = "<group>"; };
 		04333F2B22852A5400ECC489 /* DLLRUCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLLRUCache.m; sourceTree = "<group>"; };
@@ -193,6 +206,8 @@
 		04D1A351228C130B00C3F597 /* SGPagingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGPagingView.h; sourceTree = "<group>"; };
 		04D1A359228CF0EA00C3F597 /* TestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestViewController.h; sourceTree = "<group>"; };
 		04D1A35A228CF0EA00C3F597 /* TestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestViewController.m; sourceTree = "<group>"; };
+		04D1A35C228D0CB700C3F597 /* ClassifyNavView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ClassifyNavView.h; sourceTree = "<group>"; };
+		04D1A35D228D0CB700C3F597 /* ClassifyNavView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ClassifyNavView.m; sourceTree = "<group>"; };
 		04E6C323228A6941007C9548 /* VAMockDataSource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VAMockDataSource.h; sourceTree = "<group>"; };
 		04E6C324228A6941007C9548 /* VAMockDataSource.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VAMockDataSource.m; sourceTree = "<group>"; };
 		04E6C326228ABB5B007C9548 /* HomeVerListSection.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeVerListSection.h; sourceTree = "<group>"; };
@@ -464,6 +479,10 @@
 			children = (
 				04C7F9FF2282C3CA00FD9C51 /* ClassifyViewController.h */,
 				04C7FA002282C3CA00FD9C51 /* ClassifyViewController.m */,
+				04108D58228D4C350065FB4F /* ClassifyLeftViewController.h */,
+				04108D59228D4C350065FB4F /* ClassifyLeftViewController.m */,
+				04108D5B228D4C420065FB4F /* ClassifyRightViewController.h */,
+				04108D5C228D4C420065FB4F /* ClassifyRightViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -478,6 +497,12 @@
 		04C7F9B32282B9FE00FD9C51 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				04D1A35C228D0CB700C3F597 /* ClassifyNavView.h */,
+				04D1A35D228D0CB700C3F597 /* ClassifyNavView.m */,
+				04108D5E228D5BE90065FB4F /* LeftTableViewCell.h */,
+				04108D5F228D5BE90065FB4F /* LeftTableViewCell.m */,
+				04108D61228D5BF50065FB4F /* RightTableViewCell.h */,
+				04108D62228D5BF50065FB4F /* RightTableViewCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1063,9 +1088,11 @@
 				040B2F31228BA2F8006D2CC5 /* HomeNavigationBar.m in Sources */,
 				04C7F9D62282BA1600FD9C51 /* NSObject+Unicode.m in Sources */,
 				04E6C32B228ABD07007C9548 /* HomeVerCollectionViewCell.m in Sources */,
+				04108D5D228D4C420065FB4F /* ClassifyRightViewController.m in Sources */,
 				04C7F9FE2282C3AB00FD9C51 /* ShoppingCartViewController.m in Sources */,
 				04333F3E22852A5400ECC489 /* DLScrollTabbarView.m in Sources */,
 				04333F3A22852A5400ECC489 /* DLLRUCache.m in Sources */,
+				04D1A35E228D0CB700C3F597 /* ClassifyNavView.m in Sources */,
 				04333F3C22852A5400ECC489 /* DLSlideView.m in Sources */,
 				04C7F9C42282BA0600FD9C51 /* BaseModel.m in Sources */,
 				04F5C0F5228561F100EE1D5A /* HomeHeaderMenuView.m in Sources */,
@@ -1074,6 +1101,7 @@
 				04D1A355228C130B00C3F597 /* SGPageContentCollectionView.m in Sources */,
 				04333F3F22852A5400ECC489 /* DLTabedSlideView.m in Sources */,
 				04F5C0F822856DF300EE1D5A /* HomeCateItemModel.m in Sources */,
+				04108D60228D5BE90065FB4F /* LeftTableViewCell.m in Sources */,
 				04D1A35B228CF0EA00C3F597 /* TestViewController.m in Sources */,
 				04C7FA012282C3CA00FD9C51 /* ClassifyViewController.m in Sources */,
 				04E6C328228ABB5B007C9548 /* HomeVerListSection.m in Sources */,
@@ -1090,6 +1118,8 @@
 				04C7F9F52282C35D00FD9C51 /* MineViewController.m in Sources */,
 				040E77C72284090E00CDED15 /* HomeVerListView.m in Sources */,
 				04333F3D22852A5400ECC489 /* DLFixedTabbarView.m in Sources */,
+				04108D63228D5BF50065FB4F /* RightTableViewCell.m in Sources */,
+				04108D5A228D4C350065FB4F /* ClassifyLeftViewController.m in Sources */,
 				04C7F9C52282BA0600FD9C51 /* BaseNavigationController.m in Sources */,
 				04F5C10A2285747100EE1D5A /* NSDate+Addition.m in Sources */,
 				040E77C4228408FF00CDED15 /* HomeHorListView.m in Sources */,
