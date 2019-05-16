@@ -46,6 +46,14 @@
 		04C7F9FE2282C3AB00FD9C51 /* ShoppingCartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C7F9FD2282C3AB00FD9C51 /* ShoppingCartViewController.m */; };
 		04C7FA012282C3CA00FD9C51 /* ClassifyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C7FA002282C3CA00FD9C51 /* ClassifyViewController.m */; };
 		04C7FA042282C41300FD9C51 /* VATabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C7FA032282C41300FD9C51 /* VATabBarViewController.m */; };
+		04D1A352228C130B00C3F597 /* UIButton+SGPagingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04D1A341228C130A00C3F597 /* UIButton+SGPagingView.m */; };
+		04D1A353228C130B00C3F597 /* UIView+SGPagingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04D1A343228C130B00C3F597 /* UIView+SGPagingView.m */; };
+		04D1A354228C130B00C3F597 /* SGPagingViewPopGestureVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 04D1A346228C130B00C3F597 /* SGPagingViewPopGestureVC.m */; };
+		04D1A355228C130B00C3F597 /* SGPageContentCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04D1A349228C130B00C3F597 /* SGPageContentCollectionView.m */; };
+		04D1A356228C130B00C3F597 /* SGPageContentScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04D1A34B228C130B00C3F597 /* SGPageContentScrollView.m */; };
+		04D1A357228C130B00C3F597 /* SGPageTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04D1A34E228C130B00C3F597 /* SGPageTitleView.m */; };
+		04D1A358228C130B00C3F597 /* SGPageTitleViewConfigure.m in Sources */ = {isa = PBXBuildFile; fileRef = 04D1A350228C130B00C3F597 /* SGPageTitleViewConfigure.m */; };
+		04D1A35B228CF0EA00C3F597 /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04D1A35A228CF0EA00C3F597 /* TestViewController.m */; };
 		04E6C325228A6941007C9548 /* VAMockDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E6C324228A6941007C9548 /* VAMockDataSource.m */; };
 		04E6C328228ABB5B007C9548 /* HomeVerListSection.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E6C327228ABB5B007C9548 /* HomeVerListSection.m */; };
 		04E6C32B228ABD07007C9548 /* HomeVerCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E6C32A228ABD07007C9548 /* HomeVerCollectionViewCell.m */; };
@@ -168,6 +176,23 @@
 		04C7FA002282C3CA00FD9C51 /* ClassifyViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ClassifyViewController.m; sourceTree = "<group>"; };
 		04C7FA022282C41300FD9C51 /* VATabBarViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VATabBarViewController.h; sourceTree = "<group>"; };
 		04C7FA032282C41300FD9C51 /* VATabBarViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VATabBarViewController.m; sourceTree = "<group>"; };
+		04D1A340228C130A00C3F597 /* UIButton+SGPagingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+SGPagingView.h"; sourceTree = "<group>"; };
+		04D1A341228C130A00C3F597 /* UIButton+SGPagingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+SGPagingView.m"; sourceTree = "<group>"; };
+		04D1A342228C130B00C3F597 /* UIView+SGPagingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+SGPagingView.h"; sourceTree = "<group>"; };
+		04D1A343228C130B00C3F597 /* UIView+SGPagingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+SGPagingView.m"; sourceTree = "<group>"; };
+		04D1A345228C130B00C3F597 /* SGPagingViewPopGestureVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGPagingViewPopGestureVC.h; sourceTree = "<group>"; };
+		04D1A346228C130B00C3F597 /* SGPagingViewPopGestureVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGPagingViewPopGestureVC.m; sourceTree = "<group>"; };
+		04D1A348228C130B00C3F597 /* SGPageContentCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGPageContentCollectionView.h; sourceTree = "<group>"; };
+		04D1A349228C130B00C3F597 /* SGPageContentCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGPageContentCollectionView.m; sourceTree = "<group>"; };
+		04D1A34A228C130B00C3F597 /* SGPageContentScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGPageContentScrollView.h; sourceTree = "<group>"; };
+		04D1A34B228C130B00C3F597 /* SGPageContentScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGPageContentScrollView.m; sourceTree = "<group>"; };
+		04D1A34D228C130B00C3F597 /* SGPageTitleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGPageTitleView.h; sourceTree = "<group>"; };
+		04D1A34E228C130B00C3F597 /* SGPageTitleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGPageTitleView.m; sourceTree = "<group>"; };
+		04D1A34F228C130B00C3F597 /* SGPageTitleViewConfigure.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGPageTitleViewConfigure.h; sourceTree = "<group>"; };
+		04D1A350228C130B00C3F597 /* SGPageTitleViewConfigure.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGPageTitleViewConfigure.m; sourceTree = "<group>"; };
+		04D1A351228C130B00C3F597 /* SGPagingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGPagingView.h; sourceTree = "<group>"; };
+		04D1A359228CF0EA00C3F597 /* TestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestViewController.h; sourceTree = "<group>"; };
+		04D1A35A228CF0EA00C3F597 /* TestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestViewController.m; sourceTree = "<group>"; };
 		04E6C323228A6941007C9548 /* VAMockDataSource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VAMockDataSource.h; sourceTree = "<group>"; };
 		04E6C324228A6941007C9548 /* VAMockDataSource.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VAMockDataSource.m; sourceTree = "<group>"; };
 		04E6C326228ABB5B007C9548 /* HomeVerListSection.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeVerListSection.h; sourceTree = "<group>"; };
@@ -285,6 +310,7 @@
 		04333F2622852A5400ECC489 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				04D1A33E228C130A00C3F597 /* SGPagingView */,
 				040A4A8A22895C1D001A8083 /* VAHorCollectionView */,
 				04333F2722852A5400ECC489 /* DLSlideView */,
 			);
@@ -473,6 +499,8 @@
 				04C7F9EE2282C33B00FD9C51 /* HomeViewController.m */,
 				04F5C0ED22854EE300EE1D5A /* HomeSubViewController.h */,
 				04F5C0EE22854EE300EE1D5A /* HomeSubViewController.m */,
+				04D1A359228CF0EA00C3F597 /* TestViewController.h */,
+				04D1A35A228CF0EA00C3F597 /* TestViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -685,6 +713,60 @@
 			children = (
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		04D1A33E228C130A00C3F597 /* SGPagingView */ = {
+			isa = PBXGroup;
+			children = (
+				04D1A33F228C130A00C3F597 /* Category */,
+				04D1A344228C130B00C3F597 /* Controller */,
+				04D1A347228C130B00C3F597 /* SGPageContent */,
+				04D1A34C228C130B00C3F597 /* SGPageTitle */,
+				04D1A351228C130B00C3F597 /* SGPagingView.h */,
+			);
+			path = SGPagingView;
+			sourceTree = "<group>";
+		};
+		04D1A33F228C130A00C3F597 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				04D1A340228C130A00C3F597 /* UIButton+SGPagingView.h */,
+				04D1A341228C130A00C3F597 /* UIButton+SGPagingView.m */,
+				04D1A342228C130B00C3F597 /* UIView+SGPagingView.h */,
+				04D1A343228C130B00C3F597 /* UIView+SGPagingView.m */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		04D1A344228C130B00C3F597 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				04D1A345228C130B00C3F597 /* SGPagingViewPopGestureVC.h */,
+				04D1A346228C130B00C3F597 /* SGPagingViewPopGestureVC.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		04D1A347228C130B00C3F597 /* SGPageContent */ = {
+			isa = PBXGroup;
+			children = (
+				04D1A348228C130B00C3F597 /* SGPageContentCollectionView.h */,
+				04D1A349228C130B00C3F597 /* SGPageContentCollectionView.m */,
+				04D1A34A228C130B00C3F597 /* SGPageContentScrollView.h */,
+				04D1A34B228C130B00C3F597 /* SGPageContentScrollView.m */,
+			);
+			path = SGPageContent;
+			sourceTree = "<group>";
+		};
+		04D1A34C228C130B00C3F597 /* SGPageTitle */ = {
+			isa = PBXGroup;
+			children = (
+				04D1A34D228C130B00C3F597 /* SGPageTitleView.h */,
+				04D1A34E228C130B00C3F597 /* SGPageTitleView.m */,
+				04D1A34F228C130B00C3F597 /* SGPageTitleViewConfigure.h */,
+				04D1A350228C130B00C3F597 /* SGPageTitleViewConfigure.m */,
+			);
+			path = SGPageTitle;
 			sourceTree = "<group>";
 		};
 		04F5C0FC2285747100EE1D5A /* NSDate */ = {
@@ -962,15 +1044,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04D1A357228C130B00C3F597 /* SGPageTitleView.m in Sources */,
 				04F5C10E2285747100EE1D5A /* UIButton+SGEvent.m in Sources */,
 				04C7F9DC2282BA1600FD9C51 /* UIView+tool.m in Sources */,
 				04333F4022852A5400ECC489 /* DLUtility.m in Sources */,
 				040E77BE228408B100CDED15 /* HomeHeaderView.m in Sources */,
 				04C7F9802282AA1900FD9C51 /* ViewController.m in Sources */,
+				04D1A354228C130B00C3F597 /* SGPagingViewPopGestureVC.m in Sources */,
 				04C7F9C62282BA0600FD9C51 /* BaseViewController.m in Sources */,
 				04C7F9DA2282BA1600FD9C51 /* UINavigationBar+bgColor.m in Sources */,
+				04D1A358228C130B00C3F597 /* SGPageTitleViewConfigure.m in Sources */,
 				04F5C0EF22854EE300EE1D5A /* HomeSubViewController.m in Sources */,
 				04C7F9D82282BA1600FD9C51 /* UIControl+clickRepeatedly.m in Sources */,
+				04D1A353228C130B00C3F597 /* UIView+SGPagingView.m in Sources */,
 				04F7DD3922850E98008261C4 /* VAConsts.m in Sources */,
 				04C7F98B2282AA1900FD9C51 /* main.m in Sources */,
 				04C7F9D72282BA1600FD9C51 /* NSString+tool.m in Sources */,
@@ -985,14 +1071,17 @@
 				04F5C0F5228561F100EE1D5A /* HomeHeaderMenuView.m in Sources */,
 				04333F3B22852A5400ECC489 /* DLCustomSlideView.m in Sources */,
 				04C7F9F22282C34B00FD9C51 /* DiscoveryViewController.m in Sources */,
+				04D1A355228C130B00C3F597 /* SGPageContentCollectionView.m in Sources */,
 				04333F3F22852A5400ECC489 /* DLTabedSlideView.m in Sources */,
 				04F5C0F822856DF300EE1D5A /* HomeCateItemModel.m in Sources */,
+				04D1A35B228CF0EA00C3F597 /* TestViewController.m in Sources */,
 				04C7FA012282C3CA00FD9C51 /* ClassifyViewController.m in Sources */,
 				04E6C328228ABB5B007C9548 /* HomeVerListSection.m in Sources */,
 				04F5C10B2285747100EE1D5A /* NSDate+TimeAgo.m in Sources */,
 				04F5C10F2285747100EE1D5A /* UIButton+SGImagePosition.m in Sources */,
 				04C7F9D92282BA1600FD9C51 /* UIImage+tool.m in Sources */,
 				04C7F97D2282AA1900FD9C51 /* AppDelegate.m in Sources */,
+				04D1A356228C130B00C3F597 /* SGPageContentScrollView.m in Sources */,
 				04F5C10D2285747100EE1D5A /* UIButton+SGCountdown.m in Sources */,
 				04F5C0FB2285709A00EE1D5A /* UIColor+Additions.m in Sources */,
 				040A4A9022895C60001A8083 /* VAHorCollectionCell.m in Sources */,
@@ -1005,6 +1094,7 @@
 				04F5C10A2285747100EE1D5A /* NSDate+Addition.m in Sources */,
 				040E77C4228408FF00CDED15 /* HomeHorListView.m in Sources */,
 				040A4A9A22896333001A8083 /* HomeHorListSection.m in Sources */,
+				04D1A352228C130B00C3F597 /* UIButton+SGPagingView.m in Sources */,
 				040A4A9D228965B7001A8083 /* HomeHorCollectionViewCell.m in Sources */,
 				04C7F9EF2282C33B00FD9C51 /* HomeViewController.m in Sources */,
 				04F5C0F22285600E00EE1D5A /* HomeMenuGridItem.m in Sources */,

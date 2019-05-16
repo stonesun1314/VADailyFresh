@@ -12,6 +12,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface HomeNavigationBar : UIView
 
+@property (nonatomic, strong) SGPageTitleView *pageTitleView;
+
 @end
 
 NS_ASSUME_NONNULL_END
