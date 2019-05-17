@@ -22,6 +22,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (NSArray *)classifyFirstCateList;
 
+- (NSArray *)classifySecondCateList;
+
 @end
 
 NS_ASSUME_NONNULL_END

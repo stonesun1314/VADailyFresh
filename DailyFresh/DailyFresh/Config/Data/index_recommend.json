@@ -1,0 +1,74 @@
+{
+  "data": {
+    "goods": [
+      {
+        "goodType": 2,
+        "img": "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1557829191471&di=5caab1d3fabef9308ce19100c8cbf3ec&imgtype=0&src=http%3A%2F%2Fpic21.nipic.com%2F20120606%2F9801164_164114621166_2.jpg",
+        "name": "商品名称1",
+        "price": "1990",
+        "link": "无",
+        "detail": "暗示法撒旦法萨芬沙发撒",
+        "goodsId": "001",
+        "originalPrice": "2100",
+        "category": "1"
+      },
+      {
+        "goodType": 2,
+        "img": "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1557829191471&di=126862bbf5a1969e5069e178c05938c2&imgtype=0&src=http%3A%2F%2Fimg3.redocn.com%2Ftupian%2F20141205%2Fyuxiangzhouzimeishi_3614862.jpg",
+        "name": "进入疼人",
+        "price": "1990",
+        "detail": "暗示法撒旦法萨芬沙发撒",
+        "link": "无",
+        "goodsId": "001",
+        "originalPrice": "2100",
+        "category": "1"
+      },
+      {
+        "goodType": 2,
+        "img": "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1557829191471&di=7ccfca0a774e745cf2df604575485acf&imgtype=0&src=http%3A%2F%2Fimg3.redocn.com%2Ftupian%2F20141126%2Ffashitudoubingfuben_3477169.jpg",
+        "name": "就要回家方便",
+        "detail": "暗示法撒旦法萨芬沙发撒",
+        "price": "1990",
+        "link": "无",
+        "goodsId": "001",
+        "originalPrice": "2100",
+        "category": "1"
+      },
+      {
+        "goodType": 0,
+        "img": "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1557829191471&di=3db6d710ef2236b07d1bbe02705238ad&imgtype=0&src=http%3A%2F%2Fwww.2ok.com.cn%2Fproductpic%2Fcqnsqsj%2Fpic_2015101611454435751.jpg",
+        "name": "起而我还",
+        "price": "1990",
+        "link": "无",
+        "detail": "暗示法撒旦法萨芬沙发撒",
+        "goodsId": "001",
+        "originalPrice": "2100",
+        "category": "1"
+      },
+      {
+        "goodType": 2,
+        "img": "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1557829191471&di=4b62fc37d61645ad56f60393c2a83519&imgtype=0&src=http%3A%2F%2Fimg1.qunarzz.com%2Ftravel%2Fd2%2F1501%2F69%2F695879bc0350d273cdb.jpg_r_487x650x95_30cb3bc4.jpg",
+        "name": "请问是对方",
+        "price": "1990",
+        "detail": "暗示法撒旦法萨芬沙发撒",
+        "link": "无",
+        "goodsId": "001",
+        "originalPrice": "2100",
+        "category": "1"
+      },
+      {
+        "goodType": 0,
+        "img": "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1557829191471&di=0725e0574426d3f82549d1b24854288b&imgtype=0&src=http%3A%2F%2Fy1.ifengimg.com%2Fd1f64336b4fb39ab%2F2013%2F0313%2Fre_513fe73230a04.jpg",
+        "name": "第三方放大",
+        "price": "1990",
+        "link": "无",
+        "detail": "暗示法撒旦法萨芬沙发撒",
+        "goodsId": "001",
+        "originalPrice": "2100",
+        "category": "1"
+      }
+    ]
+  },
+  "code": 200,
+  "msg": ""
+}

@@ -43,6 +43,7 @@
 #import "UIView+tool.h"
 #import "UIImage+tool.h"
 #import "SGEasyButton.h"
+#import "NSString+Size.h"
 
 
 //tool

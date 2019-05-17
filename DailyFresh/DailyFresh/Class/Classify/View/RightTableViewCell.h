@@ -12,6 +12,13 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface RightTableViewCell : UITableViewCell
 
+@property (nonatomic, strong) UIImageView *iconImageView;
+@property (nonatomic, strong) UILabel *titleLabel;
+@property (nonatomic, strong) UILabel *subtitleLabel;
+@property (nonatomic, strong) UILabel *priceLabel;
+@property (nonatomic, strong) UILabel *originPriceLabel;
+@property (nonatomic, strong) UIButton *shopcartBtn;
+
 @end
 
 NS_ASSUME_NONNULL_END

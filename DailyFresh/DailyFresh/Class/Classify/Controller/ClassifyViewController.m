@@ -58,7 +58,7 @@
     }];
     
     _contentView = [[UIView alloc] init];
-    _contentView.backgroundColor = [UIColor redColor];
+//    _contentView.backgroundColor = [UIColor redColor];
     [self.view addSubview:_contentView];
     
     [_contentView mas_makeConstraints:^(MASConstraintMaker *make) {
