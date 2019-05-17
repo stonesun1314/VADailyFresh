@@ -43,6 +43,16 @@ static VAMockDataSource *_instance;
     return _instance;
 }
 
+- (NSDictionary *)readJsonFromFileName:(NSString *)fileName{
+    NSString *jsonPath = [[NSBundle mainBundle] pathForResource:fileName ofType:@""];
+    NSData *data = [NSData dataWithContentsOfFile:jsonPath];
+    NSError *error = nil;
+    NSDictionary *result = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:&error];
+    NSLog(@"\n%@", [error localizedDescription]);
+    
+    return result;
+}
+
 - (NSArray *)homeCateList{
     NSArray *cateNameList = @[@"时令水果",@"新鲜蔬菜",@"肉禽蛋类",@"海鲜水产",@"乳品雪糕",@"粮油调味",@"烘焙糕点",@"酒水饮料",@"休闲零食",@"粽子速食",@"美妆百货",@"调味粮油",@"卤味熟食",@"邀请有礼"];
     return cateNameList;

@@ -18,6 +18,8 @@
 		040E3418228E9F4D0050756B /* index_common.json in Resources */ = {isa = PBXBuildFile; fileRef = 040E3413228E9F4D0050756B /* index_common.json */; };
 		040E3419228E9F4D0050756B /* index_recommend.json in Resources */ = {isa = PBXBuildFile; fileRef = 040E3414228E9F4D0050756B /* index_recommend.json */; };
 		040E341A228E9F4D0050756B /* index_top.json in Resources */ = {isa = PBXBuildFile; fileRef = 040E3415228E9F4D0050756B /* index_top.json */; };
+		040E341D228EA9F30050756B /* SecondCateModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 040E341C228EA9F30050756B /* SecondCateModel.m */; };
+		040E3420228EAF5C0050756B /* ClassifyRightHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 040E341F228EAF5C0050756B /* ClassifyRightHeaderView.m */; };
 		040E77BE228408B100CDED15 /* HomeHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 040E77BD228408B100CDED15 /* HomeHeaderView.m */; };
 		040E77C4228408FF00CDED15 /* HomeHorListView.m in Sources */ = {isa = PBXBuildFile; fileRef = 040E77C3228408FF00CDED15 /* HomeHorListView.m */; };
 		040E77C72284090E00CDED15 /* HomeVerListView.m in Sources */ = {isa = PBXBuildFile; fileRef = 040E77C62284090E00CDED15 /* HomeVerListView.m */; };
@@ -121,6 +123,10 @@
 		040E3413228E9F4D0050756B /* index_common.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = index_common.json; sourceTree = "<group>"; };
 		040E3414228E9F4D0050756B /* index_recommend.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = index_recommend.json; sourceTree = "<group>"; };
 		040E3415228E9F4D0050756B /* index_top.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = index_top.json; sourceTree = "<group>"; };
+		040E341B228EA9F30050756B /* SecondCateModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondCateModel.h; sourceTree = "<group>"; };
+		040E341C228EA9F30050756B /* SecondCateModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondCateModel.m; sourceTree = "<group>"; };
+		040E341E228EAF5C0050756B /* ClassifyRightHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ClassifyRightHeaderView.h; sourceTree = "<group>"; };
+		040E341F228EAF5C0050756B /* ClassifyRightHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ClassifyRightHeaderView.m; sourceTree = "<group>"; };
 		040E77BC228408B100CDED15 /* HomeHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeHeaderView.h; sourceTree = "<group>"; };
 		040E77BD228408B100CDED15 /* HomeHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeHeaderView.m; sourceTree = "<group>"; };
 		040E77C2228408FF00CDED15 /* HomeHorListView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeHorListView.h; sourceTree = "<group>"; };
@@ -518,6 +524,10 @@
 		04C7F9B22282B9FE00FD9C51 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				040E341B228EA9F30050756B /* SecondCateModel.h */,
+				040E341C228EA9F30050756B /* SecondCateModel.m */,
+				040E341E228EAF5C0050756B /* ClassifyRightHeaderView.h */,
+				040E341F228EAF5C0050756B /* ClassifyRightHeaderView.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1161,6 +1171,7 @@
 				04108D63228D5BF50065FB4F /* RightTableViewCell.m in Sources */,
 				04108D5A228D4C350065FB4F /* ClassifyLeftViewController.m in Sources */,
 				04C7F9C52282BA0600FD9C51 /* BaseNavigationController.m in Sources */,
+				040E341D228EA9F30050756B /* SecondCateModel.m in Sources */,
 				04F5C10A2285747100EE1D5A /* NSDate+Addition.m in Sources */,
 				040E77C4228408FF00CDED15 /* HomeHorListView.m in Sources */,
 				040A4A9A22896333001A8083 /* HomeHorListSection.m in Sources */,
@@ -1170,6 +1181,7 @@
 				04F5C0F22285600E00EE1D5A /* HomeMenuGridItem.m in Sources */,
 				04C7FA042282C41300FD9C51 /* VATabBarViewController.m in Sources */,
 				040A4A8D22895C40001A8083 /* VAHorCollectionView.m in Sources */,
+				040E3420228EAF5C0050756B /* ClassifyRightHeaderView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -9,6 +9,8 @@
 #import "ClassifyRightViewController.h"
 #import "RightTableViewCell.h"
 #import "SecondCateView.h"
+#import "SecondCateModel.h"
+#import "ClassifyRightHeaderView.h"
 
 @interface ClassifyRightViewController ()<UITableViewDelegate,UITableViewDataSource>
 
@@ -76,16 +78,33 @@
 
 #pragma mark -- tableView
 
-- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section{
-    return @"新人大礼包";//[NSString stringWithFormat:@"新人大礼包-%ld",section];// @"新人大礼包";
+//- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section{
+//    return @"新人大礼包";//[NSString stringWithFormat:@"新人大礼包-%ld",section];// @"新人大礼包";
+//}
+
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
+    static NSString *header = @"header";
+    
+    ClassifyRightHeaderView *headerView = [tableView dequeueReusableHeaderFooterViewWithIdentifier:header];
+    if (!headerView) {
+        headerView = [[ClassifyRightHeaderView alloc] initWithReuseIdentifier:header];
+    }
+    SecondCateModel *cateModel = [_dataList objectAtIndex:section];
+    headerView.textLabel.text = cateModel.cateName;
+    return headerView;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
+    return 20.f;
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
-    return 3;
+    return _dataList.count;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 10;
+    SecondCateModel *model = [_dataList objectAtIndex:section];
+    return model.goods.count;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -98,6 +117,12 @@
     if (!cell) {
         cell = [[RightTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identify];
     }
+    
+    SecondCateModel *cateModel = [_dataList objectAtIndex:indexPath.section];
+    GoodsItemModel *goodsModel = [cateModel.goods objectAtIndex:indexPath.row];
+    
+    cell.model = goodsModel;
+    
     
     return cell;
 }

@@ -7,10 +7,16 @@
 //
 
 #import "BaseModel.h"
+#import "GoodsItemModel.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface SecondCateModel : BaseModel
+
+@property (nonatomic, strong) NSString *cateId;
+@property (nonatomic, strong) NSString *cateName;
+@property (nonatomic, strong) NSString *cateSubName;
+@property (nonatomic, strong) NSMutableArray <GoodsItemModel *>*goods;
 
 @end
 

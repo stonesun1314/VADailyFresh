@@ -104,4 +104,13 @@
     // Configure the view for the selected state
 }
 
+- (void)setModel:(GoodsItemModel *)model{
+    _model = model;
+    [_iconImageView sd_setImageWithURL:[NSURL URLWithString:model.img] placeholderImage:[UIImage imageNamed:@"df_discover_avatar"]];
+    _titleLabel.text = model.name;
+    _subtitleLabel.text = model.name;
+    _priceLabel.text = model.price;
+    _originPriceLabel.text = model.originalPrice;
+}
+
 @end

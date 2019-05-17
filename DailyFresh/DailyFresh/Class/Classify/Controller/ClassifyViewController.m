@@ -11,6 +11,7 @@
 #import "ClassifyNavView.h"
 #import "ClassifyLeftViewController.h"
 #import "ClassifyRightViewController.h"
+#import "SecondCateModel.h"
 
 
 
@@ -23,6 +24,9 @@
 @property (nonatomic, strong) ClassifyRightViewController *rightVC;
 
 @property (nonatomic, strong) NSArray *leftCateList;
+@property (nonatomic, strong) NSMutableArray *rightCateList;
+
+
 
 @end
 
@@ -45,6 +49,22 @@
 
 - (void)initDataSource {
     _leftCateList = [[VAMockDataSource shareInstance] classifyFirstCateList];
+    NSDictionary *dictionary = [[VAMockDataSource shareInstance] readJsonFromFileName:@"cate_goods.json"];
+    VALog(@"%@",dictionary);
+    
+    NSArray *cateList = [[dictionary objectForKey:@"data"] objectForKey:@"cateList"];
+    
+    _rightCateList = [NSMutableArray new];
+    
+    for (NSDictionary *dict in cateList) {
+        SecondCateModel *model = [SecondCateModel yy_modelWithJSON:dict];
+        [_rightCateList addObject:model];
+        
+    }
+    
+
+    
+    
 }
 
 - (void)setupUI{
@@ -74,6 +94,7 @@
     [self.view addSubview:_leftVC.view];
     
     _rightVC = [[ClassifyRightViewController alloc] init];
+    _rightVC.dataList = _rightCateList;
     [self addChildViewController:_rightVC];
     
     [self.view addSubview:_rightVC.view];

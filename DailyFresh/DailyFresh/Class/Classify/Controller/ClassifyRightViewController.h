@@ -13,7 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface ClassifyRightViewController : BaseViewController
 
 @property (nonatomic, strong) UITableView *aTableView;
-@property (nonatomic, strong) NSArray *dataList;
+@property (nonatomic, strong) NSMutableArray *dataList;
 
 @end
 

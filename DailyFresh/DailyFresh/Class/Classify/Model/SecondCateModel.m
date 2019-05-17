@@ -10,4 +10,9 @@
 
 @implementation SecondCateModel
 
++(NSDictionary *)modelContainerPropertyGenericClass
+{
+    return @{@"goods" : [GoodsItemModel class]};
+}
+
 @end

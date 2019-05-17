@@ -14,6 +14,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 +(instancetype)shareInstance;
 
+- (NSDictionary *)readJsonFromFileName:(NSString *)fileName;
+
 - (NSArray *)homeCateList;
 
 - (NSArray *)homeHorGoodsItemList;

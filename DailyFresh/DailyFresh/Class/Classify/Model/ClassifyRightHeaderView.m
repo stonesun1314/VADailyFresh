@@ -8,14 +8,22 @@
 
 #import "ClassifyRightHeaderView.h"
 
+@interface ClassifyRightHeaderView ()
+
+@end
+
 @implementation ClassifyRightHeaderView
 
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect {
-    // Drawing code
+- (instancetype)initWithReuseIdentifier:(NSString *)reuseIdentifier{
+    self = [super initWithReuseIdentifier:reuseIdentifier];
+    if (self) {
+        self.backgroundColor = [UIColor whiteColor];
+        self.contentView.backgroundColor = [UIColor whiteColor];
+        
+        self.textLabel.textColor = kUISubTitleColor;
+        self.textLabel.font = [UIFont systemFontOfSize:12.f];
+    }
+    return self;
 }
-*/
 
 @end
