@@ -12,6 +12,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface ClassifyRightHeaderView : UITableViewHeaderFooterView
 
+@property (nonatomic, strong) UILabel *titleLabel;
+
 @end
 
 NS_ASSUME_NONNULL_END

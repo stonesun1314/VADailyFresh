@@ -36,15 +36,21 @@
 }
 
 - (void)setupUI{
+    WeakSelf
     _headerView = [[UIView alloc] init];
 //    _headerView.backgroundColor = [UIColor blueColor];
     [self.view addSubview:_headerView];
     
     _secondCateView = [[SecondCateView alloc] init];
-    
+    _secondCateView.dataList = self.dataList;
+    _secondCateView.selectedCateBlock = ^(NSInteger index, SecondCateModel * _Nonnull model) {
+        if (weakSelf.dataList.count > index) {
+            [weakSelf.aTableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:index] atScrollPosition:UITableViewScrollPositionTop animated:YES];
+        }
+    };
     [_headerView addSubview:_secondCateView];
     
-    _secondCateView.dataList = [[VAMockDataSource shareInstance] classifySecondCateList];
+    
     
     [_headerView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.right.top.mas_equalTo(self.view);
@@ -54,9 +60,6 @@
     [_secondCateView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.right.top.bottom.mas_equalTo(self.headerView);
     }];
-    
-//    _secondCateView.backgroundColor = [UIColor redColor];
-    
     
 
     _aTableView = [[UITableView alloc] init];
@@ -68,7 +71,6 @@
 
     [self.view addSubview:_aTableView];
 
-    WeakSelf
     
     [_aTableView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.right.bottom.mas_equalTo(self.view);
@@ -90,12 +92,12 @@
         headerView = [[ClassifyRightHeaderView alloc] initWithReuseIdentifier:header];
     }
     SecondCateModel *cateModel = [_dataList objectAtIndex:section];
-    headerView.textLabel.text = cateModel.cateName;
+    headerView.titleLabel.text = cateModel.cateName;
     return headerView;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
-    return 20.f;
+    return 30.f;
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{

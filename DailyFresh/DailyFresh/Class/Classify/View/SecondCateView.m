@@ -7,8 +7,11 @@
 //
 
 #import "SecondCateView.h"
+#import "SecondCateModel.h"
 
 @interface TagButton : UIButton
+
+@property (nonatomic, strong) SecondCateModel *model;
 
 @end
 
@@ -97,19 +100,19 @@
     
     UIView *lastObj = nil;
     _scrollViewArray = [NSMutableArray new];
-    for (NSString *tag in _dataList) {
+    for (SecondCateModel *model in _dataList) {
         
-        NSInteger index = [_dataList indexOfObject:tag];
+        NSInteger index = [_dataList indexOfObject:model];
         TagButton *label = [[TagButton alloc] init];
-//        label.backgroundColor = KColorRandomColor;
         label.tag = index;
-        [label setTitle:tag forState:UIControlStateNormal];
+        [label setTitle:model.cateName forState:UIControlStateNormal];
+        label.model = model;
         label.titleLabel.font = [UIFont systemFontOfSize:12.f];
         [self.scrollContentView addSubview:label];
         [label addTarget:self action:@selector(handleTag:) forControlEvents:UIControlEventTouchUpInside];
         [_scrollViewArray addObject:label];
         
-        CGSize size = [tag sizeWithFont:label.titleLabel.font maxSize:CGSizeMake(100, 20)];
+        CGSize size = [model.cateName sizeWithFont:label.titleLabel.font maxSize:CGSizeMake(100, 20)];
         VALog(@"%@--%@",label.currentTitle,NSStringFromCGSize(size));
         
         if (index == 0) {
@@ -156,16 +159,15 @@
         
         if (_scrollViewArray.count > _selectedIndex) {
             TagButton *preBtn = [_scrollViewArray objectAtIndex:_selectedIndex];
-            
             preBtn.selected = NO;
         }
-
-        
-        
     }
     
     sender.selected = YES;
     _selectedIndex = sender.tag;
+    if (self.selectedCateBlock) {
+        self.selectedCateBlock(_selectedIndex,nil);
+    }
 }
 
 

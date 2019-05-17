@@ -7,12 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SecondCateModel.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface SecondCateView : UIView
 
 @property (nonatomic, strong) NSArray *dataList;
+
+@property (nonatomic, strong) void(^selectedCateBlock)(NSInteger index,SecondCateModel *model);
 
 @end
 
