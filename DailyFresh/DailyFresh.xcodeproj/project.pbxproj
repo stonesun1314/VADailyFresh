@@ -14,6 +14,10 @@
 		04019C81229292C600338A64 /* HomeHeaderModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 04019C80229292C600338A64 /* HomeHeaderModel.m */; };
 		04019C84229292D300338A64 /* HomeBannerModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 04019C83229292D300338A64 /* HomeBannerModel.m */; };
 		04019C872292933A00338A64 /* HomeTopAdModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 04019C862292933A00338A64 /* HomeTopAdModel.m */; };
+		04019C892292A88400338A64 /* find_data.json in Resources */ = {isa = PBXBuildFile; fileRef = 04019C882292A88400338A64 /* find_data.json */; };
+		04019C8C2292AFF600338A64 /* DiscoveryTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04019C8B2292AFF600338A64 /* DiscoveryTableViewCell.m */; };
+		04019C8F2292D71A00338A64 /* DiscoverySubViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04019C8E2292D71A00338A64 /* DiscoverySubViewController.m */; };
+		04019C922292E3F800338A64 /* DisArticalModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 04019C912292E3F800338A64 /* DisArticalModel.m */; };
 		040A4A8D22895C40001A8083 /* VAHorCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 040A4A8C22895C40001A8083 /* VAHorCollectionView.m */; };
 		040A4A9022895C60001A8083 /* VAHorCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 040A4A8F22895C60001A8083 /* VAHorCollectionCell.m */; };
 		040A4A9722895F34001A8083 /* GoodsItemModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 040A4A9622895F34001A8083 /* GoodsItemModel.m */; };
@@ -127,6 +131,13 @@
 		04019C83229292D300338A64 /* HomeBannerModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeBannerModel.m; sourceTree = "<group>"; };
 		04019C852292933A00338A64 /* HomeTopAdModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeTopAdModel.h; sourceTree = "<group>"; };
 		04019C862292933A00338A64 /* HomeTopAdModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeTopAdModel.m; sourceTree = "<group>"; };
+		04019C882292A88400338A64 /* find_data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = find_data.json; sourceTree = "<group>"; };
+		04019C8A2292AFF600338A64 /* DiscoveryTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DiscoveryTableViewCell.h; sourceTree = "<group>"; };
+		04019C8B2292AFF600338A64 /* DiscoveryTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DiscoveryTableViewCell.m; sourceTree = "<group>"; };
+		04019C8D2292D71A00338A64 /* DiscoverySubViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DiscoverySubViewController.h; sourceTree = "<group>"; };
+		04019C8E2292D71A00338A64 /* DiscoverySubViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DiscoverySubViewController.m; sourceTree = "<group>"; };
+		04019C902292E3F800338A64 /* DisArticalModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DisArticalModel.h; sourceTree = "<group>"; };
+		04019C912292E3F800338A64 /* DisArticalModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DisArticalModel.m; sourceTree = "<group>"; };
 		040A4A8B22895C40001A8083 /* VAHorCollectionView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VAHorCollectionView.h; sourceTree = "<group>"; };
 		040A4A8C22895C40001A8083 /* VAHorCollectionView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VAHorCollectionView.m; sourceTree = "<group>"; };
 		040A4A8E22895C60001A8083 /* VAHorCollectionCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VAHorCollectionCell.h; sourceTree = "<group>"; };
@@ -368,6 +379,7 @@
 		040E3410228E9F4D0050756B /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				04019C882292A88400338A64 /* find_data.json */,
 				040E3411228E9F4D0050756B /* cate_goods.json */,
 				040E3412228E9F4D0050756B /* cate_list.json */,
 				040E3413228E9F4D0050756B /* index_common.json */,
@@ -777,6 +789,8 @@
 			children = (
 				04C7F9F02282C34B00FD9C51 /* DiscoveryViewController.h */,
 				04C7F9F12282C34B00FD9C51 /* DiscoveryViewController.m */,
+				04019C8D2292D71A00338A64 /* DiscoverySubViewController.h */,
+				04019C8E2292D71A00338A64 /* DiscoverySubViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -784,6 +798,8 @@
 		04C7F9EB2282C2AA00FD9C51 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				04019C902292E3F800338A64 /* DisArticalModel.h */,
+				04019C912292E3F800338A64 /* DisArticalModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -791,6 +807,8 @@
 		04C7F9EC2282C2AA00FD9C51 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				04019C8A2292AFF600338A64 /* DiscoveryTableViewCell.h */,
+				04019C8B2292AFF600338A64 /* DiscoveryTableViewCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1036,6 +1054,7 @@
 				040E3417228E9F4D0050756B /* cate_list.json in Resources */,
 				040E3419228E9F4D0050756B /* index_recommend.json in Resources */,
 				04C7F9832282AA1900FD9C51 /* Main.storyboard in Resources */,
+				04019C892292A88400338A64 /* find_data.json in Resources */,
 				040E3418228E9F4D0050756B /* index_common.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1152,6 +1171,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04019C8F2292D71A00338A64 /* DiscoverySubViewController.m in Sources */,
 				04D1A357228C130B00C3F597 /* SGPageTitleView.m in Sources */,
 				04F5C10E2285747100EE1D5A /* UIButton+SGEvent.m in Sources */,
 				04C7F9DC2282BA1600FD9C51 /* UIView+tool.m in Sources */,
@@ -1199,10 +1219,12 @@
 				04C7F9D92282BA1600FD9C51 /* UIImage+tool.m in Sources */,
 				04C7F97D2282AA1900FD9C51 /* AppDelegate.m in Sources */,
 				04D1A356228C130B00C3F597 /* SGPageContentScrollView.m in Sources */,
+				04019C8C2292AFF600338A64 /* DiscoveryTableViewCell.m in Sources */,
 				04F5C10D2285747100EE1D5A /* UIButton+SGCountdown.m in Sources */,
 				04F5C0FB2285709A00EE1D5A /* UIColor+Additions.m in Sources */,
 				040A4A9022895C60001A8083 /* VAHorCollectionCell.m in Sources */,
 				04E6C325228A6941007C9548 /* VAMockDataSource.m in Sources */,
+				04019C922292E3F800338A64 /* DisArticalModel.m in Sources */,
 				040A4A9722895F34001A8083 /* GoodsItemModel.m in Sources */,
 				04019C7E229290D000338A64 /* HomeCateSectionModel.m in Sources */,
 				04C7F9F52282C35D00FD9C51 /* MineViewController.m in Sources */,

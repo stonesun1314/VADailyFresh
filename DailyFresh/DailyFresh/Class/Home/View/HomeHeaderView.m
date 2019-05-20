@@ -77,9 +77,6 @@
 //    _cateMenuContentView.backgroundColor = [UIColor blueColor];
     
 
-    
-
-
 }
 
 - (void)setCateModel:(HomeCateSectionModel *)cateModel{
@@ -89,7 +86,6 @@
 
 - (void)layoutCateItems{
     
-
     NSMutableArray *temp = [NSMutableArray new];
     CGFloat itemHeight = 75.f;
     CGFloat itemWidth = (kScreenWidth-VAMargin*2)/5;

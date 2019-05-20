@@ -1,0 +1,125 @@
+{
+  "data": {
+    "newsList": [
+      {
+        "userName": "大礼包",
+        "userHead": "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1557829191471&di=126862bbf5a1969e5069e178c05938c2&imgtype=0&src=http%3A%2F%2Fimg3.redocn.com%2Ftupian%2F20141205%2Fyuxiangzhouzimeishi_3614862.jpg",
+        "articleName": "日式亲自盖饭--这款日剧出镜率很高，你也能做",
+        "articleId": "1",
+        "articleImg": "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1557829191471&di=5caab1d3fabef9308ce19100c8cbf3ec&imgtype=0&src=http%3A%2F%2Fpic21.nipic.com%2F20120606%2F9801164_164114621166_2.jpg",
+        "browseNum": "1000",
+        "isTopType": true
+      },
+      {
+        "isTopType": false,
+        "articleImg": "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1557829191471&di=5caab1d3fabef9308ce19100c8cbf3ec&imgtype=0&src=http%3A%2F%2Fpic21.nipic.com%2F20120606%2F9801164_164114621166_2.jpg",
+        "articleName": "日式亲自盖饭--这款日剧出镜率很高，你也能做",
+        "browseNum": "1990",
+        "articleId": "001",
+        "userHead": "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1557829191471&di=126862bbf5a1969e5069e178c05938c2&imgtype=0&src=http%3A%2F%2Fimg3.redocn.com%2Ftupian%2F20141205%2Fyuxiangzhouzimeishi_3614862.jpg",
+        "userName": "认为和我"
+      },
+      {
+        "isTopType": false,
+        "articleImg": "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1557829191471&di=126862bbf5a1969e5069e178c05938c2&imgtype=0&src=http%3A%2F%2Fimg3.redocn.com%2Ftupian%2F20141205%2Fyuxiangzhouzimeishi_3614862.jpg",
+        "articleName": "日式亲自盖饭--这款日剧出镜率很高，你也能做",
+        "browseNum": "1990",
+        "articleId": "001",
+        "userHead": "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1557829191471&di=126862bbf5a1969e5069e178c05938c2&imgtype=0&src=http%3A%2F%2Fimg3.redocn.com%2Ftupian%2F20141205%2Fyuxiangzhouzimeishi_3614862.jpg",
+        "userName": "范德萨发"
+      },
+      {
+        "isTopType": false,
+        "articleImg": "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1557829191471&di=7ccfca0a774e745cf2df604575485acf&imgtype=0&src=http%3A%2F%2Fimg3.redocn.com%2Ftupian%2F20141126%2Ffashitudoubingfuben_3477169.jpg",
+        "articleName": "日式亲自盖饭--这款日剧出镜率很高，你也能做",
+        "browseNum": "1990",
+        "articleId": "001",
+        "userHead": "http://hbimg.b0.upaiyun.com/cf4dee008759c15f72c7741c4012c5cc96593141899c4-cAOni6_fw658",
+        "userName": "华盛顿"
+      },
+      {
+        "isTopType": false,
+        "articleImg": "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1557829191471&di=3db6d710ef2236b07d1bbe02705238ad&imgtype=0&src=http%3A%2F%2Fwww.2ok.com.cn%2Fproductpic%2Fcqnsqsj%2Fpic_2015101611454435751.jpg",
+        "articleName": "日式亲自盖饭--这款日剧出镜率很高，你也能做",
+        "browseNum": "1990",
+        "articleId": "001",
+        "userHead": "http://hbimg.b0.upaiyun.com/cf4dee008759c15f72c7741c4012c5cc96593141899c4-cAOni6_fw658",
+        "userName": "爱迪生发生过"
+      },
+      {
+        "isTopType": true,
+        "articleImg": "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1557829191471&di=4b62fc37d61645ad56f60393c2a83519&imgtype=0&src=http%3A%2F%2Fimg1.qunarzz.com%2Ftravel%2Fd2%2F1501%2F69%2F695879bc0350d273cdb.jpg_r_487x650x95_30cb3bc4.jpg",
+        "articleName": "商品名称1",
+        "browseNum": "1990",
+        "articleId": "001",
+        "userHead": "http://hbimg.b0.upaiyun.com/cf4dee008759c15f72c7741c4012c5cc96593141899c4-cAOni6_fw658",
+        "userName": "夫妻同时大幅"
+      },
+      {
+        "isTopType": false,
+        "articleImg": "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1557829191471&di=0725e0574426d3f82549d1b24854288b&imgtype=0&src=http%3A%2F%2Fy1.ifengimg.com%2Fd1f64336b4fb39ab%2F2013%2F0313%2Fre_513fe73230a04.jpg",
+        "articleName": "商品名称1",
+        "browseNum": "1990",
+        "articleId": "001",
+        "userHead": "http://hbimg.b0.upaiyun.com/cf4dee008759c15f72c7741c4012c5cc96593141899c4-cAOni6_fw658",
+        "userName": "且无人确实大"
+      },
+      {
+        "isTopType": true,
+        "articleImg": "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1557829191471&di=5caab1d3fabef9308ce19100c8cbf3ec&imgtype=0&src=http%3A%2F%2Fpic21.nipic.com%2F20120606%2F9801164_164114621166_2.jpg",
+        "articleName": "商品名称1",
+        "browseNum": "1990",
+        "articleId": "001",
+        "userHead": "http://hbimg.b0.upaiyun.com/cf4dee008759c15f72c7741c4012c5cc96593141899c4-cAOni6_fw658",
+        "userName": "区分"
+      },
+      {
+        "isTopType": false,
+        "articleImg": "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1557829191471&di=126862bbf5a1969e5069e178c05938c2&imgtype=0&src=http%3A%2F%2Fimg3.redocn.com%2Ftupian%2F20141205%2Fyuxiangzhouzimeishi_3614862.jpg",
+        "articleName": "商品名称1",
+        "browseNum": "1990",
+        "articleId": "001",
+        "userHead": "http://hbimg.b0.upaiyun.com/cf4dee008759c15f72c7741c4012c5cc96593141899c4-cAOni6_fw658",
+        "userName": "为全球微风"
+      },
+      {
+        "isTopType": false,
+        "articleImg": "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1557829191471&di=7ccfca0a774e745cf2df604575485acf&imgtype=0&src=http%3A%2F%2Fimg3.redocn.com%2Ftupian%2F20141126%2Ffashitudoubingfuben_3477169.jpg",
+        "articleName": "商品名称1",
+        "browseNum": "1990",
+        "articleId": "001",
+        "userHead": "http://hbimg.b0.upaiyun.com/cf4dee008759c15f72c7741c4012c5cc96593141899c4-cAOni6_fw658",
+        "userName": " 安然股份"
+      },
+      {
+        "isTopType": true,
+        "articleImg": "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1557829191471&di=3db6d710ef2236b07d1bbe02705238ad&imgtype=0&src=http%3A%2F%2Fwww.2ok.com.cn%2Fproductpic%2Fcqnsqsj%2Fpic_2015101611454435751.jpg",
+        "articleName": "商品名称1",
+        "browseNum": "1990",
+        "articleId": "001",
+        "userHead": "http://hbimg.b0.upaiyun.com/cf4dee008759c15f72c7741c4012c5cc96593141899c4-cAOni6_fw658",
+        "userName": "爱的我"
+      },
+      {
+        "isTopType": false,
+        "articleImg": "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1557829191471&di=4b62fc37d61645ad56f60393c2a83519&imgtype=0&src=http%3A%2F%2Fimg1.qunarzz.com%2Ftravel%2Fd2%2F1501%2F69%2F695879bc0350d273cdb.jpg_r_487x650x95_30cb3bc4.jpg",
+        "articleName": "商品名称1",
+        "browseNum": "1990",
+        "articleId": "001",
+        "userHead": "http://hbimg.b0.upaiyun.com/cf4dee008759c15f72c7741c4012c5cc96593141899c4-cAOni6_fw658",
+        "userName": "沙发大是大非"
+      },
+      {
+        "isTopType": false,
+        "articleImg": "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1557829191471&di=0725e0574426d3f82549d1b24854288b&imgtype=0&src=http%3A%2F%2Fy1.ifengimg.com%2Fd1f64336b4fb39ab%2F2013%2F0313%2Fre_513fe73230a04.jpg",
+        "articleName": "商品名称1",
+        "browseNum": "1990",
+        "articleId": "001",
+        "userHead": "http://hbimg.b0.upaiyun.com/cf4dee008759c15f72c7741c4012c5cc96593141899c4-cAOni6_fw658",
+        "userName": "第三方噶"
+      }
+    ]
+  },
+  "code": 200,
+  "msg": ""
+}

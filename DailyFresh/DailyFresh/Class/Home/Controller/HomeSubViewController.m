@@ -31,6 +31,7 @@
     // Do any additional setup after loading the view.
     self.view.backgroundColor = kUIContentBackgroundColor;
     
+
     [self setupUI];
 }
 
@@ -89,16 +90,12 @@
         
     }
     
-
-
-    
     HomeVerListSection *section2 = [[HomeVerListSection alloc] init];
     
     [_contentView addSubview:section2];
     
     section2.goodsItemList = self.verGoodsItemList;
-    
-    
+
     
     section2.sd_layout.leftEqualToView(self.view).topSpaceToView(lastObj, 10.f).widthRatioToView(_contentView, 1.0);
     [_contentView setupAutoContentSizeWithBottomView:section2 bottomMargin:20.f];
