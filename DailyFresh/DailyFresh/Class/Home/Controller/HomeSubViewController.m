@@ -60,20 +60,36 @@
     
     lastObj = _headerView;
     
-    HomeHorListSection *section1 = [[HomeHorListSection alloc] initWithType:HomeHorListTypeTitle];
-    
-    [_contentView addSubview:section1];
-    
-    NSArray * goodsItemList = [[VAMockDataSource shareInstance] homeHorGoodsItemList];
-    section1.goodsItemList = goodsItemList;
-    
-   
-    
-    HomeHorListSection *section11 = [[HomeHorListSection alloc] initWithType:HomeHorListTypeTopAd];
-    [_contentView addSubview:section11];
+    if (_limTimeModel) {
+        HomeHorListSection *section1 = [[HomeHorListSection alloc] initWithType:HomeHorListTypeTitle];
+        
+        [_contentView addSubview:section1];
+        
+        section1.name = _limTimeModel.name;
+        section1.goodsItemList = _limTimeModel.subItem;
+        
+        section1.sd_layout.leftEqualToView(_contentView).topSpaceToView(_headerView, 10.f).widthRatioToView(_contentView, 1.0);
+        
+        lastObj = section1;
+    }
 
-    NSArray * goodsItemList11 = [[VAMockDataSource shareInstance] homeHorGoodsItemList];
-    section11.goodsItemList = goodsItemList11;
+    
+    if (_topAdModelArr.count > 0) {
+        
+        for (HomeTopAdSectionModel *model in _topAdModelArr) {
+            HomeHorListSection *section11 = [[HomeHorListSection alloc] initWithType:HomeHorListTypeTopAd];
+            [_contentView addSubview:section11];
+            
+            section11.topAdImg = model.img;
+            section11.goodsItemList = model.subItem;
+            section11.sd_layout.leftEqualToView(_contentView).topSpaceToView(lastObj, 10.f).widthRatioToView(_contentView, 1.0);
+            
+            lastObj = section11;
+        }
+        
+    }
+    
+
 
     
     HomeVerListSection *section2 = [[HomeVerListSection alloc] init];
@@ -82,11 +98,13 @@
     
     section2.goodsItemList = self.verGoodsItemList;
     
-    section1.sd_layout.leftEqualToView(_contentView).topSpaceToView(_headerView, 10.f).widthRatioToView(_contentView, 1.0);
-    section11.sd_layout.leftEqualToView(_contentView).topSpaceToView(section1, 10.f).widthRatioToView(_contentView, 1.0);
-    section2.sd_layout.leftEqualToView(section11).topSpaceToView(section11, 10.f).widthRatioToView(_contentView, 1.0);
+    
+    
+    section2.sd_layout.leftEqualToView(self.view).topSpaceToView(lastObj, 10.f).widthRatioToView(_contentView, 1.0);
     [_contentView setupAutoContentSizeWithBottomView:section2 bottomMargin:20.f];
 }
+
+
 
 
 @end

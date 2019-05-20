@@ -56,6 +56,7 @@ static NSString *CellIdentiifer = @"CellIdentiifer";
         _titleLabel = [[UILabel alloc] init];
         _titleLabel.numberOfLines = 1;
         _titleLabel.text = @"新人首场免单";
+        _titleLabel.text = self.name;
         _titleLabel.textColor = kUITitleColor;
         _titleLabel.font = [UIFont systemFontOfSize:kUITitleFontsize];
         [_header addSubview:_titleLabel];
@@ -68,7 +69,8 @@ static NSString *CellIdentiifer = @"CellIdentiifer";
         _header.sd_layout.heightIs(50.f);
     }else if (_type == HomeHorListTypeTopAd){
         _imageView = [[UIImageView alloc] init];
-        _imageView.backgroundColor = [UIColor blueColor];
+//        _imageView.backgroundColor = [UIColor blueColor];
+        [_imageView sd_setImageWithURL:[NSURL URLWithString:self.topAdImg] placeholderImage:[UIImage imageNamed:@"df_discover_avatar"]];
         [_header addSubview:_imageView];
         
         _imageView.sd_layout.leftSpaceToView(_header, VAMargin).rightSpaceToView(_header, VAMargin).topSpaceToView(_header, 10.f).heightIs(110.f);
@@ -101,6 +103,16 @@ static NSString *CellIdentiifer = @"CellIdentiifer";
     
     [self setupAutoHeightWithBottomView:_collectionView bottomMargin:0];
     
+}
+
+- (void)setName:(NSString *)name{
+    _name = name;
+    _titleLabel.text = _name;
+}
+
+- (void)setTopAdImg:(NSString *)topAdImg{
+    _topAdImg = topAdImg;
+    [_imageView sd_setImageWithURL:[NSURL URLWithString:self.topAdImg] placeholderImage:[UIImage imageNamed:@"df_discover_avatar"]];
 }
 
 

@@ -22,6 +22,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, assign) HomeHorListType type;
 @property (nonatomic, strong) UICollectionView *collectionView;
 @property (nonatomic, strong) NSString *topAdImg;
+@property (nonatomic, strong) NSString *name;
 @property (nonatomic, strong) NSArray <GoodsItemModel *>*goodsItemList;
 
 - (instancetype)initWithType:(HomeHorListType)type;

@@ -146,6 +146,7 @@
 //        TestViewController *vc = [[TestViewController alloc] init];
 //        [childVCArr addObject:vc];
         _viewController = [[HomeSubViewController alloc] init];
+        _viewController.limTimeModel = _limTimeModel;
         _viewController.topAdModelArr = _topSectionArr;
         _viewController.cateSectionModel = _cateSectionModel;
         _viewController.verGoodsItemList = _verGoodsItemList;
