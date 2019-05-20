@@ -17,7 +17,9 @@ static NSString *CellIdentiifer = @"CellIdentiifer";
 
 @property (nonatomic, strong) UIView *header;
 @property (nonatomic, strong) UILabel *titleLabel;
-@property (nonatomic, strong) UIImageView *imageView;
+@property (nonatomic, strong) UIImageView *topImageView;
+
+@property (nonatomic, assign) HomeHorListType type;
 
 @end
 
@@ -28,8 +30,6 @@ static NSString *CellIdentiifer = @"CellIdentiifer";
     if (self) {
         self.backgroundColor = [UIColor whiteColor];
         _type = type;
-        
-        [self setupUI];
     }
     return self;
     
@@ -38,46 +38,29 @@ static NSString *CellIdentiifer = @"CellIdentiifer";
 - (instancetype)initWithFrame:(CGRect)frame{
     self = [super initWithFrame:frame];
     if (self) {
-        self.backgroundColor = [UIColor whiteColor];
-       
+        [self setupUI];
     }
     return self;
 }
 
 - (void)setupUI{
     
+    WeakSelf
+    
     _header = [[UIView alloc] init];
     [self addSubview:_header];
     
+    _header.sd_layout.leftEqualToView(self).topEqualToView(self).heightIs(50.f).widthRatioToView(self, 1.0);
     
-    _header.sd_layout.leftEqualToView(self).topEqualToView(self).widthRatioToView(self, 1.0);
-    
-    if (_type == HomeHorListTypeTitle) {
-        _titleLabel = [[UILabel alloc] init];
-        _titleLabel.numberOfLines = 1;
-        _titleLabel.text = @"新人首场免单";
-        _titleLabel.textColor = kUITitleColor;
-        _titleLabel.font = [UIFont systemFontOfSize:kUITitleFontsize];
-        [_header addSubview:_titleLabel];
-        
-        //    _titleLabel.backgroundColor = [UIColor orangeColor];
-        
-        _titleLabel.sd_layout.leftSpaceToView(_header, VAMargin).centerYEqualToView(_header).heightIs(30.f);
-        [_titleLabel setSingleLineAutoResizeWithMaxWidth:200.f];
-        
-        _header.sd_layout.heightIs(50.f);
-    }else if (_type == HomeHorListTypeTopAd){
-        _imageView = [[UIImageView alloc] init];
-        _imageView.backgroundColor = [UIColor blueColor];
-        [_header addSubview:_imageView];
-        
-        _imageView.sd_layout.leftSpaceToView(_header, VAMargin).rightSpaceToView(_header, VAMargin).topSpaceToView(_header, 10.f).heightIs(110.f);
-        
-        [_header setupAutoHeightWithBottomView:_imageView bottomMargin:10.f];
-    }
+    _titleLabel = [[UILabel alloc] init];
+    _titleLabel.numberOfLines = 1;
+    _titleLabel.text = @"新人首场免单";
+    _titleLabel.textColor = kUITitleColor;
+    _titleLabel.font = [UIFont systemFontOfSize:kUITitleFontsize];
+    [_header addSubview:_titleLabel];
 
-    
-    
+    _titleLabel.sd_layout.leftSpaceToView(_header, VAMargin).centerYEqualToView(_header).heightIs(30.f);
+    [_titleLabel setSingleLineAutoResizeWithMaxWidth:200.f];
     
     UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc]init];
     flowLayout.itemSize = CGSizeMake(105, 170);
@@ -93,14 +76,13 @@ static NSString *CellIdentiifer = @"CellIdentiifer";
     self.collectionView.backgroundColor = [UIColor whiteColor];
     [self addSubview:_collectionView];
     
-    _collectionView.sd_layout.widthRatioToView(self, 1.0).heightIs(170.f).leftEqualToView(self).topSpaceToView(_header, 10.f);
+    _collectionView.sd_layout.widthRatioToView(self, 1.0).heightIs(170.f).leftEqualToView(self).topSpaceToView(self, 50.f);
     
     [_collectionView setNeedsDisplay];
     
     [self.collectionView registerClass:[HomeHorCollectionViewCell class] forCellWithReuseIdentifier:CellIdentiifer];
     
-    [self setupAutoHeightWithBottomView:_collectionView bottomMargin:0];
-    
+    [self setupAutoHeightWithBottomView:_collectionView bottomMargin:20];
 }
 
 

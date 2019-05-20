@@ -71,7 +71,6 @@
 
     [self.view addSubview:_aTableView];
 
-    
     [_aTableView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.right.bottom.mas_equalTo(self.view);
         make.top.mas_equalTo(weakSelf.headerView.mas_bottom);

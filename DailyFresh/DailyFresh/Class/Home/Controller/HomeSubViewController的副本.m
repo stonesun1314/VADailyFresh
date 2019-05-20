@@ -29,7 +29,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.view.backgroundColor = kUIContentBackgroundColor;
+    self.view.backgroundColor = kMainBackgroundColor;
     
     [self setupUI];
 }
@@ -37,7 +37,6 @@
 - (void)setupUI{
     
     _contentView = [[UIScrollView alloc] initWithFrame:self.view.bounds];
-    _contentView.backgroundColor = kUIContentBackgroundColor;
     [self.view addSubview:_contentView];
     
     WeakSelf
@@ -53,35 +52,27 @@
     _headerView = [[HomeHeaderView alloc] init];
     [_contentView addSubview:_headerView];
     
-    _headerView.sd_layout.leftSpaceToView(_contentView, 0).rightSpaceToView(_contentView, 0).topSpaceToView(_contentView,0.f);
+    _headerView.sd_layout.leftSpaceToView(_contentView, 0).rightSpaceToView(_contentView, 0).topSpaceToView(_contentView,0.f).heightIs(530.f);
     
-    HomeHorListSection *section1 = [[HomeHorListSection alloc] initWithType:HomeHorListTypeTitle];
-    
+    HomeHorListSection *section1 = [[HomeHorListSection alloc] init];
     [_contentView addSubview:section1];
     
     NSArray * goodsItemList = [[VAMockDataSource shareInstance] homeHorGoodsItemList];
     section1.goodsItemList = goodsItemList;
     
-   
+    section1.sd_layout.leftEqualToView(section1).topSpaceToView(_headerView, 20.f).widthRatioToView(_contentView, 1.0);
     
-    HomeHorListSection *section11 = [[HomeHorListSection alloc] initWithType:HomeHorListTypeTopAd];
-    [_contentView addSubview:section11];
-
-    NSArray * goodsItemList11 = [[VAMockDataSource shareInstance] homeHorGoodsItemList];
-    section11.goodsItemList = goodsItemList11;
-
     
     HomeVerListSection *section2 = [[HomeVerListSection alloc] init];
-    
     [_contentView addSubview:section2];
     
     NSArray * goodsItemList2 = [[VAMockDataSource shareInstance] homeVerGoodsItemList];
     section2.goodsItemList = goodsItemList2;
     
-    section1.sd_layout.leftEqualToView(_contentView).topSpaceToView(_headerView, 10.f).widthRatioToView(_contentView, 1.0);
-    section11.sd_layout.leftEqualToView(_contentView).topSpaceToView(section1, 10.f).widthRatioToView(_contentView, 1.0);
-    section2.sd_layout.leftEqualToView(section11).topSpaceToView(section11, 10.f).widthRatioToView(_contentView, 1.0).heightIs(kVASCreenHeight);
-    [_contentView setupAutoContentSizeWithBottomView:section2 bottomMargin:20.f];
+    section2.sd_layout.leftEqualToView(section1).topSpaceToView(section1, 20.f).widthRatioToView(_contentView, 1.0).heightIs(kVASCreenHeight);
+    [_contentView setupAutoContentSizeWithBottomView:section2 bottomMargin:50.f];
+
+    
 }
 
 

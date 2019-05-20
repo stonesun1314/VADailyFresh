@@ -106,10 +106,9 @@
         
         item.origin = CGPointMake(coloum * itemWidth, row *itemHeight);
         
-        
     }
 
-
+    [self setupAutoHeightWithBottomView:_cateMenuView bottomMargin:0];
 
 }
 

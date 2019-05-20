@@ -19,7 +19,7 @@
     // Do any additional setup after loading the view.
     self.edgesForExtendedLayout = UIRectEdgeNone;
     
-    self.view.backgroundColor = kMainBackgroundColor;//[UIColor whiteColor];
+    self.view.backgroundColor = kUIContentBackgroundColor;//[UIColor whiteColor];
     
     [self setNavigationBar];
     

@@ -35,6 +35,7 @@
 #define kMainBackgroundColor    UIColorFromRGB(0xFEFEFE)
 #define kUITipColor             UIColorFromRGB(0xF27E52)
 #define kUIDisableTextColor     UIColorFromRGB(0xC9C9C9)
+#define kUIContentBackgroundColor   UIColorFromRGB(0xF8F8F8)
 
 //temp
 #define kDarkMainBackgroundColor    UIColorFromRGB(0xFAFAFA)
