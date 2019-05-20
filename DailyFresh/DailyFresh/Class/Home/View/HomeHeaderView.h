@@ -7,6 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "HomeTopAdSectionModel.h"
+#import "HomeCateSectionModel.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -17,6 +19,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong) SDCycleScrollView *bannerCycleScrollView;
 
 @property (nonatomic, strong) UIView *cateMenuView;
+
+@property (nonatomic, strong) HomeCateSectionModel *cateModel;
 
 
 @end

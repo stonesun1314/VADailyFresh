@@ -40,6 +40,8 @@
     _contentView.backgroundColor = kUIContentBackgroundColor;
     [self.view addSubview:_contentView];
     
+    UIView *lastObj;
+    
     WeakSelf
     _contentView.mj_header= [MJRefreshNormalHeader headerWithRefreshingBlock:^{
         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
@@ -51,9 +53,12 @@
     _contentView.sd_layout.spaceToSuperView(UIEdgeInsetsZero);
     
     _headerView = [[HomeHeaderView alloc] init];
+    _headerView.cateModel = _cateSectionModel;
     [_contentView addSubview:_headerView];
     
     _headerView.sd_layout.leftSpaceToView(_contentView, 0).rightSpaceToView(_contentView, 0).topSpaceToView(_contentView,0.f);
+    
+    lastObj = _headerView;
     
     HomeHorListSection *section1 = [[HomeHorListSection alloc] initWithType:HomeHorListTypeTitle];
     

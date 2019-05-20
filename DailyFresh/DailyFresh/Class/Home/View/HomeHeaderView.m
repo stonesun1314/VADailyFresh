@@ -12,7 +12,7 @@
 
 @interface HomeHeaderView ()
 
-@property (nonatomic, strong) NSMutableArray *cateModelList;
+//@property (nonatomic, strong) NSMutableArray *cateModelList;
 @property (nonatomic, strong) UIScrollView *cateMenuContentView;
 
 @end
@@ -31,15 +31,15 @@
 
 - (void)initDataSource {
     
-    NSArray *cateNameList = [[VAMockDataSource shareInstance] homeCateList];
-    
-    _cateModelList = [[NSMutableArray alloc] init];
-    
-    for (NSString *name in cateNameList) {
-        HomeCateItemModel *model = [[HomeCateItemModel alloc] init];
-        model.name = name;
-        [_cateModelList addObject:model];
-    }
+//    NSArray *cateNameList = [[VAMockDataSource shareInstance] homeCateList];
+//
+//    _cateModelList = [[NSMutableArray alloc] init];
+//
+//    for (NSString *name in cateNameList) {
+//        HomeCateItemModel *model = [[HomeCateItemModel alloc] init];
+//        model.name = name;
+//        [_cateModelList addObject:model];
+//    }
 
 }
 
@@ -76,20 +76,33 @@
     //九宫格j布局
 //    _cateMenuContentView.backgroundColor = [UIColor blueColor];
     
+
+    
+
+
+}
+
+- (void)setCateModel:(HomeCateSectionModel *)cateModel{
+    _cateModel = cateModel;
+    [self layoutCateItems];
+}
+
+- (void)layoutCateItems{
+    
+
     NSMutableArray *temp = [NSMutableArray new];
     CGFloat itemHeight = 75.f;
     CGFloat itemWidth = (kScreenWidth-VAMargin*2)/5;
-    for (HomeCateItemModel *model in _cateModelList) {
+    for (HomeCateItemModel *model in _cateModel.subItem) {
         HomeMenuGridItem *item = [[HomeMenuGridItem alloc] initWithFrame:CGRectMake(0, 0, itemWidth, itemHeight)];
         [_cateMenuContentView addSubview:item];
-//        item.sd_layout.heightIs(itemHeight).widthIs(itemWidth);
+        //        item.sd_layout.heightIs(itemHeight).widthIs(itemWidth);
         item.model = model;
         
         [temp addObject:item];
-
+        
     }
     
-
     
     NSInteger perCount = temp.count/2;
     if (temp.count % 2) {
@@ -108,9 +121,8 @@
         item.origin = CGPointMake(coloum * itemWidth, row *itemHeight);
         
     }
-
+    
     [self setupAutoHeightWithBottomView:_cateMenuView bottomMargin:0];
-
 }
 
 @end

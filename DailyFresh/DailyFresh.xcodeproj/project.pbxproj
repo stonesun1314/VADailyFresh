@@ -10,6 +10,10 @@
 		04019C7222927A3200338A64 /* HomeVerItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04019C7122927A3200338A64 /* HomeVerItemCell.m */; };
 		04019C7822928CE000338A64 /* HomeTopAdSectionModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 04019C7722928CE000338A64 /* HomeTopAdSectionModel.m */; };
 		04019C7B22928D7600338A64 /* HomeLimTimeSectionModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 04019C7A22928D7600338A64 /* HomeLimTimeSectionModel.m */; };
+		04019C7E229290D000338A64 /* HomeCateSectionModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 04019C7D229290D000338A64 /* HomeCateSectionModel.m */; };
+		04019C81229292C600338A64 /* HomeHeaderModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 04019C80229292C600338A64 /* HomeHeaderModel.m */; };
+		04019C84229292D300338A64 /* HomeBannerModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 04019C83229292D300338A64 /* HomeBannerModel.m */; };
+		04019C872292933A00338A64 /* HomeTopAdModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 04019C862292933A00338A64 /* HomeTopAdModel.m */; };
 		040A4A8D22895C40001A8083 /* VAHorCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 040A4A8C22895C40001A8083 /* VAHorCollectionView.m */; };
 		040A4A9022895C60001A8083 /* VAHorCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 040A4A8F22895C60001A8083 /* VAHorCollectionCell.m */; };
 		040A4A9722895F34001A8083 /* GoodsItemModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 040A4A9622895F34001A8083 /* GoodsItemModel.m */; };
@@ -115,6 +119,14 @@
 		04019C7722928CE000338A64 /* HomeTopAdSectionModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeTopAdSectionModel.m; sourceTree = "<group>"; };
 		04019C7922928D7600338A64 /* HomeLimTimeSectionModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeLimTimeSectionModel.h; sourceTree = "<group>"; };
 		04019C7A22928D7600338A64 /* HomeLimTimeSectionModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeLimTimeSectionModel.m; sourceTree = "<group>"; };
+		04019C7C229290D000338A64 /* HomeCateSectionModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeCateSectionModel.h; sourceTree = "<group>"; };
+		04019C7D229290D000338A64 /* HomeCateSectionModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeCateSectionModel.m; sourceTree = "<group>"; };
+		04019C7F229292C600338A64 /* HomeHeaderModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeHeaderModel.h; sourceTree = "<group>"; };
+		04019C80229292C600338A64 /* HomeHeaderModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeHeaderModel.m; sourceTree = "<group>"; };
+		04019C82229292D300338A64 /* HomeBannerModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeBannerModel.h; sourceTree = "<group>"; };
+		04019C83229292D300338A64 /* HomeBannerModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeBannerModel.m; sourceTree = "<group>"; };
+		04019C852292933A00338A64 /* HomeTopAdModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeTopAdModel.h; sourceTree = "<group>"; };
+		04019C862292933A00338A64 /* HomeTopAdModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeTopAdModel.m; sourceTree = "<group>"; };
 		040A4A8B22895C40001A8083 /* VAHorCollectionView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VAHorCollectionView.h; sourceTree = "<group>"; };
 		040A4A8C22895C40001A8083 /* VAHorCollectionView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VAHorCollectionView.m; sourceTree = "<group>"; };
 		040A4A8E22895C60001A8083 /* VAHorCollectionCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VAHorCollectionCell.h; sourceTree = "<group>"; };
@@ -588,6 +600,14 @@
 				04019C7722928CE000338A64 /* HomeTopAdSectionModel.m */,
 				04019C7922928D7600338A64 /* HomeLimTimeSectionModel.h */,
 				04019C7A22928D7600338A64 /* HomeLimTimeSectionModel.m */,
+				04019C7C229290D000338A64 /* HomeCateSectionModel.h */,
+				04019C7D229290D000338A64 /* HomeCateSectionModel.m */,
+				04019C7F229292C600338A64 /* HomeHeaderModel.h */,
+				04019C80229292C600338A64 /* HomeHeaderModel.m */,
+				04019C82229292D300338A64 /* HomeBannerModel.h */,
+				04019C83229292D300338A64 /* HomeBannerModel.m */,
+				04019C852292933A00338A64 /* HomeTopAdModel.h */,
+				04019C862292933A00338A64 /* HomeTopAdModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1151,6 +1171,7 @@
 				04C7F98B2282AA1900FD9C51 /* main.m in Sources */,
 				04C7F9D72282BA1600FD9C51 /* NSString+tool.m in Sources */,
 				040B2F31228BA2F8006D2CC5 /* HomeNavigationBar.m in Sources */,
+				04019C81229292C600338A64 /* HomeHeaderModel.m in Sources */,
 				04C7F9D62282BA1600FD9C51 /* NSObject+Unicode.m in Sources */,
 				04E6C32B228ABD07007C9548 /* HomeVerCollectionViewCell.m in Sources */,
 				04108D5D228D4C420065FB4F /* ClassifyRightViewController.m in Sources */,
@@ -1168,6 +1189,7 @@
 				04333F3F22852A5400ECC489 /* DLTabedSlideView.m in Sources */,
 				04F5C0F822856DF300EE1D5A /* HomeCateItemModel.m in Sources */,
 				04108D60228D5BE90065FB4F /* LeftTableViewCell.m in Sources */,
+				04019C872292933A00338A64 /* HomeTopAdModel.m in Sources */,
 				04D1A35B228CF0EA00C3F597 /* TestViewController.m in Sources */,
 				04C7FA012282C3CA00FD9C51 /* ClassifyViewController.m in Sources */,
 				04E6C328228ABB5B007C9548 /* HomeVerListSection.m in Sources */,
@@ -1182,6 +1204,7 @@
 				040A4A9022895C60001A8083 /* VAHorCollectionCell.m in Sources */,
 				04E6C325228A6941007C9548 /* VAMockDataSource.m in Sources */,
 				040A4A9722895F34001A8083 /* GoodsItemModel.m in Sources */,
+				04019C7E229290D000338A64 /* HomeCateSectionModel.m in Sources */,
 				04C7F9F52282C35D00FD9C51 /* MineViewController.m in Sources */,
 				040E77C72284090E00CDED15 /* HomeVerListView.m in Sources */,
 				04333F3D22852A5400ECC489 /* DLFixedTabbarView.m in Sources */,
@@ -1192,6 +1215,7 @@
 				04019C7822928CE000338A64 /* HomeTopAdSectionModel.m in Sources */,
 				04F5C10A2285747100EE1D5A /* NSDate+Addition.m in Sources */,
 				040E77C4228408FF00CDED15 /* HomeHorListView.m in Sources */,
+				04019C84229292D300338A64 /* HomeBannerModel.m in Sources */,
 				040A4A9A22896333001A8083 /* HomeHorListSection.m in Sources */,
 				04D1A352228C130B00C3F597 /* UIButton+SGPagingView.m in Sources */,
 				040A4A9D228965B7001A8083 /* HomeHorCollectionViewCell.m in Sources */,

@@ -12,6 +12,10 @@
 #import "HomeNavigationBar.h"
 #import "TestViewController.h"
 #import "GoodsItemModel.h"
+#import "HomeCateSectionModel.h"
+#import "HomeTopAdSectionModel.h"
+#import "HomeHeaderModel.h"
+#import "HomeLimTimeSectionModel.h"
 
 
 @interface HomeViewController ()<SGPageTitleViewDelegate, SGPageContentScrollViewDelegate>
@@ -26,11 +30,12 @@
 
 
 @property (nonatomic, strong) NSDictionary *topDataSource;
-@property (nonatomic, strong) NSArray *cateList;
-@property (nonatomic, strong) NSArray *topAdList;
-@property (nonatomic, strong) NSArray *limTimeAct;  //限时秒杀
-@property (nonatomic, strong) NSArray *sepcialSection;
+@property (nonatomic, strong) HomeCateSectionModel *cateSectionModel;
+@property (nonatomic, strong) HomeTopAdSectionModel *topSectionModel;
 @property (nonatomic, strong) NSMutableArray *verGoodsItemList;
+@property (nonatomic, strong) HomeLimTimeSectionModel *limTimeModel;
+
+@property (nonatomic, strong) NSMutableArray *topSectionArr;
 
 
 
@@ -59,6 +64,37 @@
     
     _topDataSource = [[VAMockDataSource shareInstance] readJsonFromFileName:@"index_top.json"];
     VALog(@"top===/n%@",_topDataSource);
+    
+    
+    NSDictionary *dataDict = [_topDataSource objectForKey:@"data"];
+    NSDictionary *dict = [dataDict objectForKey:@"header"];
+    
+    
+    
+    NSArray *goodsItem = [dataDict objectForKey:@"goodsItem"];
+    
+    _topSectionArr = [NSMutableArray new];
+    
+    for (NSDictionary *dict in goodsItem) {
+        NSNumber *itemType = [dict objectForKey:@"itemType"];
+        if ([itemType integerValue] == 0) {    //类别
+            
+            _cateSectionModel = [HomeCateSectionModel yy_modelWithJSON:dict];
+            
+        }else if ([itemType integerValue] == 1){
+            
+            _limTimeModel = [HomeLimTimeSectionModel yy_modelWithJSON:dict];
+            
+            
+        }else if ([itemType integerValue] == 2){       //特色专区
+            
+            
+            
+        }else if ([itemType integerValue] == 3){       //top+横向列表
+            HomeTopAdSectionModel *topAdModel = [HomeTopAdSectionModel yy_modelWithJSON:dict];
+            [_topSectionArr addObject:topAdModel];
+        }
+    }
     
     
     NSDictionary *dictionary = [[VAMockDataSource shareInstance] readJsonFromFileName:@"index_recommend.json"];
@@ -110,6 +146,8 @@
 //        TestViewController *vc = [[TestViewController alloc] init];
 //        [childVCArr addObject:vc];
         _viewController = [[HomeSubViewController alloc] init];
+        _viewController.topAdModelArr = _topSectionArr;
+        _viewController.cateSectionModel = _cateSectionModel;
         _viewController.verGoodsItemList = _verGoodsItemList;
         [childVCArr addObject:_viewController];
     }
