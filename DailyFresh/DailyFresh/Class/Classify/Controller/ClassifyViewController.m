@@ -59,11 +59,7 @@
     for (NSDictionary *dict in cateList) {
         SecondCateModel *model = [SecondCateModel yy_modelWithJSON:dict];
         [_rightCateList addObject:model];
-        
     }
-    
-
-    
     
 }
 

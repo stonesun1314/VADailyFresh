@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		04019C7222927A3200338A64 /* HomeVerItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04019C7122927A3200338A64 /* HomeVerItemCell.m */; };
 		040A4A8D22895C40001A8083 /* VAHorCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 040A4A8C22895C40001A8083 /* VAHorCollectionView.m */; };
 		040A4A9022895C60001A8083 /* VAHorCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 040A4A8F22895C60001A8083 /* VAHorCollectionCell.m */; };
 		040A4A9722895F34001A8083 /* GoodsItemModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 040A4A9622895F34001A8083 /* GoodsItemModel.m */; };
@@ -106,6 +107,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		04019C7022927A3200338A64 /* HomeVerItemCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeVerItemCell.h; sourceTree = "<group>"; };
+		04019C7122927A3200338A64 /* HomeVerItemCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeVerItemCell.m; sourceTree = "<group>"; };
 		040A4A8B22895C40001A8083 /* VAHorCollectionView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VAHorCollectionView.h; sourceTree = "<group>"; };
 		040A4A8C22895C40001A8083 /* VAHorCollectionView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VAHorCollectionView.m; sourceTree = "<group>"; };
 		040A4A8E22895C60001A8083 /* VAHorCollectionCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VAHorCollectionCell.h; sourceTree = "<group>"; };
@@ -602,6 +605,8 @@
 				04E6C32A228ABD07007C9548 /* HomeVerCollectionViewCell.m */,
 				040B2F2F228BA2F8006D2CC5 /* HomeNavigationBar.h */,
 				040B2F30228BA2F8006D2CC5 /* HomeNavigationBar.m */,
+				04019C7022927A3200338A64 /* HomeVerItemCell.h */,
+				04019C7122927A3200338A64 /* HomeVerItemCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1156,6 +1161,7 @@
 				04C7FA012282C3CA00FD9C51 /* ClassifyViewController.m in Sources */,
 				04E6C328228ABB5B007C9548 /* HomeVerListSection.m in Sources */,
 				04F5C10B2285747100EE1D5A /* NSDate+TimeAgo.m in Sources */,
+				04019C7222927A3200338A64 /* HomeVerItemCell.m in Sources */,
 				04F5C10F2285747100EE1D5A /* UIButton+SGImagePosition.m in Sources */,
 				04C7F9D92282BA1600FD9C51 /* UIImage+tool.m in Sources */,
 				04C7F97D2282AA1900FD9C51 /* AppDelegate.m in Sources */,

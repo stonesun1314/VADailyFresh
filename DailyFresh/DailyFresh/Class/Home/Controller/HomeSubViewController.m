@@ -75,12 +75,11 @@
     
     [_contentView addSubview:section2];
     
-    NSArray * goodsItemList2 = [[VAMockDataSource shareInstance] homeVerGoodsItemList];
-    section2.goodsItemList = goodsItemList2;
+    section2.goodsItemList = self.verGoodsItemList;
     
     section1.sd_layout.leftEqualToView(_contentView).topSpaceToView(_headerView, 10.f).widthRatioToView(_contentView, 1.0);
     section11.sd_layout.leftEqualToView(_contentView).topSpaceToView(section1, 10.f).widthRatioToView(_contentView, 1.0);
-    section2.sd_layout.leftEqualToView(section11).topSpaceToView(section11, 10.f).widthRatioToView(_contentView, 1.0).heightIs(kVASCreenHeight);
+    section2.sd_layout.leftEqualToView(section11).topSpaceToView(section11, 10.f).widthRatioToView(_contentView, 1.0);
     [_contentView setupAutoContentSizeWithBottomView:section2 bottomMargin:20.f];
 }
 

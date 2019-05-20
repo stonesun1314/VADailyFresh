@@ -12,6 +12,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface HomeSubViewController : BaseViewController
 
+@property (nonatomic, strong) NSArray *verGoodsItemList;
+
 @end
 
 NS_ASSUME_NONNULL_END

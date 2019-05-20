@@ -11,6 +11,7 @@
 #import "DLSlideView.h"
 #import "HomeNavigationBar.h"
 #import "TestViewController.h"
+#import "GoodsItemModel.h"
 
 
 @interface HomeViewController ()<SGPageTitleViewDelegate, SGPageContentScrollViewDelegate>
@@ -22,6 +23,10 @@
 
 @property (nonatomic, strong) SGPageTitleView *pageTitleView;
 @property (nonatomic, strong) SGPageContentScrollView *pageContentScrollView;
+
+
+@property (nonatomic, strong) NSDictionary *topDataSource;
+@property (nonatomic, strong) NSMutableArray *verGoodsItemList;
 
 @end
 
@@ -37,8 +42,25 @@
     [self.navigationController setNavigationBarHidden:YES];
 //    self.view.safeAreaInsets = UIEdgeInsetsMake(0, 0, 0, 0);
 //    self.additionalSafeAreaInsets = UIEdgeInsetsMake(0, 0, 0, 0);
+    
+    [self initDataSource];
+    
     [self setupUI];
     
+}
+
+- (void)initDataSource {
+    NSDictionary *dictionary = [[VAMockDataSource shareInstance] readJsonFromFileName:@"index_recommend.json"];
+    VALog(@"%@",dictionary);
+    
+    NSArray *goodsItemList = [[dictionary objectForKey:@"data"] objectForKey:@"goods"];
+    
+    _verGoodsItemList = [NSMutableArray new];
+    
+    for (NSDictionary *dict in goodsItemList) {
+        GoodsItemModel *model = [GoodsItemModel yy_modelWithJSON:dict];
+        [_verGoodsItemList addObject:model];
+    }
     
 }
 
@@ -77,6 +99,7 @@
 //        TestViewController *vc = [[TestViewController alloc] init];
 //        [childVCArr addObject:vc];
         _viewController = [[HomeSubViewController alloc] init];
+        _viewController.verGoodsItemList = _verGoodsItemList;
         [childVCArr addObject:_viewController];
     }
     
