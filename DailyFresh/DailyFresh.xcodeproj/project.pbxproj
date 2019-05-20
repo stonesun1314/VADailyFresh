@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		04019C7222927A3200338A64 /* HomeVerItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04019C7122927A3200338A64 /* HomeVerItemCell.m */; };
+		04019C7822928CE000338A64 /* HomeTopAdSectionModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 04019C7722928CE000338A64 /* HomeTopAdSectionModel.m */; };
+		04019C7B22928D7600338A64 /* HomeLimTimeSectionModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 04019C7A22928D7600338A64 /* HomeLimTimeSectionModel.m */; };
 		040A4A8D22895C40001A8083 /* VAHorCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 040A4A8C22895C40001A8083 /* VAHorCollectionView.m */; };
 		040A4A9022895C60001A8083 /* VAHorCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 040A4A8F22895C60001A8083 /* VAHorCollectionCell.m */; };
 		040A4A9722895F34001A8083 /* GoodsItemModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 040A4A9622895F34001A8083 /* GoodsItemModel.m */; };
@@ -109,6 +111,10 @@
 /* Begin PBXFileReference section */
 		04019C7022927A3200338A64 /* HomeVerItemCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeVerItemCell.h; sourceTree = "<group>"; };
 		04019C7122927A3200338A64 /* HomeVerItemCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeVerItemCell.m; sourceTree = "<group>"; };
+		04019C7622928CE000338A64 /* HomeTopAdSectionModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeTopAdSectionModel.h; sourceTree = "<group>"; };
+		04019C7722928CE000338A64 /* HomeTopAdSectionModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeTopAdSectionModel.m; sourceTree = "<group>"; };
+		04019C7922928D7600338A64 /* HomeLimTimeSectionModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeLimTimeSectionModel.h; sourceTree = "<group>"; };
+		04019C7A22928D7600338A64 /* HomeLimTimeSectionModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeLimTimeSectionModel.m; sourceTree = "<group>"; };
 		040A4A8B22895C40001A8083 /* VAHorCollectionView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VAHorCollectionView.h; sourceTree = "<group>"; };
 		040A4A8C22895C40001A8083 /* VAHorCollectionView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VAHorCollectionView.m; sourceTree = "<group>"; };
 		040A4A8E22895C60001A8083 /* VAHorCollectionCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VAHorCollectionCell.h; sourceTree = "<group>"; };
@@ -578,6 +584,10 @@
 			children = (
 				04F5C0F622856DF300EE1D5A /* HomeCateItemModel.h */,
 				04F5C0F722856DF300EE1D5A /* HomeCateItemModel.m */,
+				04019C7622928CE000338A64 /* HomeTopAdSectionModel.h */,
+				04019C7722928CE000338A64 /* HomeTopAdSectionModel.m */,
+				04019C7922928D7600338A64 /* HomeLimTimeSectionModel.h */,
+				04019C7A22928D7600338A64 /* HomeLimTimeSectionModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1129,6 +1139,7 @@
 				04E6DCB6228E83AF00A7A5A6 /* NSString+Size.m in Sources */,
 				040E77BE228408B100CDED15 /* HomeHeaderView.m in Sources */,
 				04C7F9802282AA1900FD9C51 /* ViewController.m in Sources */,
+				04019C7B22928D7600338A64 /* HomeLimTimeSectionModel.m in Sources */,
 				04D1A354228C130B00C3F597 /* SGPagingViewPopGestureVC.m in Sources */,
 				04C7F9C62282BA0600FD9C51 /* BaseViewController.m in Sources */,
 				04C7F9DA2282BA1600FD9C51 /* UINavigationBar+bgColor.m in Sources */,
@@ -1178,6 +1189,7 @@
 				04108D5A228D4C350065FB4F /* ClassifyLeftViewController.m in Sources */,
 				04C7F9C52282BA0600FD9C51 /* BaseNavigationController.m in Sources */,
 				040E341D228EA9F30050756B /* SecondCateModel.m in Sources */,
+				04019C7822928CE000338A64 /* HomeTopAdSectionModel.m in Sources */,
 				04F5C10A2285747100EE1D5A /* NSDate+Addition.m in Sources */,
 				040E77C4228408FF00CDED15 /* HomeHorListView.m in Sources */,
 				040A4A9A22896333001A8083 /* HomeHorListSection.m in Sources */,

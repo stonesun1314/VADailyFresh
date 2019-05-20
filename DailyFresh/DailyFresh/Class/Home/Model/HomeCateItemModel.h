@@ -12,9 +12,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface HomeCateItemModel : BaseModel
 
-@property (nonatomic, strong) NSString *cateId;
+@property (nonatomic, strong) NSString *category;
 @property (nonatomic, strong) NSString *img;
 @property (nonatomic, strong) NSString *name;
+@property (nonatomic, strong) NSString *goodType;
 
 @end
 

@@ -50,7 +50,8 @@
     
     _topBannerImageView = [[UIImageView alloc] init];
     _topBannerImageView.backgroundColor = [UIColor darkGrayColor];
-    _topBannerImageView.image = [UIImage imageNamed:@"df_ad_icon"];
+    [_topBannerImageView sd_setImageWithURL:[NSURL URLWithString:@"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1557828972343&di=0b31a44d6fd87d7cd7a81d1d2ae173f8&imgtype=0&src=http%3A%2F%2Fimg17.3lian.com%2Fd%2Ffile%2F201702%2F21%2F9167add2223eabf3543d4288b74cc231.jpg"] placeholderImage:[UIImage imageNamed:@"df_ad_icon"]];
+//    _topBannerImageView.image = [UIImage imageNamed:@"df_ad_icon"];
     [self addSubview:_topBannerImageView];
     
     _topBannerImageView.sd_layout.leftSpaceToView(self, VAMargin).rightSpaceToView(self, VAMargin).topSpaceToView(self, 15.f).heightIs(bannerHeight);

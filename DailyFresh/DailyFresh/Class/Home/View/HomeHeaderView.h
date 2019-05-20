@@ -18,6 +18,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, strong) UIView *cateMenuView;
 
+
 @end
 
 NS_ASSUME_NONNULL_END

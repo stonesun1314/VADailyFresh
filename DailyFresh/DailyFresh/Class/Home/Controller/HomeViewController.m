@@ -26,7 +26,13 @@
 
 
 @property (nonatomic, strong) NSDictionary *topDataSource;
+@property (nonatomic, strong) NSArray *cateList;
+@property (nonatomic, strong) NSArray *topAdList;
+@property (nonatomic, strong) NSArray *limTimeAct;  //限时秒杀
+@property (nonatomic, strong) NSArray *sepcialSection;
 @property (nonatomic, strong) NSMutableArray *verGoodsItemList;
+
+
 
 @end
 
@@ -50,6 +56,11 @@
 }
 
 - (void)initDataSource {
+    
+    _topDataSource = [[VAMockDataSource shareInstance] readJsonFromFileName:@"index_top.json"];
+    VALog(@"top===/n%@",_topDataSource);
+    
+    
     NSDictionary *dictionary = [[VAMockDataSource shareInstance] readJsonFromFileName:@"index_recommend.json"];
     VALog(@"%@",dictionary);
     
