@@ -49,6 +49,8 @@
 		04019CD12293CADE00338A64 /* refresh_00018.png in Resources */ = {isa = PBXBuildFile; fileRef = 04019CB42293CADD00338A64 /* refresh_00018.png */; };
 		04019CD22293CADE00338A64 /* refresh_00026.png in Resources */ = {isa = PBXBuildFile; fileRef = 04019CB52293CADD00338A64 /* refresh_00026.png */; };
 		04019CD32293CADE00338A64 /* refresh_0008.png in Resources */ = {isa = PBXBuildFile; fileRef = 04019CB62293CADD00338A64 /* refresh_0008.png */; };
+		04019CD62293D87900338A64 /* CartTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04019CD52293D87900338A64 /* CartTableViewCell.m */; };
+		04019CD82293DF6100338A64 /* cart_data.json in Resources */ = {isa = PBXBuildFile; fileRef = 04019CD72293DF6100338A64 /* cart_data.json */; };
 		040A4A8D22895C40001A8083 /* VAHorCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 040A4A8C22895C40001A8083 /* VAHorCollectionView.m */; };
 		040A4A9022895C60001A8083 /* VAHorCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 040A4A8F22895C60001A8083 /* VAHorCollectionCell.m */; };
 		040A4A9722895F34001A8083 /* GoodsItemModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 040A4A9622895F34001A8083 /* GoodsItemModel.m */; };
@@ -202,6 +204,9 @@
 		04019CB42293CADD00338A64 /* refresh_00018.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = refresh_00018.png; sourceTree = "<group>"; };
 		04019CB52293CADD00338A64 /* refresh_00026.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = refresh_00026.png; sourceTree = "<group>"; };
 		04019CB62293CADD00338A64 /* refresh_0008.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = refresh_0008.png; sourceTree = "<group>"; };
+		04019CD42293D87900338A64 /* CartTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CartTableViewCell.h; sourceTree = "<group>"; };
+		04019CD52293D87900338A64 /* CartTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CartTableViewCell.m; sourceTree = "<group>"; };
+		04019CD72293DF6100338A64 /* cart_data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = cart_data.json; sourceTree = "<group>"; };
 		040A4A8B22895C40001A8083 /* VAHorCollectionView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VAHorCollectionView.h; sourceTree = "<group>"; };
 		040A4A8C22895C40001A8083 /* VAHorCollectionView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VAHorCollectionView.m; sourceTree = "<group>"; };
 		040A4A8E22895C60001A8083 /* VAHorCollectionCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VAHorCollectionCell.h; sourceTree = "<group>"; };
@@ -481,6 +486,7 @@
 		040E3410228E9F4D0050756B /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				04019CD72293DF6100338A64 /* cart_data.json */,
 				04019C882292A88400338A64 /* find_data.json */,
 				040E3411228E9F4D0050756B /* cate_goods.json */,
 				040E3412228E9F4D0050756B /* cate_list.json */,
@@ -921,6 +927,8 @@
 		04C7F9F92282C39700FD9C51 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				04019CD42293D87900338A64 /* CartTableViewCell.h */,
+				04019CD52293D87900338A64 /* CartTableViewCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1168,6 +1176,7 @@
 				040E3417228E9F4D0050756B /* cate_list.json in Resources */,
 				04019CCD2293CADE00338A64 /* refresh_0003.png in Resources */,
 				04019CCC2293CADE00338A64 /* refresh_00029.png in Resources */,
+				04019CD82293DF6100338A64 /* cart_data.json in Resources */,
 				04019CBA2293CADE00338A64 /* refresh_0005.png in Resources */,
 				04019CCB2293CADE00338A64 /* refresh_00025.png in Resources */,
 				04019CC42293CADE00338A64 /* refresh_00020.png in Resources */,
@@ -1348,6 +1357,7 @@
 				04D1A35B228CF0EA00C3F597 /* TestViewController.m in Sources */,
 				04C7FA012282C3CA00FD9C51 /* ClassifyViewController.m in Sources */,
 				04E6C328228ABB5B007C9548 /* HomeVerListSection.m in Sources */,
+				04019CD62293D87900338A64 /* CartTableViewCell.m in Sources */,
 				04F5C10B2285747100EE1D5A /* NSDate+TimeAgo.m in Sources */,
 				04019C7222927A3200338A64 /* HomeVerItemCell.m in Sources */,
 				04F5C10F2285747100EE1D5A /* UIButton+SGImagePosition.m in Sources */,
