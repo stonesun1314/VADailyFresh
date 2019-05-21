@@ -41,14 +41,25 @@
     _contentView.backgroundColor = kUIContentBackgroundColor;
     [self.view addSubview:_contentView];
     
-    UIView *lastObj;
-    
     WeakSelf
-    _contentView.mj_header= [MJRefreshNormalHeader headerWithRefreshingBlock:^{
+    VAMJRefreshGifHeader *header = [VAMJRefreshGifHeader headerWithRefreshingBlock:^{
         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
             [weakSelf.contentView.mj_header endRefreshing];
+            
         });
     }];
+    // 隐藏时间
+    header.lastUpdatedTimeLabel.hidden = YES;
+    // 隐藏状态
+    header.stateLabel.hidden = YES;
+    
+    [header beginRefreshing];
+    
+    _contentView.mj_header = header;
+    
+    UIView *lastObj;
+    
+
     _contentView.mj_header.automaticallyChangeAlpha = YES;
     
     _contentView.sd_layout.spaceToSuperView(UIEdgeInsetsZero);

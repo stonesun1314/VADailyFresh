@@ -63,7 +63,7 @@
 - (void)initDataSource {
     
     _topDataSource = [[VAMockDataSource shareInstance] readJsonFromFileName:@"index_top.json"];
-    VALog(@"top===/n%@",_topDataSource);
+//    VALog(@"top===/n%@",_topDataSource);
     
     
     NSDictionary *dataDict = [_topDataSource objectForKey:@"data"];

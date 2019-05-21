@@ -75,6 +75,20 @@
         make.left.right.bottom.mas_equalTo(self.view);
         make.top.mas_equalTo(weakSelf.headerView.mas_bottom);
     }];
+    
+    VAMJRefreshGifHeader *header = [VAMJRefreshGifHeader headerWithRefreshingBlock:^{
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            [weakSelf.aTableView.mj_header endRefreshing];
+        });
+    }];
+    // 隐藏时间
+    header.lastUpdatedTimeLabel.hidden = YES;
+    // 隐藏状态
+    header.stateLabel.hidden = YES;
+    
+    [header beginRefreshing];
+    
+    _aTableView.mj_header = header;
 }
 
 #pragma mark -- tableView

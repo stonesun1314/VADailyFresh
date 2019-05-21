@@ -35,6 +35,7 @@
 #import "UIMacros.h"
 #import "URLMacros.h"
 #import "VAConsts.h"
+#import "VAMJRefreshGifHeader.h"
 
 
 //category

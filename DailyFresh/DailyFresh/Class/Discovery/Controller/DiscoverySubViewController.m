@@ -69,12 +69,22 @@
     _tableHeaderView = [[DisTableHeaderView alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, 50)];
     _atableView.tableHeaderView = _tableHeaderView;
     
+    
     WeakSelf
-    _atableView.mj_header= [MJRefreshNormalHeader headerWithRefreshingBlock:^{
+    VAMJRefreshGifHeader *header = [VAMJRefreshGifHeader headerWithRefreshingBlock:^{
         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
             [weakSelf.atableView.mj_header endRefreshing];
         });
     }];
+    // 隐藏时间
+    header.lastUpdatedTimeLabel.hidden = YES;
+    // 隐藏状态
+    header.stateLabel.hidden = YES;
+    
+    [header beginRefreshing];
+    
+    _atableView.mj_header = header;
+
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
