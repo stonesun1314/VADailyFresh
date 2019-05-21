@@ -43,6 +43,8 @@
     [self.contentView addSubview:_publisherLabel];
     
     _itemImageView = [UIImageView new];
+    _itemImageView.layer.cornerRadius = 5.f;
+    _itemImageView.clipsToBounds = YES;
     [self.contentView addSubview:_itemImageView];
     
     _titleLabel = [UILabel new];
@@ -66,82 +68,129 @@
     WeakSelf
     if (_type == ArcitalTypeTop) {
         _titleLabel.font = [UIFont systemFontOfSize:20.f];
-        [_avaterImageView mas_remakeConstraints:^(MASConstraintMaker *make) {
-            make.width.height.mas_equalTo(24);
-            make.left.mas_equalTo(weakSelf.contentView).offset(VAMargin);
-            make.top.mas_equalTo(weakSelf.contentView).offset(20.f);
-        }];
-        [_publisherLabel  mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.left.mas_equalTo(weakSelf.avaterImageView.mas_right).offset(5.f);
-            make.centerY.mas_equalTo(weakSelf.avaterImageView);
-            make.height.mas_equalTo(20.f);
-        }];
         
-        [_itemImageView mas_remakeConstraints:^(MASConstraintMaker *make) {
-            make.left.mas_equalTo(weakSelf.contentView).offset(VAMargin);
-            make.right.mas_equalTo(weakSelf.contentView).offset(-VAMargin);
-            make.top.mas_equalTo(weakSelf.avaterImageView.mas_bottom).offset(15.f);
-            make.height.mas_equalTo(190.f);
-        }];
-
-        [_titleLabel mas_remakeConstraints:^(MASConstraintMaker *make) {
-            make.left.mas_equalTo(weakSelf.itemImageView);
-            make.right.mas_equalTo(weakSelf.itemImageView);
-            make.top.mas_equalTo(weakSelf.itemImageView.mas_bottom).offset(10.f);
-        }];
+        _avaterImageView.sd_resetNewLayout.leftSpaceToView(self.contentView, VAMargin).topSpaceToView(self.contentView, 20).widthIs(24).heightIs(24.f);
+        _publisherLabel.sd_resetNewLayout.leftSpaceToView(self.avaterImageView, 5.f).centerYEqualToView(self.avaterImageView).heightIs(20.f);
+        [_publisherLabel setSingleLineAutoResizeWithMaxWidth:200.f];
+        _itemImageView.sd_resetNewLayout.leftSpaceToView(self.contentView, VAMargin).rightSpaceToView(self.contentView, VAMargin).topSpaceToView(self.avaterImageView, 10.f).heightIs(190.f);
         
-        [_beViewedAmtLabel mas_remakeConstraints:^(MASConstraintMaker *make) {
-            make.left.mas_equalTo(weakSelf.itemImageView);
-            make.top.mas_equalTo(_titleLabel.mas_bottom).offset(20.f);
-            make.bottom.mas_equalTo(weakSelf.contentView).offset(-10.f);
-            make.height.mas_equalTo(20.f);
-        }];
+        _titleLabel.sd_resetNewLayout.topSpaceToView(self.itemImageView, 10.f).leftEqualToView(self.itemImageView).rightEqualToView(self.itemImageView).autoHeightRatio(0);
+        [_titleLabel setMaxNumberOfLinesToShow:2];
         
-        [_shareBtn mas_remakeConstraints:^(MASConstraintMaker *make) {
-            make.width.height.mas_equalTo(44.f);
-            make.centerY.mas_equalTo(_beViewedAmtLabel);
-            make.right.mas_equalTo(weakSelf.contentView).offset(-VAMargin);
-        }];
+        _beViewedAmtLabel.sd_resetNewLayout.leftEqualToView(self.itemImageView).topSpaceToView(self.titleLabel, 15.f).autoHeightRatio(0);
+        [_beViewedAmtLabel setSingleLineAutoResizeWithMaxWidth:150.f];
+        
+        _shareBtn.sd_resetNewLayout.rightSpaceToView(self.contentView, VAMargin).centerYEqualToView(self.beViewedAmtLabel).widthIs(44.f).heightIs(44.f);
+        
+        [self setupAutoHeightWithBottomView:_beViewedAmtLabel bottomMargin:10.f];
+        
+//        [_avaterImageView mas_remakeConstraints:^(MASConstraintMaker *make) {
+//            make.width.height.mas_equalTo(24);
+//            make.left.mas_equalTo(weakSelf.contentView).offset(VAMargin);
+//            make.top.mas_equalTo(weakSelf.contentView).offset(20.f);
+//        }];
+//        [_publisherLabel  mas_makeConstraints:^(MASConstraintMaker *make) {
+//            make.left.mas_equalTo(weakSelf.avaterImageView.mas_right).offset(5.f);
+//            make.centerY.mas_equalTo(weakSelf.avaterImageView);
+//            make.height.mas_equalTo(20.f);
+//        }];
+//
+//        [_itemImageView mas_remakeConstraints:^(MASConstraintMaker *make) {
+//            make.left.mas_equalTo(weakSelf.contentView).offset(VAMargin);
+//            make.right.mas_equalTo(weakSelf.contentView).offset(-VAMargin);
+//            make.top.mas_equalTo(weakSelf.avaterImageView.mas_bottom).offset(15.f);
+//            make.height.mas_equalTo(190.f);
+//        }];
+//
+//        [_titleLabel mas_remakeConstraints:^(MASConstraintMaker *make) {
+//            make.left.mas_equalTo(weakSelf.itemImageView);
+//            make.right.mas_equalTo(weakSelf.itemImageView);
+//            make.top.mas_equalTo(weakSelf.itemImageView.mas_bottom).offset(10.f);
+//        }];
+//
+//        [_beViewedAmtLabel mas_remakeConstraints:^(MASConstraintMaker *make) {
+//            make.left.mas_equalTo(weakSelf.itemImageView);
+//            make.top.mas_equalTo(weakSelf.titleLabel.mas_bottom).offset(20.f);
+//            make.bottom.mas_equalTo(weakSelf.contentView).offset(-10.f);
+//            make.height.mas_equalTo(20.f);
+//        }];
+//
+//        [_shareBtn mas_remakeConstraints:^(MASConstraintMaker *make) {
+//            make.width.height.mas_equalTo(44.f);
+//            make.centerY.mas_equalTo(weakSelf.beViewedAmtLabel);
+//            make.right.mas_equalTo(weakSelf.contentView).offset(-VAMargin);
+//        }];
+        
     }else{
 
+        [self.contentView layoutIfNeeded];
+        
         _titleLabel.font = [UIFont systemFontOfSize:15.f];
         
-        [_itemImageView mas_remakeConstraints:^(MASConstraintMaker *make) {
-            make.left.mas_equalTo(weakSelf.contentView).offset(VAMargin);
-            make.width.mas_equalTo(155.f);
-            make.top.mas_equalTo(weakSelf.contentView).offset(10.f);
-            make.height.mas_equalTo(105.f);
-            make.bottom.mas_equalTo(self.contentView).offset(-10.f);
-        }];
+        _itemImageView.sd_resetNewLayout.leftSpaceToView(self.contentView, VAMargin).topSpaceToView(self.contentView, 10.f).widthIs(155.f).heightIs(105.f);
+        _avaterImageView.sd_resetNewLayout.leftSpaceToView(self.itemImageView, 10.f).topSpaceToView(self.contentView, 10.f).widthIs(24.f).heightIs(24.f);
+        _publisherLabel.sd_resetNewLayout.leftSpaceToView(self.avaterImageView, 5.f).centerYEqualToView(self.avaterImageView).heightIs(20.f);
+        [_publisherLabel setSingleLineAutoResizeWithMaxWidth:100.f];
+        _titleLabel.sd_resetNewLayout.leftSpaceToView(self.itemImageView, 10.f).rightSpaceToView(self.contentView, VAMargin).topSpaceToView(self.avaterImageView, 5.f).autoHeightRatio(0);
+        [_publisherLabel setMaxNumberOfLinesToShow:2];
+        _beViewedAmtLabel.sd_resetNewLayout.leftEqualToView(self.titleLabel).topSpaceToView(self.titleLabel, 10.f).autoHeightRatio(0);
+        [_beViewedAmtLabel setSingleLineAutoResizeWithMaxWidth:100.f];
+        _shareBtn.sd_resetNewLayout.rightSpaceToView(self.contentView, VAMargin).centerYEqualToView(self.beViewedAmtLabel).widthIs(44.f).heightIs(44.f);
         
-        [_avaterImageView mas_remakeConstraints:^(MASConstraintMaker *make) {
-            make.width.height.mas_equalTo(24);
-            make.left.mas_equalTo(weakSelf.itemImageView.mas_right).offset(10.f);
-            make.top.mas_equalTo(weakSelf.contentView).offset(10.f);
-        }];
-        [_publisherLabel  mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.left.mas_equalTo(weakSelf.avaterImageView.mas_right).offset(5.f);
-            make.centerY.mas_equalTo(weakSelf.avaterImageView);
-            make.height.mas_equalTo(20.f);
-        }];
+        [self setupAutoHeightWithBottomView:self.itemImageView bottomMargin:10.f];
         
-        [_titleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.left.mas_equalTo(weakSelf.avaterImageView);
-            make.right.mas_equalTo(weakSelf.contentView).offset(-VAMargin);
-            make.top.mas_equalTo(weakSelf.avaterImageView.mas_bottom).offset(5.f);
-        }];
         
-        [_beViewedAmtLabel mas_remakeConstraints:^(MASConstraintMaker *make) {
-            make.left.mas_equalTo(weakSelf.titleLabel);
-            make.bottom.mas_equalTo(_itemImageView.mas_bottom).offset(1.f);
-            make.height.mas_equalTo(20.f);
-        }];
+//        [_itemImageView mas_remakeConstraints:^(MASConstraintMaker *make) {
+//            make.left.mas_equalTo(weakSelf.contentView).offset(VAMargin);
+//            make.width.mas_equalTo(155.f);
+//            make.top.mas_equalTo(weakSelf.contentView).offset(10.f);
+//            make.height.mas_equalTo(105.f);
+////            make.bottom.mas_equalTo(self.contentView).offset(-10.f);
+//        }];
+//
+//
+//
+//        [_avaterImageView mas_remakeConstraints:^(MASConstraintMaker *make) {
+//            make.width.height.mas_equalTo(24);
+//            make.left.mas_equalTo(weakSelf.itemImageView.mas_right).offset(10.f);
+//            make.top.mas_equalTo(weakSelf.contentView).offset(10.f);
+//        }];
+//
+//
+//
+//        [_publisherLabel  mas_makeConstraints:^(MASConstraintMaker *make) {
+//            make.left.mas_equalTo(weakSelf.avaterImageView.mas_right).offset(5.f);
+//            make.centerY.mas_equalTo(weakSelf.avaterImageView);
+//            make.height.mas_equalTo(20.f);
+//        }];
+//
+//
+//
+//        [_titleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+//            make.left.mas_equalTo(weakSelf.avaterImageView);
+//            make.right.mas_equalTo(weakSelf.contentView).offset(-VAMargin);
+//            make.top.mas_equalTo(weakSelf.avaterImageView.mas_bottom).offset(5.f);
+//        }];
+//
+//
+//
+//        [_beViewedAmtLabel mas_remakeConstraints:^(MASConstraintMaker *make) {
+//            make.left.mas_equalTo(weakSelf.titleLabel);
+//            make.top.mas_equalTo(weakSelf.titleLabel.mas_bottom).offset(10.f);
+//            make.height.mas_equalTo(20.f);
+//        }];
+//
+//
+//
+//        [_shareBtn mas_remakeConstraints:^(MASConstraintMaker *make) {
+//            make.width.height.mas_equalTo(44.f);
+//            make.centerY.mas_equalTo(weakSelf.beViewedAmtLabel);
+//            make.right.mas_equalTo(weakSelf.contentView).offset(-VAMargin);
+//        }];
         
-        [_shareBtn mas_remakeConstraints:^(MASConstraintMaker *make) {
-            make.width.height.mas_equalTo(44.f);
-            make.centerY.mas_equalTo(_beViewedAmtLabel);
-            make.right.mas_equalTo(weakSelf.contentView).offset(-VAMargin);
-        }];
+
+        
+        [self.contentView layoutIfNeeded];
     }
 
 }
@@ -155,9 +204,11 @@
     
     _beViewedAmtLabel.text = [NSString stringWithFormat:@"浏览 %@",model.browseNum];
     
+
     if ([model.isTopType boolValue]) {
         [self setType:ArcitalTypeTop];
     }else{
+
         [self setType:ArcitalTypeNormal];
     }
 }

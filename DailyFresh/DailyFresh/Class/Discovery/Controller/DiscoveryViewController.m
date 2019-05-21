@@ -9,9 +9,9 @@
 #import "DiscoveryViewController.h"
 #import "DiscoverySubViewController.h"
 
-@interface DiscoveryViewController ()<SGPageTitleViewDelegate, SGPageContentCollectionViewDelegate>
+@interface DiscoveryViewController ()<SGPageTitleViewDelegate, SGPageContentScrollViewDelegate>
 @property (nonatomic, strong) SGPageTitleView *pageTitleView;
-@property (nonatomic, strong) SGPageContentCollectionView *pageContentCollectionView;
+@property (nonatomic, strong) SGPageContentScrollView *pageContentScrollView;
 
 
 
@@ -22,6 +22,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.edgesForExtendedLayout = UIRectEdgeNone;
+    
     self.navigationItem.title = @"发现";
     
     [self setupUI];
@@ -60,15 +62,20 @@
     }
     
     /// pageContentCollectionView
-    CGFloat ContentCollectionViewHeight = self.view.frame.size.height - CGRectGetMaxY(_pageTitleView.frame);
-    self.pageContentCollectionView = [[SGPageContentCollectionView alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(_pageTitleView.frame), self.view.frame.size.width, ContentCollectionViewHeight) parentVC:self childVCs:childArr];
-    _pageContentCollectionView.delegatePageContentCollectionView = self;
-    [self.view addSubview:_pageContentCollectionView];
+    CGFloat ContentCollectionViewHeight = self.view.frame.size.height - CGRectGetMaxY(_pageTitleView.frame) - Height_TabBar - Height_NavBar;
+    self.pageContentScrollView = [[SGPageContentScrollView alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(_pageTitleView.frame), self.view.frame.size.width, ContentCollectionViewHeight) parentVC:self childVCs:childArr];
+    self.pageContentScrollView.autoresizingMask = UIViewAutoresizingFlexibleBottomMargin;
+    _pageContentScrollView.delegatePageContentScrollView = self;
+    [self.view addSubview:_pageContentScrollView];
 }
 
 
 - (void)pageTitleView:(SGPageTitleView *)pageTitleView selectedIndex:(NSInteger)selectedIndex {
-    [self.pageContentCollectionView setPageContentCollectionViewCurrentIndex:selectedIndex];
+    [self.pageContentScrollView setPageContentScrollViewCurrentIndex:selectedIndex];
+}
+
+- (void)pageContentScrollView:(SGPageContentScrollView *)pageContentScrollView progress:(CGFloat)progress originalIndex:(NSInteger)originalIndex targetIndex:(NSInteger)targetIndex {
+    [self.pageTitleView setPageTitleViewWithProgress:progress originalIndex:originalIndex targetIndex:targetIndex];
 }
 
 

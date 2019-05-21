@@ -45,11 +45,19 @@
 
 - (void)setupUI{
     _atableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
+    _atableView.autoresizingMask = (UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight);
     _atableView.showsVerticalScrollIndicator = NO;
     _atableView.delegate = self;
     _atableView.dataSource = self;
 //    _atableView.estimatedRowHeight = 130.f;
     [self.view addSubview:_atableView];
+    
+    WeakSelf
+    _atableView.mj_header= [MJRefreshNormalHeader headerWithRefreshingBlock:^{
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            [weakSelf.atableView.mj_header endRefreshing];
+        });
+    }];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
@@ -57,12 +65,16 @@
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+//    DisArticalModel *model = [_findDataList objectAtIndex:indexPath.row];
+//    if ([model.isTopType boolValue]) {
+//        return 320.f;
+//    }
+//
+//    return 130.f;
+    
     DisArticalModel *model = [_findDataList objectAtIndex:indexPath.row];
-    if ([model.isTopType boolValue]) {
-        return 320.f;
-    }
-
-    return 130.f;
+    // 获取cell高度
+    return [self.atableView cellHeightForIndexPath:indexPath model:model keyPath:@"model" cellClass:[DiscoveryTableViewCell class]  contentViewWidth:self.view.bounds.size.width];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -70,6 +82,7 @@
     DiscoveryTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identify];
     if (!cell) {
         cell = [[DiscoveryTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identify];
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
     }
     
     DisArticalModel *model = [_findDataList objectAtIndex:indexPath.row];

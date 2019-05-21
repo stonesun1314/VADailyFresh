@@ -153,7 +153,7 @@
         [childVCArr addObject:_viewController];
     }
     
-    CGFloat ContentCollectionViewHeight = self.view.frame.size.height - CGRectGetMaxY(_headerView.frame) - Height_TabBar;
+    CGFloat ContentCollectionViewHeight = self.view.frame.size.height - CGRectGetMaxY(_headerView.frame);
     
     VALog(@"%@",_headerView);
     VALog(@"Max Y: %lf",CGRectGetMaxY(_headerView.frame));
