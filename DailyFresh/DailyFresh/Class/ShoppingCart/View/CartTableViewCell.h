@@ -7,10 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "GoodsItemModel.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface CartTableViewCell : UITableViewCell
+
+@property (nonatomic, strong) GoodsItemModel *model;
 
 @end
 
