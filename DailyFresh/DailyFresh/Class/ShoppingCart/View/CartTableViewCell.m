@@ -63,7 +63,7 @@
     [self.contentView addSubview:_originPriceLabel];
     
     _addBtn = [[UIButton alloc] init];
-    [_addBtn setImage:[UIImage imageNamed:@"df_home_add_cart_sub_normal"] forState:UIControlStateNormal];
+    [_addBtn setImage:[UIImage imageNamed:@"df_home_add_cart_add_normal"] forState:UIControlStateNormal];
     [self.contentView addSubview:_addBtn];
     
     _subBtn = [[UIButton alloc] init];
@@ -71,8 +71,9 @@
     [self.contentView addSubview:_subBtn];
     
     _countLabel = [UILabel new];
+    _countLabel.textAlignment = NSTextAlignmentCenter;
     _countLabel.font = [UIFont systemFontOfSize:14.f];
-    _countLabel.textColor = [UIColor redColor];//kUITitleColor;
+    _countLabel.textColor = kUITitleColor;//kUITitleColor;
     [self.contentView addSubview:_countLabel];
     
     _selectBtn.sd_layout.leftSpaceToView(self.contentView, VAMargin).centerYEqualToView(self.contentView).widthIs(44).heightIs(44.f);
@@ -89,6 +90,9 @@
     [_originPriceLabel setSingleLineAutoResizeWithMaxWidth:150.f];
     
     
+    _addBtn.sd_layout.rightSpaceToView(self.contentView, VAMargin).centerYEqualToView(self.priceLabel).widthIs(42).heightIs(42.f);
+    _countLabel.sd_layout.centerYEqualToView(self.addBtn).widthIs(15.f).rightSpaceToView(self.addBtn, 0.f).autoHeightRatio(0);
+    _subBtn.sd_layout.centerYEqualToView(self.addBtn).rightSpaceToView(_countLabel, 0).widthIs(42).heightIs(42.);
     
 }
 
@@ -108,6 +112,8 @@
     _titleLabel.text = @"商品名称";
     _priceLabel.text = @"1200";
     _originPriceLabel.text = @"1500";
+    _countLabel.text = @"12";
+    
 }
 
 - (void)handleSelect:(UIButton *)sender {
