@@ -9,9 +9,11 @@
 #import "DiscoverySubViewController.h"
 #import "DiscoveryTableViewCell.h"
 #import "DisArticalModel.h"
+#import "DisTableHeaderView.h"
 
 @interface DiscoverySubViewController ()<UITableViewDelegate,UITableViewDataSource>
 
+@property (nonatomic, strong) DisTableHeaderView *tableHeaderView;
 @property (nonatomic, strong) UITableView *atableView;
 
 @property (nonatomic, strong) NSMutableArray *findDataList;
@@ -43,7 +45,19 @@
     }
 }
 
+- (void)setNavigationBar {
+    
+    
+    
+}
+
+
+
 - (void)setupUI{
+    
+
+    
+    
     _atableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
     _atableView.autoresizingMask = (UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight);
     _atableView.showsVerticalScrollIndicator = NO;
@@ -51,6 +65,9 @@
     _atableView.dataSource = self;
 //    _atableView.estimatedRowHeight = 130.f;
     [self.view addSubview:_atableView];
+    
+    _tableHeaderView = [[DisTableHeaderView alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, 50)];
+    _atableView.tableHeaderView = _tableHeaderView;
     
     WeakSelf
     _atableView.mj_header= [MJRefreshNormalHeader headerWithRefreshingBlock:^{

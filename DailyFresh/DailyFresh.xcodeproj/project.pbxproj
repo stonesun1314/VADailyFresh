@@ -18,6 +18,7 @@
 		04019C8C2292AFF600338A64 /* DiscoveryTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04019C8B2292AFF600338A64 /* DiscoveryTableViewCell.m */; };
 		04019C8F2292D71A00338A64 /* DiscoverySubViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04019C8E2292D71A00338A64 /* DiscoverySubViewController.m */; };
 		04019C922292E3F800338A64 /* DisArticalModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 04019C912292E3F800338A64 /* DisArticalModel.m */; };
+		04019C952293A48600338A64 /* DisTableHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04019C942293A48600338A64 /* DisTableHeaderView.m */; };
 		040A4A8D22895C40001A8083 /* VAHorCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 040A4A8C22895C40001A8083 /* VAHorCollectionView.m */; };
 		040A4A9022895C60001A8083 /* VAHorCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 040A4A8F22895C60001A8083 /* VAHorCollectionCell.m */; };
 		040A4A9722895F34001A8083 /* GoodsItemModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 040A4A9622895F34001A8083 /* GoodsItemModel.m */; };
@@ -138,6 +139,8 @@
 		04019C8E2292D71A00338A64 /* DiscoverySubViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DiscoverySubViewController.m; sourceTree = "<group>"; };
 		04019C902292E3F800338A64 /* DisArticalModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DisArticalModel.h; sourceTree = "<group>"; };
 		04019C912292E3F800338A64 /* DisArticalModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DisArticalModel.m; sourceTree = "<group>"; };
+		04019C932293A48600338A64 /* DisTableHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DisTableHeaderView.h; sourceTree = "<group>"; };
+		04019C942293A48600338A64 /* DisTableHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DisTableHeaderView.m; sourceTree = "<group>"; };
 		040A4A8B22895C40001A8083 /* VAHorCollectionView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VAHorCollectionView.h; sourceTree = "<group>"; };
 		040A4A8C22895C40001A8083 /* VAHorCollectionView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VAHorCollectionView.m; sourceTree = "<group>"; };
 		040A4A8E22895C60001A8083 /* VAHorCollectionCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VAHorCollectionCell.h; sourceTree = "<group>"; };
@@ -809,6 +812,8 @@
 			children = (
 				04019C8A2292AFF600338A64 /* DiscoveryTableViewCell.h */,
 				04019C8B2292AFF600338A64 /* DiscoveryTableViewCell.m */,
+				04019C932293A48600338A64 /* DisTableHeaderView.h */,
+				04019C942293A48600338A64 /* DisTableHeaderView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1234,6 +1239,7 @@
 				04108D5A228D4C350065FB4F /* ClassifyLeftViewController.m in Sources */,
 				04C7F9C52282BA0600FD9C51 /* BaseNavigationController.m in Sources */,
 				040E341D228EA9F30050756B /* SecondCateModel.m in Sources */,
+				04019C952293A48600338A64 /* DisTableHeaderView.m in Sources */,
 				04019C7822928CE000338A64 /* HomeTopAdSectionModel.m in Sources */,
 				04F5C10A2285747100EE1D5A /* NSDate+Addition.m in Sources */,
 				040E77C4228408FF00CDED15 /* HomeHorListView.m in Sources */,

@@ -29,7 +29,27 @@
     [self setupUI];
 }
 
+- (void)viewWillAppear:(BOOL)animated{
+    [self.navigationController.navigationBar setShadowImage:[UIImage new]];
+    [self.navigationController.navigationBar setBackgroundImage:[UIImage new] forBarMetrics:UIBarMetricsDefault];
+}
+
 - (void)setupUI{
+    
+    UIButton *leftBtn = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 44, 44)];
+//    leftBtn.layer.cornerRadius = 22.f;
+//    leftBtn.clipsToBounds = YES;
+//    [leftBtn setImage:[UIImage imageNamed:@"df_discover_avatar"] forState:UIControlStateNormal];
+    [leftBtn addTarget:self action:@selector(handleAvatar:) forControlEvents:UIControlEventTouchUpInside];
+    
+    UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 24, 24)];
+    imageView.layer.cornerRadius = 12.f;
+    imageView.clipsToBounds = YES;
+    imageView.center = leftBtn.center;
+    imageView.image = [UIImage imageNamed:@"df_discover_avatar"];
+    [leftBtn addSubview:imageView];
+    
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:leftBtn];
     
 //    CGFloat statusHeight = CGRectGetHeight([UIApplication sharedApplication].statusBarFrame);
 //    CGFloat pageTitleViewY = 0;
@@ -78,5 +98,10 @@
     [self.pageTitleView setPageTitleViewWithProgress:progress originalIndex:originalIndex targetIndex:targetIndex];
 }
 
+
+
+- (void)handleAvatar:(UIButton *)sender {
+    VALog();
+}
 
 @end
