@@ -61,7 +61,7 @@
 - (void)layoutGoodsItem{
     NSMutableArray *temp = [NSMutableArray new];
     
-    CGSize size = CGSizeMake((kScreenSize.width - VAMargin * 2)/2, 250.f);
+    CGSize size = CGSizeMake((kScreenSize.width - VAMargin * 2)/2, 240.f);
     for (GoodsItemModel *model  in _goodsItemList) {
         HomeVerItemCell *cell = [[HomeVerItemCell alloc] init];
         cell.model = model;

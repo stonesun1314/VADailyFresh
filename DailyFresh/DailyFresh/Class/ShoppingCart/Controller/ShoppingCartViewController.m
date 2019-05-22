@@ -86,11 +86,8 @@ typedef NS_ENUM(NSInteger, ShoppingCartState) {
     
     _tableFooterView = [[CartRecomListView alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, 100)];
     _atableView.tableFooterView = _tableFooterView;
-    
     _tableFooterView.goodsItemList = _recomGoodsList;
-    
     [_tableFooterView updateLayout];
-    
     _atableView.tableFooterView = _tableFooterView;
 }
 
@@ -99,17 +96,16 @@ typedef NS_ENUM(NSInteger, ShoppingCartState) {
     return 110.f;
 }
 
-
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     return 6;
 }
-
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     static NSString *identify = @"identify";
     CartTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identify];
     if (!cell) {
         cell = [[CartTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identify];
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
     }
     cell.model = nil;
     return cell;
