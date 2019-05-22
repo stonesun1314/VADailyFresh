@@ -15,6 +15,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, strong) GoodsItemModel *model;
 
+@property (nonatomic, strong) VAAddShoppingCartBlock addCartBlock;
+
+
 @end
 
 NS_ASSUME_NONNULL_END

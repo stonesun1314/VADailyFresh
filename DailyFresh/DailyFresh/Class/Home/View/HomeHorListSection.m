@@ -135,6 +135,10 @@ static NSString *CellIdentiifer = @"CellIdentiifer";
     
     cell.model = model;
     
+    cell.addCartBlock = ^(GoodsItemModel *model, NSInteger num) {
+        [[VAMockDataSource shareInstance] addShoppingCart:model];
+    };
+    
     return cell;
 }
 

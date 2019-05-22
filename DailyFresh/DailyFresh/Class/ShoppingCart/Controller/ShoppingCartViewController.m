@@ -28,6 +28,10 @@ typedef NS_ENUM(NSInteger, ShoppingCartState) {
 
 @implementation ShoppingCartViewController
 
+- (void)dealloc{
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+
 - (void)viewDidLoad{
     [super viewDidLoad];
     
@@ -36,6 +40,8 @@ typedef NS_ENUM(NSInteger, ShoppingCartState) {
     
     [self initDataSource];
     [self setupUI];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(cartChangeNotice:) name:VAShoppingCardChangeNotification object:nil];
 }
 
 - (void)viewWillAppear:(BOOL)animated{
@@ -47,6 +53,8 @@ typedef NS_ENUM(NSInteger, ShoppingCartState) {
 }
 
 - (void)initDataSource{
+    
+    _cartList = [VAMockDataSource shareInstance].cartList;
     
     NSDictionary *dictionary = [[VAMockDataSource shareInstance] readJsonFromFileName:@"index_recommend.json"];
     //    VALog(@"%@",dictionary);
@@ -74,6 +82,8 @@ typedef NS_ENUM(NSInteger, ShoppingCartState) {
     WeakSelf
     VAMJRefreshGifHeader *header = [VAMJRefreshGifHeader headerWithRefreshingBlock:^{
         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            weakSelf.cartList = [VAMockDataSource shareInstance].cartList;
+            [weakSelf.atableView reloadData];
             [weakSelf.atableView.mj_header endRefreshing];
         });
     }];
@@ -97,7 +107,7 @@ typedef NS_ENUM(NSInteger, ShoppingCartState) {
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 6;
+    return _cartList.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -107,9 +117,20 @@ typedef NS_ENUM(NSInteger, ShoppingCartState) {
         cell = [[CartTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identify];
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
     }
-    cell.model = nil;
+    CartGoodsItemModel *model = [_cartList objectAtIndex:indexPath.row];
+    cell.model = model;
+    cell.addCartBlock = ^(GoodsItemModel *model, NSInteger num) {
+        
+    };
     return cell;
 }
 
+
+#pragma mark -- notice
+- (void)cartChangeNotice:(NSNotification *)notice{
+    _cartList = [VAMockDataSource shareInstance].cartList;
+    
+    [_atableView reloadData];
+}
 
 @end

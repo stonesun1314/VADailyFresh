@@ -11,9 +11,15 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+typedef void(^VACellSelectedBlock)(BOOL select);
+
 @interface CartTableViewCell : UITableViewCell
 
 @property (nonatomic, strong) CartGoodsItemModel *model;
+@property (nonatomic, strong) VAAddShoppingCartBlock addCartBlock;
+@property (nonatomic, strong) VASubShoppingCartBlock subCartBlock;
+@property (nonatomic, strong) VACellSelectedBlock cellSelectedBlock;
+
 
 @end
 

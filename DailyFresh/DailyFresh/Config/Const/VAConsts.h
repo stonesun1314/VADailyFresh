@@ -22,6 +22,10 @@ UIKIT_EXTERN CGFloat const VABottomTabH;
 /** 顶部Nav高度+指示器 */
 UIKIT_EXTERN CGFloat const VATopNavH;
 
+UIKIT_EXTERN NSString *const VAShoppingCardChangeNotification;
+
+
+
 
 @end
 

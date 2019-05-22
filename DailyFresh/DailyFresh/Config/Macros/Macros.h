@@ -68,6 +68,7 @@
 
 #endif
 
+#import "GoodsItemModel.h"
 
 #define kPhoneNumerError        @"请输入正确的手机号"
 #define kPasswordError          @"请输入6-20位数字和字母的组合"
@@ -100,6 +101,9 @@ static NSString* responseMessage(id response){
     }
     return @"";
 }
+
+typedef void(^VAAddShoppingCartBlock)(GoodsItemModel *model, NSInteger num);       //添加购物车
+typedef void(^VASubShoppingCartBlock)(GoodsItemModel *model, NSInteger num);       //删减购物车
 
 //========= Device ======
 //判断是否是iPad

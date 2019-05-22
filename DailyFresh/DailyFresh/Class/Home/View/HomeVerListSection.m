@@ -7,7 +7,6 @@
 //
 
 #import "HomeVerListSection.h"
-#import "HomeVerCollectionViewCell.h"
 #import "GoodsItemModel.h"
 #import "HomeVerItemCell.h"
 
@@ -50,12 +49,10 @@ static NSString *CellIdentiifer = @"CellIdentiifer";
     _titleLabel.sd_layout.leftSpaceToView(_header, VAMargin).centerYEqualToView(_header).heightIs(30.f);
     [_titleLabel setSingleLineAutoResizeWithMaxWidth:200.f];
     
-
     _contentView = [[UIView alloc] init];
     [self addSubview:_contentView];
     
 }
-
 
 - (void)setGoodsItemList:(NSArray<GoodsItemModel *> *)goodsItemList{
     _goodsItemList = goodsItemList;
@@ -71,6 +68,10 @@ static NSString *CellIdentiifer = @"CellIdentiifer";
         HomeVerItemCell *cell = [[HomeVerItemCell alloc] init];
         cell.model = model;
         
+        cell.addCartBlock = ^(GoodsItemModel *model, NSInteger num) {
+            [[VAMockDataSource shareInstance] addShoppingCart:model];
+        };
+        
         [_contentView addSubview:cell];
         [temp addObject:cell];
         cell.sd_layout.heightIs(size.height);
@@ -78,13 +79,10 @@ static NSString *CellIdentiifer = @"CellIdentiifer";
     }
     
     [_contentView setupAutoWidthFlowItems:[temp copy] withPerRowItemsCount:2 verticalMargin:5 horizontalMargin:5 verticalEdgeInset:5 horizontalEdgeInset:10];
-    //[_contentView setupAutoMarginFlowItems:[temp copy] withPerRowItemsCount:2 itemWidth:size.width verticalMargin:10 verticalEdgeInset:4 horizontalEdgeInset:10];
     
     _contentView.sd_layout.leftSpaceToView(self, 0).topSpaceToView(_header, 0.f).rightSpaceToView(self, 0.f);
     [self setupAutoHeightWithBottomView:_contentView bottomMargin:20.f];
 }
-
-
 
 
 @end

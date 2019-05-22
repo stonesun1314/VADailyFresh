@@ -21,6 +21,9 @@ CGFloat const VABottomTabH = 49;
 /** 顶部Nav高度+指示器 */
 CGFloat const VATopNavH = 64;
 
+/** 购物车商品、数量变化的通知  */
+NSString *const VAShoppingCardChangeNotification = @"VAShoppingCardChangeNotification";
+
 
 
 

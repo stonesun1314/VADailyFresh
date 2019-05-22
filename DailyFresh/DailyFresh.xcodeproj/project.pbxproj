@@ -115,7 +115,6 @@
 		04D1A35E228D0CB700C3F597 /* ClassifyNavView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04D1A35D228D0CB700C3F597 /* ClassifyNavView.m */; };
 		04E6C325228A6941007C9548 /* VAMockDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E6C324228A6941007C9548 /* VAMockDataSource.m */; };
 		04E6C328228ABB5B007C9548 /* HomeVerListSection.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E6C327228ABB5B007C9548 /* HomeVerListSection.m */; };
-		04E6C32B228ABD07007C9548 /* HomeVerCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E6C32A228ABD07007C9548 /* HomeVerCollectionViewCell.m */; };
 		04E6DCB6228E83AF00A7A5A6 /* NSString+Size.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E6DCB5228E83AF00A7A5A6 /* NSString+Size.m */; };
 		04F5C0EF22854EE300EE1D5A /* HomeSubViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F5C0EE22854EE300EE1D5A /* HomeSubViewController.m */; };
 		04F5C0F22285600E00EE1D5A /* HomeMenuGridItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F5C0F12285600E00EE1D5A /* HomeMenuGridItem.m */; };
@@ -339,8 +338,6 @@
 		04E6C324228A6941007C9548 /* VAMockDataSource.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VAMockDataSource.m; sourceTree = "<group>"; };
 		04E6C326228ABB5B007C9548 /* HomeVerListSection.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeVerListSection.h; sourceTree = "<group>"; };
 		04E6C327228ABB5B007C9548 /* HomeVerListSection.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeVerListSection.m; sourceTree = "<group>"; };
-		04E6C329228ABD07007C9548 /* HomeVerCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeVerCollectionViewCell.h; sourceTree = "<group>"; };
-		04E6C32A228ABD07007C9548 /* HomeVerCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeVerCollectionViewCell.m; sourceTree = "<group>"; };
 		04E6DCB4228E83AF00A7A5A6 /* NSString+Size.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+Size.h"; sourceTree = "<group>"; };
 		04E6DCB5228E83AF00A7A5A6 /* NSString+Size.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+Size.m"; sourceTree = "<group>"; };
 		04EF34112282CC5200279B31 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
@@ -758,8 +755,6 @@
 				040A4A9C228965B7001A8083 /* HomeHorCollectionViewCell.m */,
 				04E6C326228ABB5B007C9548 /* HomeVerListSection.h */,
 				04E6C327228ABB5B007C9548 /* HomeVerListSection.m */,
-				04E6C329228ABD07007C9548 /* HomeVerCollectionViewCell.h */,
-				04E6C32A228ABD07007C9548 /* HomeVerCollectionViewCell.m */,
 				040B2F2F228BA2F8006D2CC5 /* HomeNavigationBar.h */,
 				040B2F30228BA2F8006D2CC5 /* HomeNavigationBar.m */,
 				04019C7022927A3200338A64 /* HomeVerItemCell.h */,
@@ -1348,7 +1343,6 @@
 				04019CDE2294E86F00338A64 /* CartRecomListView.m in Sources */,
 				04019CDB2294E3D700338A64 /* CartGoodsItemModel.m in Sources */,
 				04C7F9D62282BA1600FD9C51 /* NSObject+Unicode.m in Sources */,
-				04E6C32B228ABD07007C9548 /* HomeVerCollectionViewCell.m in Sources */,
 				04108D5D228D4C420065FB4F /* ClassifyRightViewController.m in Sources */,
 				04C7F9FE2282C3AB00FD9C51 /* ShoppingCartViewController.m in Sources */,
 				04333F3E22852A5400ECC489 /* DLScrollTabbarView.m in Sources */,

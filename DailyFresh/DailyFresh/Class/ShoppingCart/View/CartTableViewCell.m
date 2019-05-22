@@ -64,10 +64,12 @@
     
     _addBtn = [[UIButton alloc] init];
     [_addBtn setImage:[UIImage imageNamed:@"df_home_add_cart_add_normal"] forState:UIControlStateNormal];
+    [_addBtn addTarget:self action:@selector(handleAdd:) forControlEvents:UIControlEventTouchUpInside];
     [self.contentView addSubview:_addBtn];
     
     _subBtn = [[UIButton alloc] init];
     [_subBtn setImage:[UIImage imageNamed:@"df_home_add_cart_sub_normal"] forState:UIControlStateNormal];
+    [_subBtn addTarget:self action:@selector(handleSub:) forControlEvents:UIControlEventTouchUpInside];
     [self.contentView addSubview:_subBtn];
     
     _countLabel = [UILabel new];
@@ -108,17 +110,51 @@
 }
 
 - (void)setModel:(CartGoodsItemModel *)model{
-    [_adImageView sd_setImageWithURL:[NSURL URLWithString:@"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1557829191471&di=5caab1d3fabef9308ce19100c8cbf3ec&imgtype=0&src=http%3A%2F%2Fpic21.nipic.com%2F20120606%2F9801164_164114621166_2.jpg"]];
-    _titleLabel.text = @"商品名称";
-    _priceLabel.text = @"1200";
-    _originPriceLabel.text = @"1500";
-    _countLabel.text = @"12";
+    _model = model;
+    
+    [_adImageView sd_setImageWithURL:[NSURL URLWithString:model.img]];
+    _titleLabel.text = model.name;
+    _priceLabel.text = model.price;
+    _originPriceLabel.text = model.originalPrice;
+    _countLabel.text = [model.goodsNum stringValue];
     _selectBtn.selected = model.selected;
+    
+//    [_adImageView sd_setImageWithURL:[NSURL URLWithString:@"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1557829191471&di=5caab1d3fabef9308ce19100c8cbf3ec&imgtype=0&src=http%3A%2F%2Fpic21.nipic.com%2F20120606%2F9801164_164114621166_2.jpg"]];
+//    _titleLabel.text = @"商品名称";
+//    _priceLabel.text = @"1200";
+//    _originPriceLabel.text = @"1500";
+//    _countLabel.text = @"12";
+//    _selectBtn.selected = model.selected;
 }
 
 - (void)handleSelect:(UIButton *)sender {
     sender.selected = !sender.selected;
     _model.selected = sender.selected;
+    if (self.cellSelectedBlock) {
+        self.cellSelectedBlock(_model.selected);
+    }
+}
+
+- (void)handleAdd:(UIButton *)sender {
+    
+    NSInteger count = [_model.goodsNum integerValue];
+    count++;
+    _model.goodsNum = [NSNumber numberWithInteger:count];
+    _countLabel.text = [_model.goodsNum stringValue];
+    if (self.addCartBlock) {
+        self.addCartBlock(_model,1);
+    }
+}
+
+- (void)handleSub:(UIButton *)sender {
+    NSInteger count = [_model.goodsNum integerValue];
+    count--;
+    
+    _model.goodsNum = [NSNumber numberWithInteger:count];
+    _countLabel.text = [_model.goodsNum stringValue];
+    if (self.subCartBlock) {
+        self.subCartBlock(_model,1);
+    }
 }
 
 @end

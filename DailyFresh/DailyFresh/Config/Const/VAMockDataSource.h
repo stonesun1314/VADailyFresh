@@ -7,12 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CartGoodsItemModel.h"
+
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface VAMockDataSource : NSObject
 
 +(instancetype)shareInstance;
+
+@property (nonatomic, strong) NSMutableArray <CartGoodsItemModel*>*cartList;
 
 - (NSDictionary *)readJsonFromFileName:(NSString *)fileName;
 
@@ -25,6 +29,8 @@ NS_ASSUME_NONNULL_BEGIN
 - (NSArray *)classifyFirstCateList;
 
 - (NSArray *)classifySecondCateList;
+
+- (void)addShoppingCart:(GoodsItemModel *)model;
 
 @end
 

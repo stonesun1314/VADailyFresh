@@ -62,6 +62,7 @@
     
     _shopcartBtn = [[UIButton alloc] init];
     [_shopcartBtn setImage:[UIImage imageNamed:@"df_buy_button"] forState:UIControlStateNormal];
+    [_shopcartBtn addTarget:self action:@selector(handleAddCart:) forControlEvents:UIControlEventTouchUpInside];
     [self addSubview:_shopcartBtn];
     
     _priceLabel.sd_layout.leftEqualToView(_imageView).topSpaceToView(_titleLabel, 5.f).heightIs(20.f);
@@ -83,6 +84,12 @@
     _titleLabel.text = model.name;
     _priceLabel.text = model.price;
     _originPriceLabel.text = model.originalPrice;
+}
+
+- (void)handleAddCart:(UIButton *)sender {
+    if (self.addCartBlock) {
+        self.addCartBlock(_model, 1);
+    }
 }
 
 @end

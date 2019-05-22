@@ -9,29 +9,31 @@
 #import "VAMockDataSource.h"
 
 #import "GoodsItemModel.h"
+#import "CartGoodsItemModel.h"
+
+@interface VAMockDataSource ()
+
+
+@end
 
 @implementation VAMockDataSource
 
 // 创建静态对象 防止外部访问
 static VAMockDataSource *_instance;
-+(instancetype)allocWithZone:(struct _NSZone *)zone
-{
 
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        if (_instance == nil) {
-            _instance = [super allocWithZone:zone];
-        }
-    });
-    return _instance;
-}
 // 为了使实例易于外界访问 我们一般提供一个类方法
 // 类方法命名规范 share类名|default类名|类名
 +(instancetype)shareInstance
 {
     //return _instance;
     // 最好用self 用Tools他的子类调用时会出现错误
-    return [[self alloc]init];
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        if (_instance == nil) {
+            _instance = [[super alloc] init];
+        }
+    });
+    return _instance;
 }
 // 为了严谨，也要重写copyWithZone 和 mutableCopyWithZone
 -(id)copyWithZone:(NSZone *)zone
@@ -53,20 +55,20 @@ static VAMockDataSource *_instance;
     return result;
 }
 
+- (instancetype)init{
+    self = [super init];
+    if (self) {
+        _cartList = [NSMutableArray new];
+    }
+    return self;
+}
+
 - (NSArray *)homeCateList{
     NSArray *cateNameList = @[@"时令水果",@"新鲜蔬菜",@"肉禽蛋类",@"海鲜水产",@"乳品雪糕",@"粮油调味",@"烘焙糕点",@"酒水饮料",@"休闲零食",@"粽子速食",@"美妆百货",@"调味粮油",@"卤味熟食",@"邀请有礼"];
     return cateNameList;
 }
 
 - (NSArray *)homeHorGoodsItemList{
-    
-//    @property (nonatomic, strong) NSString *img;
-//    @property (nonatomic, strong) NSString *name;
-//    @property (nonatomic, strong) NSString *price;
-//    @property (nonatomic, strong) NSString *link;
-//    @property (nonatomic, strong) NSString *goodsId;
-//    @property (nonatomic, strong) NSString *originalPrice;
-//    @property (nonatomic, strong) NSString *category;
     NSMutableArray *temp = [NSMutableArray new];
     for (int i = 0; i < 7; i++) {
         GoodsItemModel *model = [[GoodsItemModel alloc] init];
@@ -78,7 +80,6 @@ static VAMockDataSource *_instance;
         model.category = @"35";
         [temp addObject:model];
     }
-    
     return temp;
 }
 
@@ -113,6 +114,43 @@ static VAMockDataSource *_instance;
 
 - (NSArray *)classifySecondCateList{
     return @[@"新人大礼包",@"今日限时秒杀",@"时令水果",@"新鲜蔬菜",@"肉禽蛋类",@"乳品雪糕",@"水产熟食",@"休闲零食",@"饮料酒水",@"粮油速食",@"美妆百货"];
+}
+
+- (void)addShoppingCart:(GoodsItemModel *)model{
+    VALog(@"id:%@,name:%@",model.goodsId,model.name);
+    
+    BOOL isAdd = NO;
+    for (CartGoodsItemModel *cartModel in _cartList) {
+        if ([cartModel.goodsId isEqualToString:model.goodsId]) {
+            cartModel.goodsNum = [self add:cartModel.goodsNum and:[NSNumber numberWithInteger:1]];
+            isAdd = YES;
+            
+            //通知购物车刷新
+            [[NSNotificationCenter defaultCenter] postNotificationName:VAShoppingCardChangeNotification object:nil];
+            return;
+        }
+    }
+    
+    CartGoodsItemModel *cartModel = [[CartGoodsItemModel alloc] init];
+    cartModel.name = model.name;
+    cartModel.goodsId = model.goodsId;
+    cartModel.category = model.category;
+    cartModel.price = model.originalPrice;
+    cartModel.originalPrice = model.originalPrice;
+    cartModel.img = model.img;
+    cartModel.link = model.link;
+    cartModel.goodsNum = [NSNumber numberWithInteger:1];
+    
+    [self.cartList addObject:cartModel];
+    
+
+    //通知购物车刷新
+    [[NSNotificationCenter defaultCenter] postNotificationName:VAShoppingCardChangeNotification object:nil];
+}
+
+- (NSNumber*)add:(NSNumber *)one and:(NSNumber *)anotherNumber
+{
+    return [NSNumber numberWithFloat:[one integerValue] + [anotherNumber integerValue]];
 }
 
 @end
