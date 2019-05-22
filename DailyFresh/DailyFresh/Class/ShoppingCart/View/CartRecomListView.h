@@ -1,8 +1,8 @@
 //
-//  HomeVerListSection.h
+//  CartRecomListView.h
 //  DailyFresh
 //
-//  Created by Mac on 2019/5/14.
+//  Created by Mac on 2019/5/22.
 //  Copyright © 2019年 Mac. All rights reserved.
 //
 
@@ -11,7 +11,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface HomeVerListSection : UIView
+@interface CartRecomListView : UIView
 
 @property (nonatomic, strong) NSArray <GoodsItemModel *>*goodsItemList;
 

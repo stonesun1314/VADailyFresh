@@ -107,17 +107,18 @@
     // Configure the view for the selected state
 }
 
-- (void)setModel:(GoodsItemModel *)model{
-    [_adImageView sd_setImageWithURL:[NSURL URLWithString:@"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1557829191471&di=5caab1d3fabef9308ce19100c8cbf3ec&imgtype=0&src=http%3A%2F%2Fpic21.nipic.com%2F20120606%2F9801164_164114621166_2.jpg"] placeholderImage:[UIImage imageNamed:@""]];
+- (void)setModel:(CartGoodsItemModel *)model{
+    [_adImageView sd_setImageWithURL:[NSURL URLWithString:@"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1557829191471&di=5caab1d3fabef9308ce19100c8cbf3ec&imgtype=0&src=http%3A%2F%2Fpic21.nipic.com%2F20120606%2F9801164_164114621166_2.jpg"]];
     _titleLabel.text = @"商品名称";
     _priceLabel.text = @"1200";
     _originPriceLabel.text = @"1500";
     _countLabel.text = @"12";
-    
+    _selectBtn.selected = model.selected;
 }
 
 - (void)handleSelect:(UIButton *)sender {
     sender.selected = !sender.selected;
+    _model.selected = sender.selected;
 }
 
 @end

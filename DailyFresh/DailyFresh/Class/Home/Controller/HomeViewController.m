@@ -98,7 +98,7 @@
     
     
     NSDictionary *dictionary = [[VAMockDataSource shareInstance] readJsonFromFileName:@"index_recommend.json"];
-    VALog(@"%@",dictionary);
+//    VALog(@"%@",dictionary);
     
     NSArray *goodsItemList = [[dictionary objectForKey:@"data"] objectForKey:@"goods"];
     

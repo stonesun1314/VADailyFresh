@@ -8,6 +8,7 @@
 
 #import "ShoppingCartViewController.h"
 #import "CartTableViewCell.h"
+#import "CartRecomListView.h"
 
 typedef NS_ENUM(NSInteger, ShoppingCartState) {
     ShoppingCartStateEmpty      = 1,    //空
@@ -20,6 +21,9 @@ typedef NS_ENUM(NSInteger, ShoppingCartState) {
 
 @property (nonatomic, strong) NSMutableArray *cartList;
 
+@property (nonatomic, strong) CartRecomListView *tableFooterView;
+@property (nonatomic, strong) NSMutableArray <GoodsItemModel *>* recomGoodsList;
+
 @end
 
 @implementation ShoppingCartViewController
@@ -30,6 +34,7 @@ typedef NS_ENUM(NSInteger, ShoppingCartState) {
     self.edgesForExtendedLayout = UIRectEdgeNone;
     self.navigationItem.title = @"购物车";
     
+    [self initDataSource];
     [self setupUI];
 }
 
@@ -38,6 +43,22 @@ typedef NS_ENUM(NSInteger, ShoppingCartState) {
     
     [self.navigationController.navigationBar setShadowImage:[UIImage new]];
     [self.navigationController.navigationBar setBackgroundImage:[UIImage new] forBarMetrics:UIBarMetricsDefault];
+    
+}
+
+- (void)initDataSource{
+    
+    NSDictionary *dictionary = [[VAMockDataSource shareInstance] readJsonFromFileName:@"index_recommend.json"];
+    //    VALog(@"%@",dictionary);
+    
+    NSArray *goodsItemList = [[dictionary objectForKey:@"data"] objectForKey:@"goods"];
+    
+    _recomGoodsList = [NSMutableArray new];
+    
+    for (NSDictionary *dict in goodsItemList) {
+        GoodsItemModel *model = [GoodsItemModel yy_modelWithJSON:dict];
+        [_recomGoodsList addObject:model];
+    }
     
 }
 
@@ -52,7 +73,7 @@ typedef NS_ENUM(NSInteger, ShoppingCartState) {
 
     WeakSelf
     VAMJRefreshGifHeader *header = [VAMJRefreshGifHeader headerWithRefreshingBlock:^{
-        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
             [weakSelf.atableView.mj_header endRefreshing];
         });
     }];
@@ -60,10 +81,17 @@ typedef NS_ENUM(NSInteger, ShoppingCartState) {
     header.lastUpdatedTimeLabel.hidden = YES;
     // 隐藏状态
     header.stateLabel.hidden = YES;
-    
     [header beginRefreshing];
-    
     _atableView.mj_header = header;
+    
+    _tableFooterView = [[CartRecomListView alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, 100)];
+    _atableView.tableFooterView = _tableFooterView;
+    
+    _tableFooterView.goodsItemList = _recomGoodsList;
+    
+    [_tableFooterView updateLayout];
+    
+    _atableView.tableFooterView = _tableFooterView;
 }
 
 
@@ -73,7 +101,7 @@ typedef NS_ENUM(NSInteger, ShoppingCartState) {
 
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 10;
+    return 6;
 }
 
 

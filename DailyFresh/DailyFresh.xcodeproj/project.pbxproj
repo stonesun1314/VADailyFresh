@@ -51,6 +51,8 @@
 		04019CD32293CADE00338A64 /* refresh_0008.png in Resources */ = {isa = PBXBuildFile; fileRef = 04019CB62293CADD00338A64 /* refresh_0008.png */; };
 		04019CD62293D87900338A64 /* CartTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04019CD52293D87900338A64 /* CartTableViewCell.m */; };
 		04019CD82293DF6100338A64 /* cart_data.json in Resources */ = {isa = PBXBuildFile; fileRef = 04019CD72293DF6100338A64 /* cart_data.json */; };
+		04019CDB2294E3D700338A64 /* CartGoodsItemModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 04019CDA2294E3D700338A64 /* CartGoodsItemModel.m */; };
+		04019CDE2294E86F00338A64 /* CartRecomListView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04019CDD2294E86F00338A64 /* CartRecomListView.m */; };
 		040A4A8D22895C40001A8083 /* VAHorCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 040A4A8C22895C40001A8083 /* VAHorCollectionView.m */; };
 		040A4A9022895C60001A8083 /* VAHorCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 040A4A8F22895C60001A8083 /* VAHorCollectionCell.m */; };
 		040A4A9722895F34001A8083 /* GoodsItemModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 040A4A9622895F34001A8083 /* GoodsItemModel.m */; };
@@ -207,6 +209,10 @@
 		04019CD42293D87900338A64 /* CartTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CartTableViewCell.h; sourceTree = "<group>"; };
 		04019CD52293D87900338A64 /* CartTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CartTableViewCell.m; sourceTree = "<group>"; };
 		04019CD72293DF6100338A64 /* cart_data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = cart_data.json; sourceTree = "<group>"; };
+		04019CD92294E3D700338A64 /* CartGoodsItemModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CartGoodsItemModel.h; sourceTree = "<group>"; };
+		04019CDA2294E3D700338A64 /* CartGoodsItemModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CartGoodsItemModel.m; sourceTree = "<group>"; };
+		04019CDC2294E86F00338A64 /* CartRecomListView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CartRecomListView.h; sourceTree = "<group>"; };
+		04019CDD2294E86F00338A64 /* CartRecomListView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CartRecomListView.m; sourceTree = "<group>"; };
 		040A4A8B22895C40001A8083 /* VAHorCollectionView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VAHorCollectionView.h; sourceTree = "<group>"; };
 		040A4A8C22895C40001A8083 /* VAHorCollectionView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VAHorCollectionView.m; sourceTree = "<group>"; };
 		040A4A8E22895C60001A8083 /* VAHorCollectionCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VAHorCollectionCell.h; sourceTree = "<group>"; };
@@ -929,6 +935,8 @@
 			children = (
 				04019CD42293D87900338A64 /* CartTableViewCell.h */,
 				04019CD52293D87900338A64 /* CartTableViewCell.m */,
+				04019CDC2294E86F00338A64 /* CartRecomListView.h */,
+				04019CDD2294E86F00338A64 /* CartRecomListView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -945,6 +953,8 @@
 		04C7F9FB2282C39700FD9C51 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				04019CD92294E3D700338A64 /* CartGoodsItemModel.h */,
+				04019CDA2294E3D700338A64 /* CartGoodsItemModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1335,6 +1345,8 @@
 				04C7F9D72282BA1600FD9C51 /* NSString+tool.m in Sources */,
 				040B2F31228BA2F8006D2CC5 /* HomeNavigationBar.m in Sources */,
 				04019C81229292C600338A64 /* HomeHeaderModel.m in Sources */,
+				04019CDE2294E86F00338A64 /* CartRecomListView.m in Sources */,
+				04019CDB2294E3D700338A64 /* CartGoodsItemModel.m in Sources */,
 				04C7F9D62282BA1600FD9C51 /* NSObject+Unicode.m in Sources */,
 				04E6C32B228ABD07007C9548 /* HomeVerCollectionViewCell.m in Sources */,
 				04108D5D228D4C420065FB4F /* ClassifyRightViewController.m in Sources */,
