@@ -20,6 +20,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (NSDictionary *)readJsonFromFileName:(NSString *)fileName;
 
+- (void)writeCartItemsToFile;
+
+- (BOOL)writeToFileName:(NSString *)fileName;
+
 - (NSArray *)homeCateList;
 
 - (NSArray *)homeHorGoodsItemList;
@@ -31,6 +35,8 @@ NS_ASSUME_NONNULL_BEGIN
 - (NSArray *)classifySecondCateList;
 
 - (void)addShoppingCart:(GoodsItemModel *)model;
+
+- (void)saveCartData;
 
 @end
 

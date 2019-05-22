@@ -45,6 +45,19 @@ static VAMockDataSource *_instance;
     return _instance;
 }
 
+- (instancetype)init{
+    self = [super init];
+    if (self) {
+        _cartList = [NSMutableArray new];
+        
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            [self readCartListFromFile];
+        });
+        
+    }
+    return self;
+}
+
 - (NSDictionary *)readJsonFromFileName:(NSString *)fileName{
     NSString *jsonPath = [[NSBundle mainBundle] pathForResource:fileName ofType:@""];
     NSData *data = [NSData dataWithContentsOfFile:jsonPath];
@@ -55,12 +68,46 @@ static VAMockDataSource *_instance;
     return result;
 }
 
-- (instancetype)init{
-    self = [super init];
-    if (self) {
-        _cartList = [NSMutableArray new];
+- (void)readCartListFromFile {
+    //读取Json//==Json文件路径
+    NSString *path = [[NSFileManager defaultManager] applicationLibraryDirectory];
+    
+    NSString *Json_path=[path stringByAppendingPathComponent:@"cart_list.json"];
+    if ([[NSFileManager defaultManager] fileExistsAtPath:path]) {
+        //==Json数据
+        NSData *data=[NSData dataWithContentsOfFile:Json_path];
+        NSError *error;
+        //==JsonObject
+        NSArray *JsonObject=[NSJSONSerialization JSONObjectWithData:data
+                                                      options:NSJSONReadingAllowFragments
+                                                        error:&error];
+        for (NSDictionary *dict in JsonObject) {
+            
+            CartGoodsItemModel *model = [CartGoodsItemModel yy_modelWithJSON:dict];
+            [_cartList addObject:model];
+        }
+        VALog(@"%@",JsonObject);
     }
-    return self;
+
+}
+
+- (void)writeCartItemsToFile{
+    
+    id jsonData = [self.cartList yy_modelToJSONData];
+    
+    VALog(@"%@",jsonData);
+    
+    NSString *path = [[NSFileManager defaultManager] applicationLibraryDirectory];
+    
+    NSString *Json_path=[path stringByAppendingPathComponent:@"cart_list.json"];
+    //==写入文件
+    NSLog(@"%@",[jsonData writeToFile:Json_path atomically:YES] ? @"Succeed":@"Failed");
+
+}
+
+- (BOOL)writeToFileName:(NSString *)fileName{
+ 
+    return YES;
 }
 
 - (NSArray *)homeCateList{
@@ -146,11 +193,17 @@ static VAMockDataSource *_instance;
 
     //通知购物车刷新
     [[NSNotificationCenter defaultCenter] postNotificationName:VAShoppingCardChangeNotification object:nil];
+    
+    [self writeCartItemsToFile];
 }
 
 - (NSNumber*)add:(NSNumber *)one and:(NSNumber *)anotherNumber
 {
     return [NSNumber numberWithFloat:[one integerValue] + [anotherNumber integerValue]];
+}
+
+- (void)saveCartData{
+    
 }
 
 @end

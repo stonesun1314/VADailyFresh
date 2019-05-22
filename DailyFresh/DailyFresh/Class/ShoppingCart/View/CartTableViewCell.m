@@ -148,6 +148,9 @@
 
 - (void)handleSub:(UIButton *)sender {
     NSInteger count = [_model.goodsNum integerValue];
+    if (count <= 1) {
+        return;
+    }
     count--;
     
     _model.goodsNum = [NSNumber numberWithInteger:count];

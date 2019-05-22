@@ -45,6 +45,7 @@
 #import "UIImage+tool.h"
 #import "SGEasyButton.h"
 #import "NSString+Size.h"
+#import "NSFileManager+Vanke.h"
 
 
 //tool

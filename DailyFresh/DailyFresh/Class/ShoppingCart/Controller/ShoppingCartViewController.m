@@ -120,7 +120,10 @@ typedef NS_ENUM(NSInteger, ShoppingCartState) {
     CartGoodsItemModel *model = [_cartList objectAtIndex:indexPath.row];
     cell.model = model;
     cell.addCartBlock = ^(GoodsItemModel *model, NSInteger num) {
-        
+        [[VAMockDataSource shareInstance] writeCartItemsToFile];
+    };
+    cell.subCartBlock = ^(GoodsItemModel *model, NSInteger num) {
+        [[VAMockDataSource shareInstance] writeCartItemsToFile];
     };
     return cell;
 }

@@ -80,6 +80,7 @@
 		04333F3E22852A5400ECC489 /* DLScrollTabbarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04333F3422852A5400ECC489 /* DLScrollTabbarView.m */; };
 		04333F3F22852A5400ECC489 /* DLTabedSlideView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04333F3722852A5400ECC489 /* DLTabedSlideView.m */; };
 		04333F4022852A5400ECC489 /* DLUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 04333F3922852A5400ECC489 /* DLUtility.m */; };
+		04B17E7F22955667004FB510 /* NSFileManager+Vanke.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B17E7E22955667004FB510 /* NSFileManager+Vanke.m */; };
 		04C7F97D2282AA1900FD9C51 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C7F97C2282AA1900FD9C51 /* AppDelegate.m */; };
 		04C7F9802282AA1900FD9C51 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C7F97F2282AA1900FD9C51 /* ViewController.m */; };
 		04C7F9832282AA1900FD9C51 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04C7F9812282AA1900FD9C51 /* Main.storyboard */; };
@@ -263,6 +264,8 @@
 		04333F3722852A5400ECC489 /* DLTabedSlideView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLTabedSlideView.m; sourceTree = "<group>"; };
 		04333F3822852A5400ECC489 /* DLUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLUtility.h; sourceTree = "<group>"; };
 		04333F3922852A5400ECC489 /* DLUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLUtility.m; sourceTree = "<group>"; };
+		04B17E7D22955667004FB510 /* NSFileManager+Vanke.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSFileManager+Vanke.h"; sourceTree = "<group>"; };
+		04B17E7E22955667004FB510 /* NSFileManager+Vanke.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSFileManager+Vanke.m"; sourceTree = "<group>"; };
 		04C7F9782282AA1900FD9C51 /* DailyFresh.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DailyFresh.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04C7F97B2282AA1900FD9C51 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		04C7F97C2282AA1900FD9C51 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -550,6 +553,15 @@
 			path = DLTabbarView;
 			sourceTree = "<group>";
 		};
+		04B17E7C22955645004FB510 /* NSFileManager */ = {
+			isa = PBXGroup;
+			children = (
+				04B17E7D22955667004FB510 /* NSFileManager+Vanke.h */,
+				04B17E7E22955667004FB510 /* NSFileManager+Vanke.m */,
+			);
+			path = NSFileManager;
+			sourceTree = "<group>";
+		};
 		04C7F96F2282AA1900FD9C51 = {
 			isa = PBXGroup;
 			children = (
@@ -822,6 +834,7 @@
 		04C7F9C72282BA1600FD9C51 /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				04B17E7C22955645004FB510 /* NSFileManager */,
 				04F5C0FC2285747100EE1D5A /* NSDate */,
 				04F5C1022285747100EE1D5A /* SGEasyButton */,
 				04C7F9C82282BA1600FD9C51 /* NSObject+Unicode.h */,
@@ -1379,6 +1392,7 @@
 				040A4A9722895F34001A8083 /* GoodsItemModel.m in Sources */,
 				04019C7E229290D000338A64 /* HomeCateSectionModel.m in Sources */,
 				04C7F9F52282C35D00FD9C51 /* MineViewController.m in Sources */,
+				04B17E7F22955667004FB510 /* NSFileManager+Vanke.m in Sources */,
 				040E77C72284090E00CDED15 /* HomeVerListView.m in Sources */,
 				04333F3D22852A5400ECC489 /* DLFixedTabbarView.m in Sources */,
 				04108D63228D5BF50065FB4F /* RightTableViewCell.m in Sources */,
