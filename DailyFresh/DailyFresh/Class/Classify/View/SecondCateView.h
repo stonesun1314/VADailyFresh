@@ -17,6 +17,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, strong) void(^selectedCateBlock)(NSInteger index,SecondCateModel *model);
 
+- (void)selectIndex:(NSInteger)index;
+
 @end
 
 NS_ASSUME_NONNULL_END

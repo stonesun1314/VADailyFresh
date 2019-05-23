@@ -172,6 +172,12 @@
     }
 }
 
+- (void)selectIndex:(NSInteger)index{
+    UIButton *preBtn = nil;
+    UIButton *selBtn = nil;
+    
+}
+
 
 
 @end

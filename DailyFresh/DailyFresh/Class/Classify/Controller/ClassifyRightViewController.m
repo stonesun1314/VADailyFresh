@@ -130,6 +130,7 @@
     RightTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identify];
     if (!cell) {
         cell = [[RightTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identify];
+        cell.selectionStyle = UITableViewCellSeparatorStyleNone;
     }
     
     
