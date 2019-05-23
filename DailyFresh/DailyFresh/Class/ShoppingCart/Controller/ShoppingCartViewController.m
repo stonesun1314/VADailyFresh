@@ -10,6 +10,7 @@
 #import "CartTableViewCell.h"
 #import "CartRecomListView.h"
 #import "CartEmptyView.h"
+#import "CartSettlingView.h"
 
 typedef NS_ENUM(NSInteger, ShoppingCartState) {
     ShoppingCartStateEmpty      = 1,    //空
@@ -26,7 +27,7 @@ typedef NS_ENUM(NSInteger, ShoppingCartState) {
 @property (nonatomic, strong) CartRecomListView *tableFooterView;
 @property (nonatomic, strong) NSMutableArray <GoodsItemModel *>* recomGoodsList;
 
-@property (nonatomic, strong) UIView *settlingView; //结算
+@property (nonatomic, strong) CartSettlingView *settlingView; //结算
 
 @end
 
@@ -71,9 +72,6 @@ typedef NS_ENUM(NSInteger, ShoppingCartState) {
         GoodsItemModel *model = [GoodsItemModel yy_modelWithJSON:dict];
         [_recomGoodsList addObject:model];
     }
-    
-
-    
 }
 
 - (void)setupUI{
@@ -108,8 +106,22 @@ typedef NS_ENUM(NSInteger, ShoppingCartState) {
     
 //    [self reloadData];
     
+    _settlingView = [[CartSettlingView alloc] init];
+    _settlingView.selectAllBlock = ^(BOOL select) {
+        NSInteger selectedPrice = 0;
+        for (CartGoodsItemModel *model in weakSelf.cartList) {
+            model.selected = select;
+            
+        }
+        
+        [weakSelf calSelectedItemPrice];
+        
+        [self reloadData];
+    };
+    [self.view addSubview:_settlingView];
+    _settlingView.sd_layout.leftEqualToView(self.view).rightEqualToView(self.view).bottomEqualToView(self.view).heightIs(50.f);
+    
 }
-
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     return 110.f;
@@ -129,12 +141,14 @@ typedef NS_ENUM(NSInteger, ShoppingCartState) {
     CartGoodsItemModel *model = [_cartList objectAtIndex:indexPath.row];
     cell.model = model;
     cell.addCartBlock = ^(GoodsItemModel *model, NSInteger num) {
+        [self calSelectedItemPrice];
         [[VAMockDataSource shareInstance] writeCartItemsToFile];
     };
     cell.subCartBlock = ^(GoodsItemModel *model, NSInteger num) {
         if ([model.goodsNum integerValue] <= 0) { //商品数量为0，则删除
             [self deleteCartItem:indexPath];
         }
+        [self calSelectedItemPrice];
         [[VAMockDataSource shareInstance] writeCartItemsToFile];
     };
     return cell;
@@ -166,8 +180,9 @@ typedef NS_ENUM(NSInteger, ShoppingCartState) {
         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
             [[VAMockDataSource shareInstance] writeCartItemsToFile];
         });
+        
+        [self calSelectedItemPrice];
     }
-
 }
 
 
@@ -200,5 +215,19 @@ typedef NS_ENUM(NSInteger, ShoppingCartState) {
     }
 
 }
+
+- (void)calSelectedItemPrice {
+    NSInteger selectedPrice = 0;
+    for (CartGoodsItemModel *model in self.cartList) {
+        if (model.selected) {
+            selectedPrice += ([model.price integerValue] * [model.goodsNum integerValue]);
+        }
+        
+    }
+    
+     self.settlingView.totalPrice = [NSString stringWithFormat:@"%ld",selectedPrice];
+}
+
+
 
 @end

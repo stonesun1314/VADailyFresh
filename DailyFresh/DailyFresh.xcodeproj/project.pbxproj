@@ -118,6 +118,7 @@
 		04E6C328228ABB5B007C9548 /* HomeVerListSection.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E6C327228ABB5B007C9548 /* HomeVerListSection.m */; };
 		04E6DCB6228E83AF00A7A5A6 /* NSString+Size.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E6DCB5228E83AF00A7A5A6 /* NSString+Size.m */; };
 		04EB85BB2296301B00E7319D /* CartEmptyView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EB85BA2296301B00E7319D /* CartEmptyView.m */; };
+		04EB85BE2296452100E7319D /* CartSettlingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EB85BD2296452100E7319D /* CartSettlingView.m */; };
 		04F5C0EF22854EE300EE1D5A /* HomeSubViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F5C0EE22854EE300EE1D5A /* HomeSubViewController.m */; };
 		04F5C0F22285600E00EE1D5A /* HomeMenuGridItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F5C0F12285600E00EE1D5A /* HomeMenuGridItem.m */; };
 		04F5C0F5228561F100EE1D5A /* HomeHeaderMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F5C0F4228561F100EE1D5A /* HomeHeaderMenuView.m */; };
@@ -345,6 +346,8 @@
 		04E6DCB5228E83AF00A7A5A6 /* NSString+Size.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+Size.m"; sourceTree = "<group>"; };
 		04EB85B92296301B00E7319D /* CartEmptyView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CartEmptyView.h; sourceTree = "<group>"; };
 		04EB85BA2296301B00E7319D /* CartEmptyView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CartEmptyView.m; sourceTree = "<group>"; };
+		04EB85BC2296452100E7319D /* CartSettlingView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CartSettlingView.h; sourceTree = "<group>"; };
+		04EB85BD2296452100E7319D /* CartSettlingView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CartSettlingView.m; sourceTree = "<group>"; };
 		04EF34112282CC5200279B31 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		04F5C0ED22854EE300EE1D5A /* HomeSubViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeSubViewController.h; sourceTree = "<group>"; };
 		04F5C0EE22854EE300EE1D5A /* HomeSubViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeSubViewController.m; sourceTree = "<group>"; };
@@ -947,6 +950,8 @@
 				04019CDD2294E86F00338A64 /* CartRecomListView.m */,
 				04EB85B92296301B00E7319D /* CartEmptyView.h */,
 				04EB85BA2296301B00E7319D /* CartEmptyView.m */,
+				04EB85BC2296452100E7319D /* CartSettlingView.h */,
+				04EB85BD2296452100E7319D /* CartSettlingView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1377,6 +1382,7 @@
 				04E6C328228ABB5B007C9548 /* HomeVerListSection.m in Sources */,
 				04019CD62293D87900338A64 /* CartTableViewCell.m in Sources */,
 				04F5C10B2285747100EE1D5A /* NSDate+TimeAgo.m in Sources */,
+				04EB85BE2296452100E7319D /* CartSettlingView.m in Sources */,
 				04019C7222927A3200338A64 /* HomeVerItemCell.m in Sources */,
 				04F5C10F2285747100EE1D5A /* UIButton+SGImagePosition.m in Sources */,
 				04C7F9D92282BA1600FD9C51 /* UIImage+tool.m in Sources */,
