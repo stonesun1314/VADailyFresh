@@ -7,6 +7,5 @@
 //  Copyright © 2017年 kingsic. All rights reserved.
 //
 
-#import "UIButton+SGEvent.h"
 #import "UIButton+SGCountdown.h"
 #import "UIButton+SGImagePosition.h"

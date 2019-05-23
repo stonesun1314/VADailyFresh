@@ -9,6 +9,7 @@
 #import "ShoppingCartViewController.h"
 #import "CartTableViewCell.h"
 #import "CartRecomListView.h"
+#import "CartEmptyView.h"
 
 typedef NS_ENUM(NSInteger, ShoppingCartState) {
     ShoppingCartStateEmpty      = 1,    //空
@@ -21,6 +22,7 @@ typedef NS_ENUM(NSInteger, ShoppingCartState) {
 
 @property (nonatomic, strong) NSMutableArray *cartList;
 
+@property (nonatomic, strong) CartEmptyView *emptyView;
 @property (nonatomic, strong) CartRecomListView *tableFooterView;
 @property (nonatomic, strong) NSMutableArray <GoodsItemModel *>* recomGoodsList;
 
@@ -68,6 +70,12 @@ typedef NS_ENUM(NSInteger, ShoppingCartState) {
         [_recomGoodsList addObject:model];
     }
     
+    if (_cartList.count == 0) { //empty
+        
+    }else{
+        
+    }
+    
 }
 
 - (void)setupUI{
@@ -82,9 +90,7 @@ typedef NS_ENUM(NSInteger, ShoppingCartState) {
     WeakSelf
     VAMJRefreshGifHeader *header = [VAMJRefreshGifHeader headerWithRefreshingBlock:^{
         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-            weakSelf.cartList = [VAMockDataSource shareInstance].cartList;
-            [weakSelf.atableView reloadData];
-            [weakSelf.atableView.mj_header endRefreshing];
+            [weakSelf reloadData];
         });
     }];
     // 隐藏时间
@@ -99,6 +105,9 @@ typedef NS_ENUM(NSInteger, ShoppingCartState) {
     _tableFooterView.goodsItemList = _recomGoodsList;
     [_tableFooterView updateLayout];
     _atableView.tableFooterView = _tableFooterView;
+    
+    _emptyView = [[CartEmptyView alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, 250.f)];
+    
 }
 
 
@@ -129,11 +138,91 @@ typedef NS_ENUM(NSInteger, ShoppingCartState) {
 }
 
 
+- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath{
+    return YES;
+}
+
+- (UITableViewCellEditingStyle)tableView:(UITableView *)tableView editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return UITableViewCellEditingStyleDelete;
+}
+
+- (NSString *)tableView:(UITableView *)tableView titleForDeleteConfirmationButtonForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return @"删除";
+}
+
+//设置进入编辑状态时，Cell不会缩进
+- (BOOL)tableView: (UITableView *)tableView shouldIndentWhileEditingRowAtIndexPath:(NSIndexPath *)indexPath {
+    return NO;
+}
+
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath{
+    VALog(@"");
+//    if (editingStyle == UITableViewCellEditingStyleDelete) {
+//        //如果编辑样式为删除样式
+//        if (indexPath.row<[self.cartList count])
+//        {
+//            [self.cartList removeObjectAtIndex:indexPath.row];//移除数据源的数据
+//            [_atableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];//移除tableView中的数据
+//        }
+//    }
+
+}
+    
+- (NSArray<UITableViewRowAction*>*)tableView:(UITableView *)tableView editActionsForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    //code
+    UITableViewRowAction *deleteAction = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleDestructive title:@"删除" handler:^(UITableViewRowAction * _Nonnull action, NSIndexPath * _Nonnull indexPath) {
+        //如果编辑样式为删除样式
+        if (indexPath.row<[self.cartList count])
+        {
+            [self.cartList removeObjectAtIndex:indexPath.row];//移除数据源的数据
+            [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];//移除tableView中的数据
+            
+        }
+    }];
+    
+    return @[deleteAction];
+}
+
+//- (nullable UISwipeActionsConfiguration *)tableView:(UITableView *)tableView trailingSwipeActionsConfigurationForRowAtIndexPath:(nonnull NSIndexPath *)indexPath{
+//    if (@available(iOS 11.0, *)) {
+//        UIContextualAction *deleteAction = [UIContextualAction contextualActionWithStyle:UIContextualActionStyleDestructive title:@"删除" handler:^(UIContextualAction * _Nonnull action, __kindof UIView * _Nonnull sourceView, void (^ _Nonnull completionHandler)(BOOL)) {
+//            [self.cartList removeObjectAtIndex:indexPath.row];//移除数据源的数据
+//            [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];//移除tableView中的数据
+//            completionHandler(YES);
+//        }];
+//        //也可以设置图片
+//        deleteAction.backgroundColor = [UIColor redColor];
+//
+//        UISwipeActionsConfiguration *config = [UISwipeActionsConfiguration configurationWithActions:@[deleteAction]];
+//        config.performsFirstActionWithFullSwipe = NO;
+//        return config;
+//    } else {
+//        // Fallback on earlier versions
+//        return nil;
+//    }
+//}
+
 #pragma mark -- notice
 - (void)cartChangeNotice:(NSNotification *)notice{
+    
+    [self reloadData];
+
+}
+
+- (void)reloadData{
     _cartList = [VAMockDataSource shareInstance].cartList;
     
     [_atableView reloadData];
+    
+    if (_cartList.count == 0) {
+        _atableView.tableHeaderView = _emptyView;
+    }else{
+        _atableView.tableHeaderView = nil;
+    }
+    
+    [_atableView.mj_header endRefreshing];
+    
 }
 
 @end

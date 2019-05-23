@@ -76,7 +76,7 @@ static VAMockDataSource *_instance;
     if ([[NSFileManager defaultManager] fileExistsAtPath:path]) {
         
         NSArray *JsonObject = [[NSArray alloc] initWithContentsOfFile:Json_path];
-        NSLog(@"---plist一开始保存时候的内容---%@",JsonObject);
+//        NSLog(@"---plist一开始保存时候的内容---%@",JsonObject);
 //        //==Json数据
 //        NSData *data=[NSData dataWithContentsOfFile:Json_path];
 //        NSError *error;
