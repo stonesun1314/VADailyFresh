@@ -37,6 +37,11 @@
         make.width.mas_equalTo(80.f);
         make.top.bottom.left.mas_equalTo(self.view);
     }];
+    
+    if (self.dataList.count > 0) {
+        [_aTableView selectRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0] animated:NO scrollPosition:UITableViewScrollPositionNone];
+    }
+
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
