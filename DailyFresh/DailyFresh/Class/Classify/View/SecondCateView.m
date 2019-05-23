@@ -98,6 +98,8 @@
 
 - (void)layoutTags{
     
+    [self.scrollContentView removeAllSubviews];
+    
     UIView *lastObj = nil;
     _scrollViewArray = [NSMutableArray new];
     for (SecondCateModel *model in _dataList) {

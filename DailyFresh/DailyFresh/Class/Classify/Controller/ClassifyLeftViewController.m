@@ -11,6 +11,8 @@
 
 @interface ClassifyLeftViewController ()<UITableViewDelegate,UITableViewDataSource>
 
+@property (nonatomic, strong) NSIndexPath *currentSelectIndex;
+
 @end
 
 @implementation ClassifyLeftViewController
@@ -60,6 +62,15 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     [tableView scrollToRowAtIndexPath:indexPath atScrollPosition:UITableViewScrollPositionMiddle animated:YES];
+    
+    if (_currentSelectIndex.row != indexPath.row) {
+        _currentSelectIndex = indexPath;
+        if (self.selectedCateBlock) {
+            self.selectedCateBlock(indexPath.row);
+        }
+        
+    }
+
 }
 
 

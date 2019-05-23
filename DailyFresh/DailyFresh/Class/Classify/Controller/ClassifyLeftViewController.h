@@ -10,10 +10,14 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+typedef void(^VASelectedCateBlock)(NSInteger index);
+
 @interface ClassifyLeftViewController : BaseViewController
 
 @property (nonatomic, strong) UITableView *aTableView;
 @property (nonatomic, strong) NSArray *dataList;
+
+@property (nonatomic, strong) VASelectedCateBlock selectedCateBlock;
 
 @end
 

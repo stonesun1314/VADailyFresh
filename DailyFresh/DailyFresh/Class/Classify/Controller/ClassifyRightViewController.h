@@ -15,6 +15,9 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong) UITableView *aTableView;
 @property (nonatomic, strong) NSMutableArray *dataList;
 
+- (void)clearAllData;
+- (void)reloadData;
+
 @end
 
 NS_ASSUME_NONNULL_END

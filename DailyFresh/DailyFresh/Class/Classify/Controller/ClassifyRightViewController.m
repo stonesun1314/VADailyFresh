@@ -50,8 +50,6 @@
     };
     [_headerView addSubview:_secondCateView];
     
-    
-    
     [_headerView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.right.top.mas_equalTo(self.view);
         make.height.mas_equalTo(44.f);
@@ -68,6 +66,7 @@
     _aTableView.showsVerticalScrollIndicator = NO;
     _aTableView.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
     _aTableView.backgroundColor = kMainBackgroundColor;
+    _aTableView.tableFooterView = [UIView new];
 
     [self.view addSubview:_aTableView];
 
@@ -146,6 +145,23 @@
     
     
     return cell;
+}
+
+- (void)clearAllData {
+    [self.dataList removeAllObjects];
+    _secondCateView.dataList = nil;
+    [self.aTableView reloadData];
+}
+
+- (void)reloadData{
+    WeakSelf
+    
+    [self.aTableView.mj_header beginRefreshing];
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+       weakSelf.secondCateView.dataList = self.dataList;
+        [weakSelf.aTableView reloadData];
+        [weakSelf.aTableView.mj_header endRefreshing];
+    });
 }
 
 @end

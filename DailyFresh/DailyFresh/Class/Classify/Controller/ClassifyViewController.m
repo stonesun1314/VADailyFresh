@@ -49,8 +49,12 @@
 
 - (void)initDataSource {
     _leftCateList = [[VAMockDataSource shareInstance] classifyFirstCateList];
+    
+    [self readRightData];
+}
+
+- (void)readRightData{
     NSDictionary *dictionary = [[VAMockDataSource shareInstance] readJsonFromFileName:@"cate_goods.json"];
-    VALog(@"%@",dictionary);
     
     NSArray *cateList = [[dictionary objectForKey:@"data"] objectForKey:@"cateList"];
     
@@ -60,10 +64,10 @@
         SecondCateModel *model = [SecondCateModel yy_modelWithJSON:dict];
         [_rightCateList addObject:model];
     }
-    
 }
 
 - (void)setupUI{
+    WeakSelf
     _navView = [[ClassifyNavView alloc] init];
     [self.view addSubview:_navView];
     
@@ -85,6 +89,12 @@
     
     _leftVC = [[ClassifyLeftViewController alloc] init];
     _leftVC.dataList = _leftCateList;
+    _leftVC.selectedCateBlock = ^(NSInteger index) {
+        [weakSelf.rightVC clearAllData];
+        [weakSelf readRightData];
+        weakSelf.rightVC.dataList = weakSelf.rightCateList;
+        [weakSelf.rightVC reloadData];
+    };
     [self addChildViewController:_leftVC];
     
     [self.view addSubview:_leftVC.view];
