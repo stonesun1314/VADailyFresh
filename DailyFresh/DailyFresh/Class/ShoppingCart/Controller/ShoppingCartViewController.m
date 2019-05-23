@@ -104,11 +104,8 @@ typedef NS_ENUM(NSInteger, ShoppingCartState) {
     
     _emptyView = [[CartEmptyView alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, 250.f)];
     
-//    [self reloadData];
-    
     _settlingView = [[CartSettlingView alloc] init];
     _settlingView.selectAllBlock = ^(BOOL select) {
-        NSInteger selectedPrice = 0;
         for (CartGoodsItemModel *model in weakSelf.cartList) {
             model.selected = select;
             
@@ -116,7 +113,7 @@ typedef NS_ENUM(NSInteger, ShoppingCartState) {
         
         [weakSelf calSelectedItemPrice];
         
-        [self reloadData];
+        [weakSelf reloadData];
     };
     [self.view addSubview:_settlingView];
     _settlingView.sd_layout.leftEqualToView(self.view).rightEqualToView(self.view).bottomEqualToView(self.view).heightIs(50.f);

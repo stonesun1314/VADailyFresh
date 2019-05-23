@@ -133,10 +133,16 @@
         cell = [[RightTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identify];
     }
     
+    
+    
     SecondCateModel *cateModel = [_dataList objectAtIndex:indexPath.section];
     GoodsItemModel *goodsModel = [cateModel.goods objectAtIndex:indexPath.row];
     
     cell.model = goodsModel;
+    
+    cell.addCartBlock = ^(GoodsItemModel *model, NSInteger num) {
+        [[VAMockDataSource shareInstance] addShoppingCart:model];
+    };
     
     
     return cell;

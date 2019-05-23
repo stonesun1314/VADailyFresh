@@ -69,6 +69,10 @@
         [_contentView addSubview:cell];
         [temp addObject:cell];
         cell.sd_layout.heightIs(size.height);
+        
+        cell.addCartBlock = ^(GoodsItemModel *model, NSInteger num) {
+            [[VAMockDataSource shareInstance] addShoppingCart:model];
+        };
         //        cell.backgroundColor = KColorRandomColor;
     }
     

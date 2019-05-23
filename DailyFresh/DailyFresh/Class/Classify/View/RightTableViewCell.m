@@ -50,6 +50,7 @@
         
         _shopcartBtn = [[UIButton alloc] init];
         [_shopcartBtn setImage:[UIImage imageNamed:@"df_side_shopCar_icon"] forState:UIControlStateNormal];
+        [_shopcartBtn addTarget:self action:@selector(handleAdd:) forControlEvents:UIControlEventTouchUpInside];
         [self.contentView addSubview:_shopcartBtn];
         
         [_iconImageView mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -111,6 +112,12 @@
     _subtitleLabel.text = model.name;
     _priceLabel.text = model.price;
     _originPriceLabel.text = model.originalPrice;
+}
+
+- (void)handleAdd:(UIButton *)sender{
+    if (self.addCartBlock) {
+        self.addCartBlock(_model, 1);
+    }
 }
 
 @end
