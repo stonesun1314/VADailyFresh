@@ -36,6 +36,7 @@
 #import "URLMacros.h"
 #import "VAConsts.h"
 #import "VAMJRefreshGifHeader.h"
+#import "VANStringUtil.h"
 
 
 //category

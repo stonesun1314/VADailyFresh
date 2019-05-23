@@ -114,8 +114,8 @@
     
     [_adImageView sd_setImageWithURL:[NSURL URLWithString:model.img]];
     _titleLabel.text = model.name;
-    _priceLabel.text = model.price;
-    _originPriceLabel.text = model.originalPrice;
+    _priceLabel.text = [VANStringUtil converCurrnecyFormate:model.price]; //model.price;
+    _originPriceLabel.text = [VANStringUtil converCurrnecyFormate:model.originalPrice]; //model.originalPrice;
     _countLabel.text = [model.goodsNum stringValue];
     _selectBtn.selected = model.selected;
     
