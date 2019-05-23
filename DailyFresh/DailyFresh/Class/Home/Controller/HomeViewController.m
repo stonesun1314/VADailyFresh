@@ -30,6 +30,7 @@
 
 
 @property (nonatomic, strong) NSDictionary *topDataSource;
+@property (nonatomic, strong) HomeHeaderModel *headerBannerListModel;
 @property (nonatomic, strong) HomeCateSectionModel *cateSectionModel;
 @property (nonatomic, strong) HomeTopAdSectionModel *topSectionModel;
 @property (nonatomic, strong) NSMutableArray *verGoodsItemList;
@@ -69,6 +70,7 @@
     NSDictionary *dataDict = [_topDataSource objectForKey:@"data"];
     NSDictionary *dict = [dataDict objectForKey:@"header"];
     
+    _headerBannerListModel = [HomeHeaderModel yy_modelWithJSON:dict];
     
     
     NSArray *goodsItem = [dataDict objectForKey:@"goodsItem"];
@@ -146,6 +148,7 @@
 //        TestViewController *vc = [[TestViewController alloc] init];
 //        [childVCArr addObject:vc];
         _viewController = [[HomeSubViewController alloc] init];
+        _viewController.headerBannerModel = self.headerBannerListModel;
         _viewController.limTimeModel = _limTimeModel;
         _viewController.topAdModelArr = _topSectionArr;
         _viewController.cateSectionModel = _cateSectionModel;

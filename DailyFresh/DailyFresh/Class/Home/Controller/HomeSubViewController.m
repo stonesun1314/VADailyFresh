@@ -65,6 +65,7 @@
     _contentView.sd_layout.spaceToSuperView(UIEdgeInsetsZero);
     
     _headerView = [[HomeHeaderView alloc] init];
+    _headerView.headerBannerModel = self.headerBannerModel;
     _headerView.cateModel = _cateSectionModel;
     [_contentView addSubview:_headerView];
     

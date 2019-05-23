@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "HomeTopAdSectionModel.h"
 #import "HomeCateSectionModel.h"
+#import "HomeHeaderModel.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -20,6 +21,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, strong) UIView *cateMenuView;
 
+@property (nonatomic, strong) HomeHeaderModel *headerBannerModel;
 @property (nonatomic, strong) HomeCateSectionModel *cateModel;
 
 

@@ -56,7 +56,7 @@
     
     _topBannerImageView.sd_layout.leftSpaceToView(self, VAMargin).rightSpaceToView(self, VAMargin).topSpaceToView(self, 15.f).heightIs(bannerHeight);
     
-    _bannerCycleScrollView = [SDCycleScrollView cycleScrollViewWithFrame:CGRectMake(VAMargin, bannerHeight + 15.f + 15.f, kVAScreenWidth - VAMargin * 2, 100) imageURLStringsGroup:@[@"backPlaceholder",@"backPlaceholder",@"backPlaceholder",@"backPlaceholder",@"backPlaceholder"]]; //[SDCycleScrollView cycleScrollViewWithFrame:CGRectMake(0, bannerHeight + 15.f + 15.f, VAScreenWidth - VAMargin * 2, 100) imagesGroup:@[]];
+    _bannerCycleScrollView = [SDCycleScrollView cycleScrollViewWithFrame:CGRectMake(VAMargin, bannerHeight + 15.f + 15.f, kVAScreenWidth - VAMargin * 2, 100) delegate:self placeholderImage:[UIImage imageNamed:@"backPlaceholder"]];
     [self addSubview:_bannerCycleScrollView];
     
     _cateMenuView = [[UIView alloc] init];
@@ -77,6 +77,19 @@
 //    _cateMenuContentView.backgroundColor = [UIColor blueColor];
     
 
+}
+
+- (void)setHeaderBannerModel:(HomeHeaderModel *)headerBannerModel{
+    _headerBannerModel = headerBannerModel;
+    HomeTopAdModel *top = _headerBannerModel.top;
+    
+    [_topBannerImageView sd_setImageWithURL:[NSURL URLWithString:top.img]];
+    
+    NSMutableArray *temp = [NSMutableArray new];
+    for (HomeBannerModel *bannerModel in _headerBannerModel.banner) {
+        [temp addObject:bannerModel.img];
+    }
+    _bannerCycleScrollView.imageURLStringsGroup = temp;
 }
 
 - (void)setCateModel:(HomeCateSectionModel *)cateModel{
