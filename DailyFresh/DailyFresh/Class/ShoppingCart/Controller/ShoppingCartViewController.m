@@ -26,6 +26,8 @@ typedef NS_ENUM(NSInteger, ShoppingCartState) {
 @property (nonatomic, strong) CartRecomListView *tableFooterView;
 @property (nonatomic, strong) NSMutableArray <GoodsItemModel *>* recomGoodsList;
 
+@property (nonatomic, strong) UIView *settlingView; //结算
+
 @end
 
 @implementation ShoppingCartViewController
@@ -70,11 +72,7 @@ typedef NS_ENUM(NSInteger, ShoppingCartState) {
         [_recomGoodsList addObject:model];
     }
     
-    if (_cartList.count == 0) { //empty
-        
-    }else{
-        
-    }
+
     
 }
 
@@ -108,6 +106,8 @@ typedef NS_ENUM(NSInteger, ShoppingCartState) {
     
     _emptyView = [[CartEmptyView alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, 250.f)];
     
+//    [self reloadData];
+    
 }
 
 
@@ -132,6 +132,9 @@ typedef NS_ENUM(NSInteger, ShoppingCartState) {
         [[VAMockDataSource shareInstance] writeCartItemsToFile];
     };
     cell.subCartBlock = ^(GoodsItemModel *model, NSInteger num) {
+        if ([model.goodsNum integerValue] <= 0) { //商品数量为0，则删除
+            [self deleteCartItem:indexPath];
+        }
         [[VAMockDataSource shareInstance] writeCartItemsToFile];
     };
     return cell;
@@ -159,30 +162,13 @@ typedef NS_ENUM(NSInteger, ShoppingCartState) {
     VALog(@"");
     if (editingStyle == UITableViewCellEditingStyleDelete) {
         //如果编辑样式为删除样式
-        if (indexPath.row<[self.cartList count])
-        {
-            [self.cartList removeObjectAtIndex:indexPath.row];//移除数据源的数据
-            [_atableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];//移除tableView中的数据
-        }
+        [self deleteCartItem:indexPath];
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            [[VAMockDataSource shareInstance] writeCartItemsToFile];
+        });
     }
 
 }
-    
-//- (NSArray<UITableViewRowAction*>*)tableView:(UITableView *)tableView editActionsForRowAtIndexPath:(NSIndexPath *)indexPath
-//{
-//    //code
-//    UITableViewRowAction *deleteAction = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleDestructive title:@"删除" handler:^(UITableViewRowAction * _Nonnull action, NSIndexPath * _Nonnull indexPath) {
-//        //如果编辑样式为删除样式
-//        if (indexPath.row<[self.cartList count])
-//        {
-//            [self.cartList removeObjectAtIndex:indexPath.row];//移除数据源的数据
-//            [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];//移除tableView中的数据
-//
-//        }
-//    }];
-//
-//    return @[deleteAction];
-//}
 
 
 #pragma mark -- notice
@@ -205,6 +191,14 @@ typedef NS_ENUM(NSInteger, ShoppingCartState) {
     
     [_atableView.mj_header endRefreshing];
     
+}
+
+- (void)deleteCartItem:(NSIndexPath *)indexPath{
+    if (self.cartList.count > indexPath.row) {
+        [self.cartList removeObjectAtIndex:indexPath.row];//移除数据源的数据
+        [_atableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
+    }
+
 }
 
 @end

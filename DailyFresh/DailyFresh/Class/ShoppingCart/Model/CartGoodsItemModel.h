@@ -12,7 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface CartGoodsItemModel : GoodsItemModel
 
-@property (nonatomic, strong) NSNumber *goodsNum;
+
 @property (nonatomic, assign) BOOL selected;
 
 @end

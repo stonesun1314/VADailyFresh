@@ -148,7 +148,7 @@
 
 - (void)handleSub:(UIButton *)sender {
     NSInteger count = [_model.goodsNum integerValue];
-    if (count <= 1) {
+    if (count <= 0) {
         return;
     }
     count--;

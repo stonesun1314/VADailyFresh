@@ -20,6 +20,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong) NSString *originalPrice;
 @property (nonatomic, strong) NSString *category;
 
+@property (nonatomic, strong) NSNumber *goodsNum;
+
 @end
 
 NS_ASSUME_NONNULL_END
