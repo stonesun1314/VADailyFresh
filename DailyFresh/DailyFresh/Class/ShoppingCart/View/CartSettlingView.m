@@ -76,7 +76,7 @@
 
 - (void)setTotalPrice:(NSString *)totalPrice{
     _totalPrice = totalPrice;
-    _totalPriceLabel.text = [VANStringUtil converCurrnecyFormate:_totalPrice];
+    _totalPriceLabel.text = [NSString stringWithFormat:@"合计:%@",[VANStringUtil converCurrnecyFormate:_totalPrice]];
 }
 
 @end
