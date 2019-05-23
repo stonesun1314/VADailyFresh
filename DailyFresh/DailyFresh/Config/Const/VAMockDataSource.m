@@ -72,34 +72,37 @@ static VAMockDataSource *_instance;
     //读取Json//==Json文件路径
     NSString *path = [[NSFileManager defaultManager] applicationLibraryDirectory];
     
-    NSString *Json_path=[path stringByAppendingPathComponent:@"cart_list.json"];
+    NSString *Json_path=[path stringByAppendingPathComponent:@"cart_list.plist"];
     if ([[NSFileManager defaultManager] fileExistsAtPath:path]) {
-        //==Json数据
-        NSData *data=[NSData dataWithContentsOfFile:Json_path];
-        NSError *error;
-        //==JsonObject
-        NSArray *JsonObject=[NSJSONSerialization JSONObjectWithData:data
-                                                      options:NSJSONReadingAllowFragments
-                                                        error:&error];
+        
+        NSArray *JsonObject = [[NSArray alloc] initWithContentsOfFile:Json_path];
+        NSLog(@"---plist一开始保存时候的内容---%@",JsonObject);
+//        //==Json数据
+//        NSData *data=[NSData dataWithContentsOfFile:Json_path];
+//        NSError *error;
+//        //==JsonObject
+//        NSArray *JsonObject=[NSJSONSerialization JSONObjectWithData:data
+//                                                      options:NSJSONReadingAllowFragments
+//                                                        error:&error];
         for (NSDictionary *dict in JsonObject) {
             
             CartGoodsItemModel *model = [CartGoodsItemModel yy_modelWithJSON:dict];
             [_cartList addObject:model];
         }
-        VALog(@"%@",JsonObject);
+//        VALog(@"%@",JsonObject);
     }
 
 }
 
 - (void)writeCartItemsToFile{
     
-    id jsonData = [self.cartList yy_modelToJSONData];
+    id jsonData = [self.cartList yy_modelToJSONObject];
     
     VALog(@"%@",jsonData);
     
     NSString *path = [[NSFileManager defaultManager] applicationLibraryDirectory];
     
-    NSString *Json_path=[path stringByAppendingPathComponent:@"cart_list.json"];
+    NSString *Json_path=[path stringByAppendingPathComponent:@"cart_list.plist"];
     //==写入文件
     NSLog(@"%@",[jsonData writeToFile:Json_path atomically:YES] ? @"Succeed":@"Failed");
 
