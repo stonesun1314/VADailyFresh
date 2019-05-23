@@ -17,6 +17,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    //df_me_go_appstore_evaluate@2x     头像  //df_logo_meiriyouxian@2x
 }
 
 /*
