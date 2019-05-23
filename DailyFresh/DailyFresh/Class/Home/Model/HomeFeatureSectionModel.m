@@ -10,4 +10,9 @@
 
 @implementation HomeFeatureSectionModel
 
++(NSDictionary *)modelContainerPropertyGenericClass
+{
+    return @{@"subItem" : [GoodsItemModel class]};
+}
+
 @end

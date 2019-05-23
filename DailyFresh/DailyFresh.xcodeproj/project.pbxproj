@@ -122,6 +122,7 @@
 		04EB85C122966B5200E7319D /* VANStringUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EB85C022966B5200E7319D /* VANStringUtil.m */; };
 		04F45D8622969BAB00331784 /* HomeFeatureSection.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F45D8522969BAB00331784 /* HomeFeatureSection.m */; };
 		04F45D8922969BBF00331784 /* HomeFeatureSectionModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F45D8822969BBF00331784 /* HomeFeatureSectionModel.m */; };
+		04F45D8C22969CAD00331784 /* HomeFeatureItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F45D8B22969CAD00331784 /* HomeFeatureItemView.m */; };
 		04F5C0EF22854EE300EE1D5A /* HomeSubViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F5C0EE22854EE300EE1D5A /* HomeSubViewController.m */; };
 		04F5C0F22285600E00EE1D5A /* HomeMenuGridItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F5C0F12285600E00EE1D5A /* HomeMenuGridItem.m */; };
 		04F5C0F5228561F100EE1D5A /* HomeHeaderMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F5C0F4228561F100EE1D5A /* HomeHeaderMenuView.m */; };
@@ -358,6 +359,8 @@
 		04F45D8522969BAB00331784 /* HomeFeatureSection.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeFeatureSection.m; sourceTree = "<group>"; };
 		04F45D8722969BBF00331784 /* HomeFeatureSectionModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeFeatureSectionModel.h; sourceTree = "<group>"; };
 		04F45D8822969BBF00331784 /* HomeFeatureSectionModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeFeatureSectionModel.m; sourceTree = "<group>"; };
+		04F45D8A22969CAD00331784 /* HomeFeatureItemView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeFeatureItemView.h; sourceTree = "<group>"; };
+		04F45D8B22969CAD00331784 /* HomeFeatureItemView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeFeatureItemView.m; sourceTree = "<group>"; };
 		04F5C0ED22854EE300EE1D5A /* HomeSubViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeSubViewController.h; sourceTree = "<group>"; };
 		04F5C0EE22854EE300EE1D5A /* HomeSubViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeSubViewController.m; sourceTree = "<group>"; };
 		04F5C0F02285600E00EE1D5A /* HomeMenuGridItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeMenuGridItem.h; sourceTree = "<group>"; };
@@ -789,6 +792,8 @@
 				04019C7122927A3200338A64 /* HomeVerItemCell.m */,
 				04F45D8422969BAB00331784 /* HomeFeatureSection.h */,
 				04F45D8522969BAB00331784 /* HomeFeatureSection.m */,
+				04F45D8A22969CAD00331784 /* HomeFeatureItemView.h */,
+				04F45D8B22969CAD00331784 /* HomeFeatureItemView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1387,6 +1392,7 @@
 				04CBE7EB228E4AD200AB1D5B /* SecondCateView.m in Sources */,
 				04333F3B22852A5400ECC489 /* DLCustomSlideView.m in Sources */,
 				04C7F9F22282C34B00FD9C51 /* DiscoveryViewController.m in Sources */,
+				04F45D8C22969CAD00331784 /* HomeFeatureItemView.m in Sources */,
 				04D1A355228C130B00C3F597 /* SGPageContentCollectionView.m in Sources */,
 				04333F3F22852A5400ECC489 /* DLTabedSlideView.m in Sources */,
 				04F5C0F822856DF300EE1D5A /* HomeCateItemModel.m in Sources */,

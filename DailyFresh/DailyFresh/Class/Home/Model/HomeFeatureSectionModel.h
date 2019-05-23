@@ -7,10 +7,14 @@
 //
 
 #import "BaseModel.h"
+#import "GoodsItemModel.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface HomeFeatureSectionModel : BaseModel
+
+@property (nonatomic, strong) NSString *itemType;
+@property (nonatomic, strong) NSArray <GoodsItemModel *>* subItem;
 
 @end
 

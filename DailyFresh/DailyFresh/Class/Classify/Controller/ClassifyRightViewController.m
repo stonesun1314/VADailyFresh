@@ -133,8 +133,6 @@
         cell.selectionStyle = UITableViewCellSeparatorStyleNone;
     }
     
-    
-    
     SecondCateModel *cateModel = [_dataList objectAtIndex:indexPath.section];
     GoodsItemModel *goodsModel = [cateModel.goods objectAtIndex:indexPath.row];
     

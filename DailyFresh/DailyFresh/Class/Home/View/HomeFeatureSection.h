@@ -7,10 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "HomeFeatureItemView.h"
+#import "HomeFeatureSectionModel.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface HomeFeatureSection : UIView
+
+@property (nonatomic, strong) HomeFeatureSectionModel *model;
 
 @end
 

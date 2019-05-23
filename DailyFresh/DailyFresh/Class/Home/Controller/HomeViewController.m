@@ -16,6 +16,7 @@
 #import "HomeTopAdSectionModel.h"
 #import "HomeHeaderModel.h"
 #import "HomeLimTimeSectionModel.h"
+#import "HomeFeatureSectionModel.h"
 
 
 @interface HomeViewController ()<SGPageTitleViewDelegate, SGPageContentScrollViewDelegate>
@@ -35,6 +36,7 @@
 @property (nonatomic, strong) HomeTopAdSectionModel *topSectionModel;
 @property (nonatomic, strong) NSMutableArray *verGoodsItemList;
 @property (nonatomic, strong) HomeLimTimeSectionModel *limTimeModel;
+@property (nonatomic, strong) HomeFeatureSectionModel *featureModel;
 
 @property (nonatomic, strong) NSMutableArray *topSectionArr;
 
@@ -90,7 +92,7 @@
             
         }else if ([itemType integerValue] == 2){       //特色专区
             
-            
+            _featureModel = [HomeFeatureSectionModel yy_modelWithJSON:dict];
             
         }else if ([itemType integerValue] == 3){       //top+横向列表
             HomeTopAdSectionModel *topAdModel = [HomeTopAdSectionModel yy_modelWithJSON:dict];
@@ -153,6 +155,7 @@
         _viewController.topAdModelArr = _topSectionArr;
         _viewController.cateSectionModel = _cateSectionModel;
         _viewController.verGoodsItemList = _verGoodsItemList;
+        _viewController.featureModel = _featureModel;
         [childVCArr addObject:_viewController];
     }
     

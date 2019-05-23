@@ -11,6 +11,7 @@
 #import "HomeCateSectionModel.h"
 #import "HomeLimTimeSectionModel.h"
 #import "HomeHeaderModel.h"
+#import "HomeFeatureSectionModel.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -22,6 +23,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong) HomeHeaderModel *headerBannerModel;
 @property (nonatomic, strong) HomeCateSectionModel *cateSectionModel;
 @property (nonatomic, strong) HomeLimTimeSectionModel *limTimeModel;
+@property (nonatomic, strong) HomeFeatureSectionModel *featureModel;
 @property (nonatomic, strong) NSMutableArray *topAdModelArr;
 
 @end

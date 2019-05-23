@@ -11,8 +11,9 @@
 #import "HomeHorListView.h"
 #import "HomeVerListView.h"
 #import "HomeHorListSection.h"
+#import "HomeFeatureSectionModel.h"
+#import "HomeFeatureSection.h"
 #import "HomeVerListSection.h"
-
 
 @interface HomeSubViewController ()
 
@@ -91,6 +92,18 @@
         
         lastObj = section1;
     }
+    
+    if (_featureModel) {
+        HomeFeatureSection *featureSection = [[HomeFeatureSection alloc] init];
+//        featureSection.backgroundColor = [UIColor blueColor];
+        [_contentView addSubview:featureSection];
+        
+        featureSection.model = _featureModel;
+        
+        featureSection.sd_layout.leftEqualToView(_contentView).topSpaceToView(lastObj, 10.f).widthRatioToView(_contentView, 1.0);
+        
+        lastObj = featureSection;
+    }
 
     
     if (_topAdModelArr.count > 0) {
@@ -112,8 +125,6 @@
     
     
     HomeVerListSection *section2 = [[HomeVerListSection alloc] init];
-    
-    
     [_contentView addSubview:section2];
     
     section2.goodsItemList = self.verGoodsItemList;
@@ -130,10 +141,6 @@
     [section2 updateLayout];
     VALog(@"%@",section2);
     VALog(@"%@",_contentView);
-//    _contentView.backgroundColor = [UIColor blueColor];
-//    
-//    section2.backgroundColor = [UIColor redColor];
-//    
     
 }
 
