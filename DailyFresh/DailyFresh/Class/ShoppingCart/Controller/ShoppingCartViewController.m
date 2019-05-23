@@ -157,51 +157,33 @@ typedef NS_ENUM(NSInteger, ShoppingCartState) {
 
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath{
     VALog(@"");
-//    if (editingStyle == UITableViewCellEditingStyleDelete) {
-//        //如果编辑样式为删除样式
-//        if (indexPath.row<[self.cartList count])
-//        {
-//            [self.cartList removeObjectAtIndex:indexPath.row];//移除数据源的数据
-//            [_atableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];//移除tableView中的数据
-//        }
-//    }
-
-}
-    
-- (NSArray<UITableViewRowAction*>*)tableView:(UITableView *)tableView editActionsForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    //code
-    UITableViewRowAction *deleteAction = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleDestructive title:@"删除" handler:^(UITableViewRowAction * _Nonnull action, NSIndexPath * _Nonnull indexPath) {
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
         //如果编辑样式为删除样式
         if (indexPath.row<[self.cartList count])
         {
             [self.cartList removeObjectAtIndex:indexPath.row];//移除数据源的数据
-            [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];//移除tableView中的数据
-            
+            [_atableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];//移除tableView中的数据
         }
-    }];
-    
-    return @[deleteAction];
-}
+    }
 
-//- (nullable UISwipeActionsConfiguration *)tableView:(UITableView *)tableView trailingSwipeActionsConfigurationForRowAtIndexPath:(nonnull NSIndexPath *)indexPath{
-//    if (@available(iOS 11.0, *)) {
-//        UIContextualAction *deleteAction = [UIContextualAction contextualActionWithStyle:UIContextualActionStyleDestructive title:@"删除" handler:^(UIContextualAction * _Nonnull action, __kindof UIView * _Nonnull sourceView, void (^ _Nonnull completionHandler)(BOOL)) {
+}
+    
+//- (NSArray<UITableViewRowAction*>*)tableView:(UITableView *)tableView editActionsForRowAtIndexPath:(NSIndexPath *)indexPath
+//{
+//    //code
+//    UITableViewRowAction *deleteAction = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleDestructive title:@"删除" handler:^(UITableViewRowAction * _Nonnull action, NSIndexPath * _Nonnull indexPath) {
+//        //如果编辑样式为删除样式
+//        if (indexPath.row<[self.cartList count])
+//        {
 //            [self.cartList removeObjectAtIndex:indexPath.row];//移除数据源的数据
 //            [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];//移除tableView中的数据
-//            completionHandler(YES);
-//        }];
-//        //也可以设置图片
-//        deleteAction.backgroundColor = [UIColor redColor];
 //
-//        UISwipeActionsConfiguration *config = [UISwipeActionsConfiguration configurationWithActions:@[deleteAction]];
-//        config.performsFirstActionWithFullSwipe = NO;
-//        return config;
-//    } else {
-//        // Fallback on earlier versions
-//        return nil;
-//    }
+//        }
+//    }];
+//
+//    return @[deleteAction];
 //}
+
 
 #pragma mark -- notice
 - (void)cartChangeNotice:(NSNotification *)notice{
