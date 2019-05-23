@@ -10,7 +10,6 @@
 #import "GoodsItemModel.h"
 #import "HomeVerItemCell.h"
 
-static NSString *CellIdentiifer = @"CellIdentiifer";
 
 @interface HomeVerListSection ()
 
@@ -37,7 +36,7 @@ static NSString *CellIdentiifer = @"CellIdentiifer";
     _header = [[UIView alloc] init];
     [self addSubview:_header];
     
-    _header.sd_layout.leftEqualToView(self).topEqualToView(self).heightIs(50.f).widthRatioToView(self, 1.0);
+    
     
     _titleLabel = [[UILabel alloc] init];
     _titleLabel.numberOfLines = 1;
@@ -49,8 +48,18 @@ static NSString *CellIdentiifer = @"CellIdentiifer";
     _titleLabel.sd_layout.leftSpaceToView(_header, VAMargin).centerYEqualToView(_header).heightIs(30.f);
     [_titleLabel setSingleLineAutoResizeWithMaxWidth:200.f];
     
-    _contentView = [[UIView alloc] init];
-    [self addSubview:_contentView];
+    self.contentView = [[UIView alloc] init];
+    [self addSubview:self.contentView];
+    
+    _header.sd_layout.leftEqualToView(self).topEqualToView(self).heightIs(50.f).widthRatioToView(self, 1.0);
+    _contentView.sd_resetLayout.leftEqualToView(self).topSpaceToView(_header, 0.f).widthRatioToView(self, 1.0);
+    [_header updateLayout];
+    [_contentView updateLayout];
+    [self updateLayout];
+    
+    VALog(@"%@",_header);
+    VALog(@"%@",_contentView);
+    
     
 }
 
@@ -60,7 +69,15 @@ static NSString *CellIdentiifer = @"CellIdentiifer";
     [self layoutGoodsItem];
 }
 
+- (void)layoutSubviews{
+    [super layoutSubviews];
+}
+
 - (void)layoutGoodsItem{
+    
+    
+    [_contentView removeAllSubviews];
+    
     NSMutableArray *temp = [NSMutableArray new];
     
     CGSize size = CGSizeMake((kScreenSize.width - VAMargin * 2)/2, 240.f);
@@ -78,10 +95,20 @@ static NSString *CellIdentiifer = @"CellIdentiifer";
 //        cell.backgroundColor = KColorRandomColor;
     }
     
-    [_contentView setupAutoWidthFlowItems:[temp copy] withPerRowItemsCount:2 verticalMargin:5 horizontalMargin:5 verticalEdgeInset:5 horizontalEdgeInset:10];
     
-    _contentView.sd_layout.leftSpaceToView(self, 0).topSpaceToView(_header, 0.f).rightSpaceToView(self, 0.f);
+    
+    
+    [_contentView updateLayout];
+
+    [_contentView setupAutoWidthFlowItems:[temp copy] withPerRowItemsCount:2 verticalMargin:5 horizontalMargin:5 verticalEdgeInset:5 horizontalEdgeInset:10];
+
+
     [self setupAutoHeightWithBottomView:_contentView bottomMargin:20.f];
+//    _contentView.backgroundColor = [UIColor redColor];
+//    [_contentView updateLayout];
+//    [self updateLayout];
+
+    VALog(@"%@",_contentView);
 }
 
 

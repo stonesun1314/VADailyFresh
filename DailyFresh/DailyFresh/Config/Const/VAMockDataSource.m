@@ -185,7 +185,7 @@ static VAMockDataSource *_instance;
     cartModel.name = model.name;
     cartModel.goodsId = model.goodsId;
     cartModel.category = model.category;
-    cartModel.price = model.originalPrice;
+    cartModel.price = model.price;
     cartModel.originalPrice = model.originalPrice;
     cartModel.img = model.img;
     cartModel.link = model.link;

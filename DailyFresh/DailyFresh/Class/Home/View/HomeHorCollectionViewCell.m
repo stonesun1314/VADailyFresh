@@ -39,7 +39,7 @@
     _imageView = [[UIImageView alloc] init];
     [self addSubview:_imageView];
     
-    _imageView.sd_layout.centerXEqualToView(self).topSpaceToView(self, 5.f).widthIs(90.f).heightIs(90.f);
+    _imageView.sd_layout.centerXEqualToView(self).topSpaceToView(self, 0.f).widthIs(90.f).heightIs(90.f);
     
     _titleLabel = [[UILabel alloc] init];
     _titleLabel.font = [UIFont systemFontOfSize:kUITitleFontsize];

@@ -164,4 +164,8 @@
     });
 }
 
+- (void)tableView:(UITableView *)tableView didEndDisplayingHeaderView:(UIView *)view forSection:(NSInteger)section{
+    
+}
+
 @end

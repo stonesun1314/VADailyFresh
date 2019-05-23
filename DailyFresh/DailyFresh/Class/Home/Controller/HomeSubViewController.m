@@ -30,6 +30,11 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.view.backgroundColor = kUIContentBackgroundColor;
+    if(@available(iOS 11.0, *)){
+        
+    }else{
+       self.automaticallyAdjustsScrollViewInsets = NO;
+    }
     
 
     [self setupUI];
@@ -62,7 +67,8 @@
 
     _contentView.mj_header.automaticallyChangeAlpha = YES;
     
-    _contentView.sd_layout.spaceToSuperView(UIEdgeInsetsZero);
+    _contentView.sd_layout.leftEqualToView(self.view).rightEqualToView(self.view).topEqualToView(self.view).
+    bottomEqualToView(self.view);
     
     _headerView = [[HomeHeaderView alloc] init];
     _headerView.headerBannerModel = self.headerBannerModel;
@@ -102,15 +108,33 @@
         
     }
     
+    [_contentView updateLayout];
+    
+    
     HomeVerListSection *section2 = [[HomeVerListSection alloc] init];
+    
     
     [_contentView addSubview:section2];
     
     section2.goodsItemList = self.verGoodsItemList;
-
     
-    section2.sd_layout.leftEqualToView(self.view).topSpaceToView(lastObj, 10.f).widthRatioToView(_contentView, 1.0);
+    section2.sd_layout.leftEqualToView(_contentView).topSpaceToView(lastObj, 10.f).widthRatioToView(_contentView, 1.0);
+    
+    [section2 updateLayout];
+    
+    
     [_contentView setupAutoContentSizeWithBottomView:section2 bottomMargin:20.f];
+    
+    
+    [_contentView updateLayout];
+    [section2 updateLayout];
+    VALog(@"%@",section2);
+    VALog(@"%@",_contentView);
+//    _contentView.backgroundColor = [UIColor blueColor];
+//    
+//    section2.backgroundColor = [UIColor redColor];
+//    
+    
 }
 
 

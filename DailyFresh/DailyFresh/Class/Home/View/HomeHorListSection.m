@@ -66,7 +66,7 @@ static NSString *CellIdentiifer = @"CellIdentiifer";
         _titleLabel.sd_layout.leftSpaceToView(_header, VAMargin).centerYEqualToView(_header).heightIs(30.f);
         [_titleLabel setSingleLineAutoResizeWithMaxWidth:200.f];
         
-        _header.sd_layout.heightIs(50.f);
+        _header.sd_layout.heightIs(40.f);
     }else if (_type == HomeHorListTypeTopAd){
         _imageView = [[UIImageView alloc] init];
 //        _imageView.backgroundColor = [UIColor blueColor];
@@ -75,27 +75,30 @@ static NSString *CellIdentiifer = @"CellIdentiifer";
         
         _imageView.sd_layout.leftSpaceToView(_header, VAMargin).rightSpaceToView(_header, VAMargin).topSpaceToView(_header, 10.f).heightIs(110.f);
         
-        [_header setupAutoHeightWithBottomView:_imageView bottomMargin:10.f];
+        [_header setupAutoHeightWithBottomView:_imageView bottomMargin:5.f];
     }
 
     
-    
-    
+
     UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc]init];
     flowLayout.itemSize = CGSizeMake(105, 170);
     flowLayout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
-    flowLayout.sectionInset = UIEdgeInsetsMake(10, 15, 10, 15);
+    flowLayout.sectionInset = UIEdgeInsetsMake(5, 10, 5, 10);
     flowLayout.minimumLineSpacing = 10;
     
-    _collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 0, self.bounds.size.width,170) collectionViewLayout:flowLayout];
+    _collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 0, self.bounds.size.width,180) collectionViewLayout:flowLayout];
     self.collectionView.delegate = self;
     self.collectionView.dataSource = self;
     self.clipsToBounds = YES;
     self.collectionView.showsHorizontalScrollIndicator = NO;
     self.collectionView.backgroundColor = [UIColor whiteColor];
+    if(@available(iOS 11.0, *)){
+        self.collectionView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentScrollableAxes;
+    }
+    
     [self addSubview:_collectionView];
     
-    _collectionView.sd_layout.widthRatioToView(self, 1.0).heightIs(170.f).leftEqualToView(self).topSpaceToView(_header, 10.f);
+    _collectionView.sd_layout.widthRatioToView(self, 1.0).heightIs(180.f).leftEqualToView(self).topSpaceToView(_header, 5.f);
     
     [_collectionView setNeedsDisplay];
     
