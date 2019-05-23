@@ -40,7 +40,7 @@
         
         _totalPriceLabel = [UILabel new];
         _totalPriceLabel.textColor = [UIColor blackColor];
-        _totalPriceLabel.text = @"合计: ￥200.00";
+        _totalPriceLabel.text = @"合计: ￥0.00";
         _totalPriceLabel.font = [UIFont systemFontOfSize:kUITitleFontsize];
         _totalPriceLabel.numberOfLines = 1;
         [self addSubview:_totalPriceLabel];
@@ -76,7 +76,7 @@
 
 - (void)setTotalPrice:(NSString *)totalPrice{
     _totalPrice = totalPrice;
-    _totalPriceLabel.text = _totalPrice;
+    _totalPriceLabel.text = [VANStringUtil converCurrnecyFormate:_totalPrice];
 }
 
 @end

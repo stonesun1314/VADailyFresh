@@ -137,6 +137,9 @@ typedef NS_ENUM(NSInteger, ShoppingCartState) {
     }
     CartGoodsItemModel *model = [_cartList objectAtIndex:indexPath.row];
     cell.model = model;
+    cell.cellSelectedBlock = ^(BOOL select) {
+       [self calSelectedItemPrice];
+    };
     cell.addCartBlock = ^(GoodsItemModel *model, NSInteger num) {
         [self calSelectedItemPrice];
         [[VAMockDataSource shareInstance] writeCartItemsToFile];
@@ -150,6 +153,8 @@ typedef NS_ENUM(NSInteger, ShoppingCartState) {
     };
     return cell;
 }
+
+
 
 
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -203,6 +208,8 @@ typedef NS_ENUM(NSInteger, ShoppingCartState) {
     
     [_atableView.mj_header endRefreshing];
     
+    [self setRightItem];
+    
 }
 
 - (void)deleteCartItem:(NSIndexPath *)indexPath{
@@ -219,10 +226,38 @@ typedef NS_ENUM(NSInteger, ShoppingCartState) {
         if (model.selected) {
             selectedPrice += ([model.price integerValue] * [model.goodsNum integerValue]);
         }
-        
     }
     
      self.settlingView.totalPrice = [NSString stringWithFormat:@"%ld",selectedPrice];
+}
+
+- (void)setRightItem {
+    
+    if (self.cartList.count > 0) {
+        UIButton *btn = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 44, 44)];
+        [btn setTitle:@"删除" forState:UIControlStateNormal];
+        [btn setTitleColor:kUITitleColor forState:UIControlStateNormal];
+        btn.titleLabel.font = [UIFont systemFontOfSize:kUISubtitleFontSize];
+        [btn addTarget:self action:@selector(handleDelete:) forControlEvents:UIControlEventTouchUpInside];
+        UIBarButtonItem *rightItem = [[UIBarButtonItem alloc] initWithCustomView:btn];
+        self.navigationItem.rightBarButtonItem = rightItem;
+    }else{
+        self.navigationItem.rightBarButtonItem = nil;
+    }
+
+}
+
+- (void)handleDelete:(UIButton *)sender {
+    NSArray *tempArr = [NSArray arrayWithArray:self.cartList];
+    for (CartGoodsItemModel *model in tempArr) {
+        if (model.selected) {
+            NSInteger index = [self.cartList indexOfObject:model];
+            [self.cartList removeObjectAtIndex:index];//移除数据源的数据
+            [_atableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:[NSIndexPath indexPathForRow:index inSection:0]] withRowAnimation:UITableViewRowAnimationFade];
+        }
+    }
+    
+    [[VAMockDataSource shareInstance] writeCartItemsToFile];
 }
 
 
