@@ -1,5 +1,5 @@
 //
-//  MineServiceItemView.h
+//  MineScrollSectionView.h
 //  DailyFresh
 //
 //  Created by Mac on 2019/5/24.
@@ -10,10 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface MineServiceItemView : UIView
-
-@property (nonatomic, strong) UIImageView *imageView;
-@property (nonatomic, strong) UILabel *titleLabel;
+@interface MineScrollSectionView : UIView
 
 @end
 

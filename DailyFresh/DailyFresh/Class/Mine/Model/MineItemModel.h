@@ -1,5 +1,5 @@
 //
-//  MineServiceItemView.h
+//  MineItemModel.h
 //  DailyFresh
 //
 //  Created by Mac on 2019/5/24.
@@ -10,10 +10,10 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface MineServiceItemView : UIView
+@interface MineItemModel : UIView
 
-@property (nonatomic, strong) UIImageView *imageView;
-@property (nonatomic, strong) UILabel *titleLabel;
+@property (nonatomic, strong) NSString *img;
+@property (nonatomic, strong) NSString *name;
 
 @end
 

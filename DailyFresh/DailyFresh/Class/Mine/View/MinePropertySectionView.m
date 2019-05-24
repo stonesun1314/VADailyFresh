@@ -85,7 +85,7 @@
     
     [_contentView setupAutoWidthFlowItems:[temp copy] withPerRowItemsCount:4 verticalMargin:0 horizontalMargin:0 verticalEdgeInset:0 horizontalEdgeInset:0];
     
-    [self setupAutoHeightWithBottomView:_contentView bottomMargin:5.f];
+    [self setupAutoHeightWithBottomView:_contentView bottomMargin:0.f];
 }
 
 @end

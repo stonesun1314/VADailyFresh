@@ -10,6 +10,8 @@
 #import "MineHeaderView.h"
 #import "MinePropertySectionView.h"
 #import "MineOrderServiceSectionView.h"
+#import "MineScrollSectionView.h"
+#import "MineServiceSectionView.h"
 
 @interface MineViewController ()
 
@@ -21,6 +23,10 @@
 
 @property (nonatomic, strong) MinePropertySectionView *propertySectionView;
 @property (nonatomic, strong) MineOrderServiceSectionView *orderServiceSectionView;
+@property (nonatomic, strong) MineScrollSectionView *scrollSectionView;
+@property (nonatomic, strong) MineServiceSectionView *serviceSectionView;
+
+
 
 @end
 
@@ -87,6 +93,14 @@
     _orderServiceSectionView = [[MineOrderServiceSectionView alloc] init];
     [_scrollView addSubview:_orderServiceSectionView];
     
+    _scrollSectionView = [[MineScrollSectionView alloc] init];
+//    _scrollSectionView.backgroundColor = [UIColor redColor];
+    [_scrollView addSubview:_scrollSectionView];
+    
+    _serviceSectionView = [[MineServiceSectionView alloc] init];
+//    _serviceSectionView.backgroundColor = [UIColor redColor];
+    [_scrollView addSubview:_serviceSectionView];
+    
     _headerView.sd_layout.leftEqualToView(_scrollView).rightEqualToView(_scrollView)
     .topEqualToView(_scrollView).heightIs(200.f);
     
@@ -94,11 +108,16 @@
     .topSpaceToView(_headerView, -10.f);
     
     _orderServiceSectionView.sd_layout.leftEqualToView(_scrollView).
-    rightEqualToView(_scrollView).topSpaceToView(_propertySectionView, 5.f);
+    rightEqualToView(_scrollView).topSpaceToView(_propertySectionView, 10.f);
 
+
+    _scrollSectionView.sd_layout.leftEqualToView(_scrollView).rightEqualToView(_scrollView)
+    .topSpaceToView(_orderServiceSectionView, 10.f);
     
+    _serviceSectionView.sd_layout.leftEqualToView(_scrollView).rightEqualToView(_scrollView)
+    .topSpaceToView(_scrollSectionView, 10.f);
     
-    [_scrollView setupAutoContentSizeWithBottomView:_orderServiceSectionView bottomMargin:200.f];
+    [_scrollView setupAutoContentSizeWithBottomView:_serviceSectionView bottomMargin:30.f];
 }
 
 @end

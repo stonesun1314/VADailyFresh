@@ -106,7 +106,7 @@
     [_serviceContentView addSubview:_evaluateBtn];
     
     _refundBtn = [[MineOrderServiceItemView alloc] init];
-    _refundBtn.imageView.image = [UIImage imageNamed:@"df_ic_cs_refund"];
+    _refundBtn.imageView.image = [UIImage imageNamed:@"df_vending"];
     _refundBtn.titleLabel.text = @"售后/退款";
     [_serviceContentView addSubview:_refundBtn];
     
@@ -129,7 +129,7 @@
     //df_prePayment@2x  待付款
     //df_preSend@2x 待发货
     //df_sending@2x 配送中
-    //df_ic_cs_refund@2x 待评价
+    //df_vending@2x 待评价
     //df_evaluationImage@2x //待评价
 
 }
