@@ -123,6 +123,13 @@
 		04F45D8622969BAB00331784 /* HomeFeatureSection.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F45D8522969BAB00331784 /* HomeFeatureSection.m */; };
 		04F45D8922969BBF00331784 /* HomeFeatureSectionModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F45D8822969BBF00331784 /* HomeFeatureSectionModel.m */; };
 		04F45D8C22969CAD00331784 /* HomeFeatureItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F45D8B22969CAD00331784 /* HomeFeatureItemView.m */; };
+		04F45D8F229791B300331784 /* MineHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F45D8E229791B300331784 /* MineHeaderView.m */; };
+		04F45D922297984B00331784 /* MinePropertySectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F45D912297984B00331784 /* MinePropertySectionView.m */; };
+		04F45D952297A15D00331784 /* MinePropertyItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F45D942297A15D00331784 /* MinePropertyItemView.m */; };
+		04F45D9B2297C14A00331784 /* MineOrderServiceSectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F45D9A2297C14A00331784 /* MineOrderServiceSectionView.m */; };
+		04F45DA12297D53600331784 /* MineServiceSectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F45DA02297D53600331784 /* MineServiceSectionView.m */; };
+		04F45DA42297D54800331784 /* MineServiceItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F45DA32297D54800331784 /* MineServiceItemView.m */; };
+		04F45DA72297D58400331784 /* MineOrderServiceItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F45DA62297D58400331784 /* MineOrderServiceItemView.m */; };
 		04F5C0EF22854EE300EE1D5A /* HomeSubViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F5C0EE22854EE300EE1D5A /* HomeSubViewController.m */; };
 		04F5C0F22285600E00EE1D5A /* HomeMenuGridItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F5C0F12285600E00EE1D5A /* HomeMenuGridItem.m */; };
 		04F5C0F5228561F100EE1D5A /* HomeHeaderMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F5C0F4228561F100EE1D5A /* HomeHeaderMenuView.m */; };
@@ -361,6 +368,20 @@
 		04F45D8822969BBF00331784 /* HomeFeatureSectionModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeFeatureSectionModel.m; sourceTree = "<group>"; };
 		04F45D8A22969CAD00331784 /* HomeFeatureItemView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeFeatureItemView.h; sourceTree = "<group>"; };
 		04F45D8B22969CAD00331784 /* HomeFeatureItemView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeFeatureItemView.m; sourceTree = "<group>"; };
+		04F45D8D229791B300331784 /* MineHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MineHeaderView.h; sourceTree = "<group>"; };
+		04F45D8E229791B300331784 /* MineHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MineHeaderView.m; sourceTree = "<group>"; };
+		04F45D902297984B00331784 /* MinePropertySectionView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MinePropertySectionView.h; sourceTree = "<group>"; };
+		04F45D912297984B00331784 /* MinePropertySectionView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MinePropertySectionView.m; sourceTree = "<group>"; };
+		04F45D932297A15D00331784 /* MinePropertyItemView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MinePropertyItemView.h; sourceTree = "<group>"; };
+		04F45D942297A15D00331784 /* MinePropertyItemView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MinePropertyItemView.m; sourceTree = "<group>"; };
+		04F45D992297C14A00331784 /* MineOrderServiceSectionView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MineOrderServiceSectionView.h; sourceTree = "<group>"; };
+		04F45D9A2297C14A00331784 /* MineOrderServiceSectionView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MineOrderServiceSectionView.m; sourceTree = "<group>"; };
+		04F45D9F2297D53600331784 /* MineServiceSectionView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MineServiceSectionView.h; sourceTree = "<group>"; };
+		04F45DA02297D53600331784 /* MineServiceSectionView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MineServiceSectionView.m; sourceTree = "<group>"; };
+		04F45DA22297D54800331784 /* MineServiceItemView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MineServiceItemView.h; sourceTree = "<group>"; };
+		04F45DA32297D54800331784 /* MineServiceItemView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MineServiceItemView.m; sourceTree = "<group>"; };
+		04F45DA52297D58400331784 /* MineOrderServiceItemView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MineOrderServiceItemView.h; sourceTree = "<group>"; };
+		04F45DA62297D58400331784 /* MineOrderServiceItemView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MineOrderServiceItemView.m; sourceTree = "<group>"; };
 		04F5C0ED22854EE300EE1D5A /* HomeSubViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeSubViewController.h; sourceTree = "<group>"; };
 		04F5C0EE22854EE300EE1D5A /* HomeSubViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeSubViewController.m; sourceTree = "<group>"; };
 		04F5C0F02285600E00EE1D5A /* HomeMenuGridItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeMenuGridItem.h; sourceTree = "<group>"; };
@@ -827,6 +848,20 @@
 		04C7F9BB2282B9FE00FD9C51 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				04F45D8D229791B300331784 /* MineHeaderView.h */,
+				04F45D8E229791B300331784 /* MineHeaderView.m */,
+				04F45D902297984B00331784 /* MinePropertySectionView.h */,
+				04F45D912297984B00331784 /* MinePropertySectionView.m */,
+				04F45D932297A15D00331784 /* MinePropertyItemView.h */,
+				04F45D942297A15D00331784 /* MinePropertyItemView.m */,
+				04F45D992297C14A00331784 /* MineOrderServiceSectionView.h */,
+				04F45D9A2297C14A00331784 /* MineOrderServiceSectionView.m */,
+				04F45D9F2297D53600331784 /* MineServiceSectionView.h */,
+				04F45DA02297D53600331784 /* MineServiceSectionView.m */,
+				04F45DA22297D54800331784 /* MineServiceItemView.h */,
+				04F45DA32297D54800331784 /* MineServiceItemView.m */,
+				04F45DA52297D58400331784 /* MineOrderServiceItemView.h */,
+				04F45DA62297D58400331784 /* MineOrderServiceItemView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1357,6 +1392,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04F45D8F229791B300331784 /* MineHeaderView.m in Sources */,
 				04019C8F2292D71A00338A64 /* DiscoverySubViewController.m in Sources */,
 				04D1A357228C130B00C3F597 /* SGPageTitleView.m in Sources */,
 				04C7F9DC2282BA1600FD9C51 /* UIView+tool.m in Sources */,
@@ -1403,7 +1439,10 @@
 				04E6C328228ABB5B007C9548 /* HomeVerListSection.m in Sources */,
 				04019CD62293D87900338A64 /* CartTableViewCell.m in Sources */,
 				04F5C10B2285747100EE1D5A /* NSDate+TimeAgo.m in Sources */,
+				04F45D9B2297C14A00331784 /* MineOrderServiceSectionView.m in Sources */,
 				04EB85BE2296452100E7319D /* CartSettlingView.m in Sources */,
+				04F45DA42297D54800331784 /* MineServiceItemView.m in Sources */,
+				04F45D922297984B00331784 /* MinePropertySectionView.m in Sources */,
 				04019C7222927A3200338A64 /* HomeVerItemCell.m in Sources */,
 				04F5C10F2285747100EE1D5A /* UIButton+SGImagePosition.m in Sources */,
 				04C7F9D92282BA1600FD9C51 /* UIImage+tool.m in Sources */,
@@ -1436,12 +1475,15 @@
 				04F45D8922969BBF00331784 /* HomeFeatureSectionModel.m in Sources */,
 				040A4A9A22896333001A8083 /* HomeHorListSection.m in Sources */,
 				04D1A352228C130B00C3F597 /* UIButton+SGPagingView.m in Sources */,
+				04F45D952297A15D00331784 /* MinePropertyItemView.m in Sources */,
 				040A4A9D228965B7001A8083 /* HomeHorCollectionViewCell.m in Sources */,
 				04C7F9EF2282C33B00FD9C51 /* HomeViewController.m in Sources */,
 				04F5C0F22285600E00EE1D5A /* HomeMenuGridItem.m in Sources */,
 				04C7FA042282C41300FD9C51 /* VATabBarViewController.m in Sources */,
 				040A4A8D22895C40001A8083 /* VAHorCollectionView.m in Sources */,
+				04F45DA72297D58400331784 /* MineOrderServiceItemView.m in Sources */,
 				040E3420228EAF5C0050756B /* ClassifyRightHeaderView.m in Sources */,
+				04F45DA12297D53600331784 /* MineServiceSectionView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

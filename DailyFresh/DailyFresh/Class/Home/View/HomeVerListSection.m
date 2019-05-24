@@ -57,8 +57,8 @@
     [_contentView updateLayout];
     [self updateLayout];
     
-    VALog(@"%@",_header);
-    VALog(@"%@",_contentView);
+//    VALog(@"%@",_header);
+//    VALog(@"%@",_contentView);
     
     
 }
@@ -108,7 +108,7 @@
 //    [_contentView updateLayout];
 //    [self updateLayout];
 
-    VALog(@"%@",_contentView);
+//    VALog(@"%@",_contentView);
 }
 
 

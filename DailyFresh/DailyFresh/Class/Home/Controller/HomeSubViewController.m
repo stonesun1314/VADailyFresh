@@ -139,8 +139,8 @@
     
     [_contentView updateLayout];
     [section2 updateLayout];
-    VALog(@"%@",section2);
-    VALog(@"%@",_contentView);
+//    VALog(@"%@",section2);
+//    VALog(@"%@",_contentView);
     
 }
 

@@ -84,8 +84,8 @@
     
     [_contentView updateLayout];
     [self updateLayout];
-    VALog(@"%@",_contentView);
-    VALog(@"%@",self);
+//    VALog(@"%@",_contentView);
+//    VALog(@"%@",self);
 
 }
 
