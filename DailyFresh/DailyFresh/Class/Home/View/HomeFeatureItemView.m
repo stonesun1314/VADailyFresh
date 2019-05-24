@@ -24,28 +24,36 @@
         
         _subTitleLabel = [UILabel new];
         _subTitleLabel.textColor = kUISubTitleColor;
-        _subTitleLabel.font = [UIFont systemFontOfSize:12.f];
+        _subTitleLabel.font = [UIFont systemFontOfSize:11.f];
         _subTitleLabel.numberOfLines = 1;
         _subTitleLabel.textAlignment = NSTextAlignmentLeft;
         [self addSubview:_subTitleLabel];
         
-        _imageView = [[UIImageView alloc] init];
-        _imageView.layer.cornerRadius = 3.f;
-        _imageView.clipsToBounds = YES;
-        [self addSubview:_imageView];
+        _imageView1 = [[UIImageView alloc] init];
+        _imageView1.layer.cornerRadius = 3.f;
+        _imageView1.clipsToBounds = YES;
+        [self addSubview:_imageView1];
         
-        _titleLabel.sd_layout.leftSpaceToView(self, 5.f).topSpaceToView(self, 5.f).autoHeightRatio(0);
+        _imageView2 = [[UIImageView alloc] init];
+        _imageView2.layer.cornerRadius = 3.f;
+        _imageView2.clipsToBounds = YES;
+        [self addSubview:_imageView2];
+        
+        
+        _titleLabel.sd_layout.leftSpaceToView(self, 5.f).topSpaceToView(self, 2.f).autoHeightRatio(0);
         [_titleLabel setSingleLineAutoResizeWithMaxWidth:150.f];
         [_titleLabel setMaxNumberOfLinesToShow:1];
         
         
-        _subTitleLabel.sd_layout.leftEqualToView(_titleLabel).topSpaceToView(_titleLabel, 2.f).autoHeightRatio(0);
+        _subTitleLabel.sd_layout.leftEqualToView(_titleLabel).topSpaceToView(_titleLabel, 5.f).autoHeightRatio(0);
         [_subTitleLabel setSingleLineAutoResizeWithMaxWidth:150.f];
         [_subTitleLabel setMaxNumberOfLinesToShow:1];
         
-        _imageView.sd_layout.leftEqualToView(_titleLabel).topSpaceToView(_subTitleLabel, 5.0).heightIs(80.f).rightSpaceToView(self,10.f);
+        _imageView1.sd_layout.leftEqualToView(_titleLabel).topSpaceToView(_subTitleLabel, 5.0).heightIs(60.f).widthRatioToView(self, 0.4);
         
-        [self setupAutoHeightWithBottomView:_imageView bottomMargin:0.f];
+        _imageView2.sd_layout.leftSpaceToView(_imageView1, 8).topEqualToView(_imageView1).heightIs(60.f).widthRatioToView(self, 0.4);
+        
+        [self setupAutoHeightWithBottomView:_imageView1 bottomMargin:0.f];
         
     }
     return self;
@@ -55,7 +63,8 @@
     _model = model;
     _titleLabel.text = model.name;
     _subTitleLabel.text = model.detail;
-    [_imageView sd_setImageWithURL:[NSURL URLWithString:model.img]];
+    [_imageView1 sd_setImageWithURL:[NSURL URLWithString:model.img]];
+    [_imageView2 sd_setImageWithURL:[NSURL URLWithString:model.img]];
 }
 
 @end

@@ -16,7 +16,9 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong) UILabel *titleLabel;
 @property (nonatomic, strong) UILabel *subTitleLabel;
 
-@property (nonatomic, strong) UIImageView *imageView;
+@property (nonatomic, strong) UIImageView *imageView1;
+
+@property (nonatomic, strong) UIImageView *imageView2;
 
 @property (nonatomic, strong) GoodsItemModel *model;
 
