@@ -125,13 +125,18 @@
 
     NSMutableArray *temp = [NSMutableArray new];
     for (MineItemModel *model in _dataList) {
+        NSInteger index = [_dataList indexOfObject:model];
         MineServiceItemView *item = [[MineServiceItemView alloc] init];
+        item.tag = index;
         item.imageView.image = [UIImage imageNamed:model.img];
         item.titleLabel.text = model.name;
         [_serviceContentView addSubview:item];
         [temp addObject:item];
         
         item.sd_layout.heightIs(80.f);
+        
+        UITapGestureRecognizer *gesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleItem:)];
+        [item addGestureRecognizer:gesture];
     }
     
    
@@ -149,6 +154,13 @@
     //df_ic_cs_refund@2x 待评价
     //df_evaluationImage@2x //待评价
     
+}
+
+- (void)handleItem:(UIGestureRecognizer *)sender {
+    UIView *view = sender.view;
+    if (self.serviceItemBlock) {
+        self.serviceItemBlock(view.tag);
+    }
 }
 
 

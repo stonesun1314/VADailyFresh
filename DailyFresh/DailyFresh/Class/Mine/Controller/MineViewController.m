@@ -12,6 +12,7 @@
 #import "MineOrderServiceSectionView.h"
 #import "MineScrollSectionView.h"
 #import "MineServiceSectionView.h"
+#import "SettingViewController.h"
 
 @interface MineViewController ()
 
@@ -74,6 +75,8 @@
 
 - (void)setupUI{
     
+    WeakSelf
+    
     UIView *view =[[UIView alloc] initWithFrame:self.view.bounds];
     [self.view addSubview:view];
     
@@ -102,6 +105,11 @@
     [_scrollView addSubview:_scrollSectionView];
     
     _serviceSectionView = [[MineServiceSectionView alloc] init];
+    _serviceSectionView.serviceItemBlock = ^(NSInteger index) {
+        if (index == 8) {   //设置
+            [weakSelf goSettingVC];
+        }
+    };
 //    _serviceSectionView.backgroundColor = [UIColor redColor];
     [_scrollView addSubview:_serviceSectionView];
     
@@ -122,6 +130,12 @@
     .topSpaceToView(_scrollSectionView, 10.f);
     
     [_scrollView setupAutoContentSizeWithBottomView:_serviceSectionView bottomMargin:30.f];
+}
+
+- (void)goSettingVC{
+    SettingViewController *vc = [[SettingViewController alloc] init];
+    vc.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 @end

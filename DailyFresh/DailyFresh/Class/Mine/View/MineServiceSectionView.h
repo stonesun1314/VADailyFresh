@@ -8,9 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
+typedef void(^VAServiceItemBlock)(NSInteger index);
+
 NS_ASSUME_NONNULL_BEGIN
 
 @interface MineServiceSectionView : UIView
+
+@property (nonatomic, strong) VAServiceItemBlock serviceItemBlock;
 
 @end
 
