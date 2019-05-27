@@ -12,6 +12,7 @@
 #import "ClassifyLeftViewController.h"
 #import "ClassifyRightViewController.h"
 #import "SecondCateModel.h"
+#import "VALocationViewController.h"
 
 
 
@@ -69,6 +70,9 @@
 - (void)setupUI{
     WeakSelf
     _navView = [[ClassifyNavView alloc] init];
+    _navView.handleLocationBlock = ^{
+        [weakSelf goLocationVC];
+    };
     [self.view addSubview:_navView];
     
     [_navView mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -118,9 +122,13 @@
         make.right.mas_equalTo(self.contentView);
     }];
     
-    
-    
-    
+
+}
+
+- (void)goLocationVC{
+    VALocationViewController *vc = [[VALocationViewController alloc] init];
+    vc.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 @end

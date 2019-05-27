@@ -18,6 +18,7 @@
 #import "HomeLimTimeSectionModel.h"
 #import "HomeFeatureSectionModel.h"
 #import "VAScanViewController.h"
+#import "VALocationViewController.h"
 
 
 @interface HomeViewController ()<SGPageTitleViewDelegate, SGPageContentScrollViewDelegate>
@@ -103,7 +104,6 @@
     
     
     NSDictionary *dictionary = [[VAMockDataSource shareInstance] readJsonFromFileName:@"index_recommend.json"];
-//    VALog(@"%@",dictionary);
     
     NSArray *goodsItemList = [[dictionary objectForKey:@"data"] objectForKey:@"goods"];
     
@@ -128,14 +128,13 @@
     _navigationBar = [[HomeNavigationBar alloc] init];
 //    _navigationBar.backgroundColor = [UIColor whiteColor];
     _navigationBar.handleLocationBlock = ^{
-//        VAScanViewController *vc = [[VAScanViewController alloc] init];
-//        self
+        [weakSelf goLocationVC];
     };
     _navigationBar.handleScanBlock = ^{
         
         [LBXPermission authorizeWithType:LBXPermissionType_Camera completion:^(BOOL granted, BOOL firstTime) {
             if (granted) {
-                [weakSelf scanVC];
+                [weakSelf goScanVC];
             }
             else if(!firstTime)
             {
@@ -213,7 +212,7 @@
     [self.pageTitleView setPageTitleViewWithProgress:progress originalIndex:originalIndex targetIndex:targetIndex];
 }
 
-- (void)scanVC {
+- (void)goScanVC {
     
     //设置扫码区域参数
     LBXScanViewStyle *style = [[LBXScanViewStyle alloc]init];
@@ -239,6 +238,12 @@
     vc.scanCodeType = SCT_QRCode;
     vc.hidesBottomBarWhenPushed = YES;
     
+    [self.navigationController pushViewController:vc animated:YES];
+}
+
+- (void)goLocationVC {
+    VALocationViewController *vc = [[VALocationViewController alloc] init];
+    vc.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:vc animated:YES];
 }
 

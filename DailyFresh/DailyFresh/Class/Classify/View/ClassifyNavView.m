@@ -41,6 +41,7 @@
     [_locationBtn setTitle:@"万科大厦" forState:UIControlStateNormal];
     [_locationBtn setTitleColor:kUITitleColor forState:UIControlStateNormal];
     _locationBtn.titleLabel.font = [UIFont systemFontOfSize:kUISubtitleFontSize];
+    [_locationBtn addTarget:self action:@selector(handleLocation:) forControlEvents:UIControlEventTouchUpInside];
     [self addSubview:_locationBtn];
     
     _locationArrow = [[UIImageView alloc] init];
@@ -51,10 +52,7 @@
     _scanBtn = [[UIButton alloc] init];
     [_scanBtn setImage:[UIImage imageNamed:@"df_qrcode_black"] forState:UIControlStateNormal];
     [self addSubview:_scanBtn];
-    
-    
 
-    
 
     
     _searchBar = [[UISearchBar alloc] init];
@@ -110,6 +108,12 @@
     
     
     
+}
+
+- (void)handleLocation:(UIButton *)sender {
+    if (self.handleLocationBlock) {
+        self.handleLocationBlock();
+    }
 }
 
 

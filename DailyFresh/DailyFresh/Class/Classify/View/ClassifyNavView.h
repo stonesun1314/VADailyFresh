@@ -8,9 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
+typedef void(^VAHandleLocationBlock)(void);
+
 NS_ASSUME_NONNULL_BEGIN
 
 @interface ClassifyNavView : UIView
+
+@property (nonatomic, strong) VAHandleLocationBlock handleLocationBlock;
 
 @end
 

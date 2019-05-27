@@ -98,6 +98,8 @@
 		0465E8B4229B953900001CED /* LBXPermissionPhotos.m in Sources */ = {isa = PBXBuildFile; fileRef = 0465E8A7229B953900001CED /* LBXPermissionPhotos.m */; };
 		0465E8B5229B953900001CED /* LBXPermissionReminders.m in Sources */ = {isa = PBXBuildFile; fileRef = 0465E8A9229B953900001CED /* LBXPermissionReminders.m */; };
 		0465E8B6229B953900001CED /* LBXPermissionSetting.m in Sources */ = {isa = PBXBuildFile; fileRef = 0465E8AB229B953900001CED /* LBXPermissionSetting.m */; };
+		0465E8BD229BB55200001CED /* VALocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0465E8BC229BB55200001CED /* VALocationViewController.m */; };
+		0465E8BF229BB7B200001CED /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0465E8BE229BB7B200001CED /* CoreLocation.framework */; };
 		04B17E7F22955667004FB510 /* NSFileManager+Vanke.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B17E7E22955667004FB510 /* NSFileManager+Vanke.m */; };
 		04C7F97D2282AA1900FD9C51 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C7F97C2282AA1900FD9C51 /* AppDelegate.m */; };
 		04C7F9802282AA1900FD9C51 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C7F97F2282AA1900FD9C51 /* ViewController.m */; };
@@ -332,6 +334,9 @@
 		0465E8A9229B953900001CED /* LBXPermissionReminders.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LBXPermissionReminders.m; sourceTree = "<group>"; };
 		0465E8AA229B953900001CED /* LBXPermissionSetting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LBXPermissionSetting.h; sourceTree = "<group>"; };
 		0465E8AB229B953900001CED /* LBXPermissionSetting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LBXPermissionSetting.m; sourceTree = "<group>"; };
+		0465E8BB229BB55200001CED /* VALocationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VALocationViewController.h; sourceTree = "<group>"; };
+		0465E8BC229BB55200001CED /* VALocationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VALocationViewController.m; sourceTree = "<group>"; };
+		0465E8BE229BB7B200001CED /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		04B17E7D22955667004FB510 /* NSFileManager+Vanke.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSFileManager+Vanke.h"; sourceTree = "<group>"; };
 		04B17E7E22955667004FB510 /* NSFileManager+Vanke.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSFileManager+Vanke.m"; sourceTree = "<group>"; };
 		04C7F9782282AA1900FD9C51 /* DailyFresh.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DailyFresh.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -480,6 +485,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0465E8BF229BB7B200001CED /* CoreLocation.framework in Frameworks */,
 				DAEEB0D6843C2184D81F4771 /* libPods-DailyFresh.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -769,6 +775,39 @@
 			path = LBXPermissions;
 			sourceTree = "<group>";
 		};
+		0465E8B7229BB52F00001CED /* VALocation */ = {
+			isa = PBXGroup;
+			children = (
+				0465E8B8229BB52F00001CED /* Controller */,
+				0465E8B9229BB52F00001CED /* Model */,
+				0465E8BA229BB52F00001CED /* View */,
+			);
+			path = VALocation;
+			sourceTree = "<group>";
+		};
+		0465E8B8229BB52F00001CED /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				0465E8BB229BB55200001CED /* VALocationViewController.h */,
+				0465E8BC229BB55200001CED /* VALocationViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		0465E8B9229BB52F00001CED /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0465E8BA229BB52F00001CED /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		04B17E7C22955645004FB510 /* NSFileManager */ = {
 			isa = PBXGroup;
 			children = (
@@ -865,6 +904,7 @@
 		04C7F9AF2282B9FE00FD9C51 /* Class */ = {
 			isa = PBXGroup;
 			children = (
+				0465E8B7229BB52F00001CED /* VALocation */,
 				0465E87A229B6FA200001CED /* VASearch */,
 				0465E876229B6F9C00001CED /* VASCan */,
 				040A4A9122895F1F001A8083 /* Shop */,
@@ -1311,6 +1351,7 @@
 		E686E1780FC57064A54CFB2B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0465E8BE229BB7B200001CED /* CoreLocation.framework */,
 				2E5E19113B31F65EC351A9A1 /* libPods-DailyFresh.a */,
 				7C99271DF9C01374B60985A6 /* libPods-DailyFreshTests.a */,
 				85695DFB46B18BD3DA7F5B2E /* libPods-DailyFreshUITests.a */,
@@ -1678,6 +1719,7 @@
 				04F5C10A2285747100EE1D5A /* NSDate+Addition.m in Sources */,
 				040E77C4228408FF00CDED15 /* HomeHorListView.m in Sources */,
 				04EB85C122966B5200E7319D /* VANStringUtil.m in Sources */,
+				0465E8BD229BB55200001CED /* VALocationViewController.m in Sources */,
 				04019C84229292D300338A64 /* HomeBannerModel.m in Sources */,
 				04F45D8922969BBF00331784 /* HomeFeatureSectionModel.m in Sources */,
 				040A4A9A22896333001A8083 /* HomeHorListSection.m in Sources */,

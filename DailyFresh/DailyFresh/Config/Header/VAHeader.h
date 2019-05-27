@@ -23,6 +23,7 @@
 #import <SDWebImage/UIButton+WebCache.h>
 #import <Masonry/Masonry.h>
 #import <LBXScan/LBXScanView.h>
+#import <CoreLocation/CoreLocation.h>
 
 #import "SGPagingView.h"
 #import "LBXPermission.h"
