@@ -15,6 +15,7 @@
 @property (nonatomic, strong) UIImageView *arcImageView;
 
 @property (nonatomic, strong) UIView *contentView;
+@property (nonatomic, strong) UIView *contentBgView;
 
 @property (nonatomic, strong) MinePropertyItemView *balanceItem;    //余额
 @property (nonatomic, strong) MinePropertyItemView *redBagItem;
@@ -31,7 +32,7 @@
     self = [super initWithFrame:frame];
     if (self) {
         
-//        self.backgroundColor = kUIContentBackgroundColor;
+        //self.backgroundColor = kUIContentBackgroundColor;
         
         [self setupUI];
         
@@ -43,14 +44,21 @@
     _arcImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"df_mePageMaskIcon"]];
     [self addSubview:_arcImageView];
     
+    _contentBgView = [[UIView alloc] init];
+    _contentBgView.backgroundColor = kUIContentBackgroundColor;
+    [self addSubview:_contentBgView];
+    
     _contentView = [[UIView alloc] init];
     _contentView.backgroundColor = [UIColor whiteColor];
     _contentView.layer.cornerRadius = 5.f;
     _contentView.clipsToBounds = YES;
     [self addSubview:_contentView];
     
+    
     _arcImageView.sd_layout.leftEqualToView(self).rightEqualToView(self)
     .topEqualToView(self).heightIs(12.f);
+    
+    _contentBgView.sd_layout.leftSpaceToView(self, VAMargin).rightSpaceToView(self, VAMargin).topSpaceToView(_arcImageView, 0).heightIs(120.f);
     
     _contentView.sd_layout.leftSpaceToView(self, VAMargin).rightSpaceToView(self, VAMargin).topSpaceToView(_arcImageView, 0).heightIs(80.f);
     

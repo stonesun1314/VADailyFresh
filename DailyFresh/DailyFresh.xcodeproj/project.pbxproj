@@ -80,6 +80,8 @@
 		04333F3E22852A5400ECC489 /* DLScrollTabbarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04333F3422852A5400ECC489 /* DLScrollTabbarView.m */; };
 		04333F3F22852A5400ECC489 /* DLTabedSlideView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04333F3722852A5400ECC489 /* DLTabedSlideView.m */; };
 		04333F4022852A5400ECC489 /* DLUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 04333F3922852A5400ECC489 /* DLUtility.m */; };
+		0465E880229B6FBD00001CED /* VAScanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0465E87F229B6FBD00001CED /* VAScanViewController.m */; };
+		0465E883229B707900001CED /* VAScanResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0465E882229B707900001CED /* VAScanResultViewController.m */; };
 		04B17E7F22955667004FB510 /* NSFileManager+Vanke.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B17E7E22955667004FB510 /* NSFileManager+Vanke.m */; };
 		04C7F97D2282AA1900FD9C51 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C7F97C2282AA1900FD9C51 /* AppDelegate.m */; };
 		04C7F9802282AA1900FD9C51 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C7F97F2282AA1900FD9C51 /* ViewController.m */; };
@@ -278,6 +280,10 @@
 		04333F3722852A5400ECC489 /* DLTabedSlideView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLTabedSlideView.m; sourceTree = "<group>"; };
 		04333F3822852A5400ECC489 /* DLUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLUtility.h; sourceTree = "<group>"; };
 		04333F3922852A5400ECC489 /* DLUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLUtility.m; sourceTree = "<group>"; };
+		0465E87E229B6FBD00001CED /* VAScanViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VAScanViewController.h; sourceTree = "<group>"; };
+		0465E87F229B6FBD00001CED /* VAScanViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VAScanViewController.m; sourceTree = "<group>"; };
+		0465E881229B707900001CED /* VAScanResultViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VAScanResultViewController.h; sourceTree = "<group>"; };
+		0465E882229B707900001CED /* VAScanResultViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VAScanResultViewController.m; sourceTree = "<group>"; };
 		04B17E7D22955667004FB510 /* NSFileManager+Vanke.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSFileManager+Vanke.h"; sourceTree = "<group>"; };
 		04B17E7E22955667004FB510 /* NSFileManager+Vanke.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSFileManager+Vanke.m"; sourceTree = "<group>"; };
 		04C7F9782282AA1900FD9C51 /* DailyFresh.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DailyFresh.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -595,6 +601,72 @@
 			path = DLTabbarView;
 			sourceTree = "<group>";
 		};
+		0465E876229B6F9C00001CED /* VASCan */ = {
+			isa = PBXGroup;
+			children = (
+				0465E877229B6F9C00001CED /* Controller */,
+				0465E878229B6F9C00001CED /* Model */,
+				0465E879229B6F9C00001CED /* View */,
+			);
+			path = VASCan;
+			sourceTree = "<group>";
+		};
+		0465E877229B6F9C00001CED /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				0465E87E229B6FBD00001CED /* VAScanViewController.h */,
+				0465E87F229B6FBD00001CED /* VAScanViewController.m */,
+				0465E881229B707900001CED /* VAScanResultViewController.h */,
+				0465E882229B707900001CED /* VAScanResultViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		0465E878229B6F9C00001CED /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0465E879229B6F9C00001CED /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0465E87A229B6FA200001CED /* VASearch */ = {
+			isa = PBXGroup;
+			children = (
+				0465E87B229B6FA200001CED /* Controller */,
+				0465E87C229B6FA200001CED /* Model */,
+				0465E87D229B6FA200001CED /* View */,
+			);
+			path = VASearch;
+			sourceTree = "<group>";
+		};
+		0465E87B229B6FA200001CED /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		0465E87C229B6FA200001CED /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0465E87D229B6FA200001CED /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		04B17E7C22955645004FB510 /* NSFileManager */ = {
 			isa = PBXGroup;
 			children = (
@@ -689,6 +761,8 @@
 		04C7F9AF2282B9FE00FD9C51 /* Class */ = {
 			isa = PBXGroup;
 			children = (
+				0465E87A229B6FA200001CED /* VASearch */,
+				0465E876229B6F9C00001CED /* VASCan */,
 				040A4A9122895F1F001A8083 /* Shop */,
 				04C7F9E92282C2AA00FD9C51 /* Discovery */,
 				04C7F9B02282B9FE00FD9C51 /* Classify */,
@@ -1316,12 +1390,14 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-DailyFresh/Pods-DailyFresh-resources.sh",
+				"${PODS_ROOT}/LBXScan/LBXScan/UI/CodeScan.bundle",
 				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/CodeScan.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MJRefresh.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1419,6 +1495,7 @@
 				04C7F9D82282BA1600FD9C51 /* UIControl+clickRepeatedly.m in Sources */,
 				04D1A353228C130B00C3F597 /* UIView+SGPagingView.m in Sources */,
 				04F7DD3922850E98008261C4 /* VAConsts.m in Sources */,
+				0465E883229B707900001CED /* VAScanResultViewController.m in Sources */,
 				04C7F98B2282AA1900FD9C51 /* main.m in Sources */,
 				04C7F9D72282BA1600FD9C51 /* NSString+tool.m in Sources */,
 				040B2F31228BA2F8006D2CC5 /* HomeNavigationBar.m in Sources */,
@@ -1460,6 +1537,7 @@
 				04C7F97D2282AA1900FD9C51 /* AppDelegate.m in Sources */,
 				04D1A356228C130B00C3F597 /* SGPageContentScrollView.m in Sources */,
 				04019C8C2292AFF600338A64 /* DiscoveryTableViewCell.m in Sources */,
+				0465E880229B6FBD00001CED /* VAScanViewController.m in Sources */,
 				04F5C10D2285747100EE1D5A /* UIButton+SGCountdown.m in Sources */,
 				04F5C0FB2285709A00EE1D5A /* UIColor+Additions.m in Sources */,
 				040A4A9022895C60001A8083 /* VAHorCollectionCell.m in Sources */,

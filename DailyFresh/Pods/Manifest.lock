@@ -17,6 +17,11 @@ PODS:
   - FMDB (2.7.5):
     - FMDB/standard (= 2.7.5)
   - FMDB/standard (2.7.5)
+  - LBXScan/LBXNative (2.3):
+    - LBXScan/Types (~> 2.2)
+  - LBXScan/Types (2.3)
+  - LBXScan/UI (2.3):
+    - LBXScan/Types (~> 2.2)
   - Masonry (1.1.0)
   - MJExtension (3.0.15.1)
   - MJRefresh (3.1.15.7)
@@ -35,6 +40,8 @@ PODS:
 DEPENDENCIES:
   - AFNetworking (~> 3.2.1)
   - FMDB (~> 2.7.5)
+  - LBXScan/LBXNative (~> 2.3)
+  - LBXScan/UI (~> 2.3)
   - Masonry (~> 1.1.0)
   - MJExtension (~> 3.0.15.1)
   - MJRefresh (~> 3.1.15.7)
@@ -49,6 +56,7 @@ SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - AFNetworking
     - FMDB
+    - LBXScan
     - Masonry
     - MJExtension
     - MJRefresh
@@ -62,6 +70,7 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
   FMDB: 2ce00b547f966261cd18927a3ddb07cb6f3db82a
+  LBXScan: e51449f0832d1fe17da632af0d22adeb3cfa3543
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   MJExtension: 19bc33ce2eee2d319760f5622562cf581a6ff756
   MJRefresh: 697f8ec75ebdbe9207767bb682cf0f51b0d8a41f
@@ -72,6 +81,6 @@ SPEC CHECKSUMS:
   YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
   YYText: 5c461d709e24d55a182d1441c41dc639a18a4849
 
-PODFILE CHECKSUM: 751f263b6481dac0ece2ce470c01a9c8dc532387
+PODFILE CHECKSUM: f1b2463930e7ba8ed92117b059426c17f2fa4c6f
 
 COCOAPODS: 1.5.3

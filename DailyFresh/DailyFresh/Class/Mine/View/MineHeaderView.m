@@ -10,6 +10,11 @@
 
 @interface MineHeaderView ()
 
+@property (nonatomic, strong) UIImageView *cardImageView;
+
+@property (nonatomic, strong) UIImageView *vipRightImageView;
+@property (nonatomic, strong) UIButton *openVipBtn;
+
 @end
 
 @implementation MineHeaderView
@@ -41,6 +46,25 @@
         [_messageBtn setImage:[UIImage imageNamed:@"df_me_message_icon"] forState:UIControlStateNormal];
         [self addSubview:_messageBtn];
         
+        _cardImageView = [[UIImageView alloc] init];
+        _cardImageView.image = [UIImage imageNamed:@"df_me_vip_cardbg"];
+        [self addSubview:_cardImageView];
+        
+        _vipRightImageView = [[UIImageView alloc] init];
+        _vipRightImageView.image = [UIImage imageNamed:@"df_vipMemberOpenLabel"];
+        [_cardImageView addSubview:_vipRightImageView];
+        
+        _openVipBtn = [[UIButton alloc] init];
+        [_openVipBtn setTitle:@"开通会员" forState:UIControlStateNormal];
+        [_openVipBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+        _openVipBtn.titleLabel.font = [UIFont systemFontOfSize:12.f];
+        [_openVipBtn setBackgroundImage:[UIImage imageNamed:@"df_goods_coupon_open_vip_bg"] forState:UIControlStateNormal];
+        [_cardImageView addSubview:_openVipBtn];
+        
+        _vipRightImageView.sd_layout.leftSpaceToView(_cardImageView, 10.f).topSpaceToView(_cardImageView, 10.f).widthIs(115.f).heightIs(17.f);
+        
+        _openVipBtn.sd_layout.rightSpaceToView(_cardImageView, 8.f).widthIs(70).heightIs(24.f).topSpaceToView(_cardImageView, 7.f);
+        
         _bgImageView.sd_layout.leftEqualToView(self).rightEqualToView(self).
         topEqualToView(self).bottomEqualToView(self);
         
@@ -48,6 +72,8 @@
         
         _loginBtn.sd_layout.leftSpaceToView(_avatarImageView, 10.f).centerYEqualToView(_avatarImageView).widthIs(80.f).heightIs(60.f);
         _messageBtn.sd_layout.rightSpaceToView(self, VAMargin).centerYEqualToView(_avatarImageView).widthIs(44).heightIs(44.f);
+        
+        _cardImageView.sd_layout.heightIs(120.f).leftSpaceToView(self, VAMargin).rightSpaceToView(self, VAMargin).bottomSpaceToView(self, -80);
         
         
     }

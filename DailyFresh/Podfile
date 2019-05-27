@@ -19,6 +19,8 @@ target 'DailyFresh' do
     pod 'YYText',          '~>1.0.7'
     pod 'YYCategories',          '~>1.0.4'
     #pod 'IQKeyboardManager', '~> 6.2.0'
+    pod 'LBXScan/LBXNative','~> 2.3'
+    pod 'LBXScan/UI','~> 2.3'
 
   target 'DailyFreshTests' do
     inherit! :search_paths

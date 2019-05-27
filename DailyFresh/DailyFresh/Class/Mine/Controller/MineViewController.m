@@ -50,6 +50,10 @@
     
     //df_share_detail_backImage@2x
     
+    // 会员卡 vipMemberOpenLabel@2x        //df_goods_coupon_open_vip_bg@2x.png   666  openButtonImage@2x.png
+    
+    //completed_icon@2x.png
+    
     [self setupUI];
 }
 
