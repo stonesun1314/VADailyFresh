@@ -22,9 +22,15 @@
 #import <SDWebImage/UIImageView+WebCache.h>
 #import <SDWebImage/UIButton+WebCache.h>
 #import <Masonry/Masonry.h>
+#import <LBXScan/LBXScanView.h>
 
 #import "SGPagingView.h"
+#import "LBXPermission.h"
+#import "LBXPermissionSetting.h"
 
+
+#define LBXScan_Define_Native  //包含native库
+#define LBXScan_Define_UI     //包含界面库
 
 
 //business

@@ -36,11 +36,12 @@
 
 - (void)setNavigationBar {
     
+    //df_leftBackSearchImage@2x.png
     UINavigationBar * bar = self.navigationController.navigationBar;
     bar.translucent = NO;
     bar.barTintColor = [UIColor whiteColor];
     
-    UIBarButtonItem *backBarButtonItem = [[UIBarButtonItem alloc]initWithImage:[[UIImage imageNamed:@"arrow_navbar"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] style:UIBarButtonItemStylePlain target:self action:@selector(backClick:)];
+    UIBarButtonItem *backBarButtonItem = [[UIBarButtonItem alloc]initWithImage:[[UIImage imageNamed:@"df_leftBackSearchImage"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] style:UIBarButtonItemStylePlain target:self action:@selector(backClick:)];
     self.navigationItem.leftBarButtonItem = backBarButtonItem;
     
     //arrow_navbar

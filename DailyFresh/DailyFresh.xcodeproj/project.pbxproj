@@ -82,6 +82,22 @@
 		04333F4022852A5400ECC489 /* DLUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 04333F3922852A5400ECC489 /* DLUtility.m */; };
 		0465E880229B6FBD00001CED /* VAScanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0465E87F229B6FBD00001CED /* VAScanViewController.m */; };
 		0465E883229B707900001CED /* VAScanResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0465E882229B707900001CED /* VAScanResultViewController.m */; };
+		0465E890229B842900001CED /* UIActionSheet+LBXAlertAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 0465E887229B842900001CED /* UIActionSheet+LBXAlertAction.m */; };
+		0465E891229B842900001CED /* UIAlertController+supportedInterfaceOrientations.m in Sources */ = {isa = PBXBuildFile; fileRef = 0465E889229B842900001CED /* UIAlertController+supportedInterfaceOrientations.m */; };
+		0465E892229B842900001CED /* UIAlertView+LBXAlertAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 0465E88B229B842900001CED /* UIAlertView+LBXAlertAction.m */; };
+		0465E893229B842900001CED /* UIWindow+LBXHierarchy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0465E88D229B842900001CED /* UIWindow+LBXHierarchy.m */; };
+		0465E894229B842900001CED /* LBXAlertAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 0465E88F229B842900001CED /* LBXAlertAction.m */; };
+		0465E8AC229B953900001CED /* LBXPermission.m in Sources */ = {isa = PBXBuildFile; fileRef = 0465E897229B953900001CED /* LBXPermission.m */; };
+		0465E8AD229B953900001CED /* LBXPermissionCalendar.m in Sources */ = {isa = PBXBuildFile; fileRef = 0465E899229B953900001CED /* LBXPermissionCalendar.m */; };
+		0465E8AE229B953900001CED /* LBXPermissionCamera.m in Sources */ = {isa = PBXBuildFile; fileRef = 0465E89B229B953900001CED /* LBXPermissionCamera.m */; };
+		0465E8AF229B953900001CED /* LBXPermissionContacts.m in Sources */ = {isa = PBXBuildFile; fileRef = 0465E89D229B953900001CED /* LBXPermissionContacts.m */; };
+		0465E8B0229B953900001CED /* LBXPermissionHealth.m in Sources */ = {isa = PBXBuildFile; fileRef = 0465E89F229B953900001CED /* LBXPermissionHealth.m */; };
+		0465E8B1229B953900001CED /* LBXPermissionLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 0465E8A1229B953900001CED /* LBXPermissionLocation.m */; };
+		0465E8B2229B953900001CED /* LBXPermissionMicrophone.m in Sources */ = {isa = PBXBuildFile; fileRef = 0465E8A3229B953900001CED /* LBXPermissionMicrophone.m */; };
+		0465E8B3229B953900001CED /* LBXPermissionNetwork.m in Sources */ = {isa = PBXBuildFile; fileRef = 0465E8A5229B953900001CED /* LBXPermissionNetwork.m */; };
+		0465E8B4229B953900001CED /* LBXPermissionPhotos.m in Sources */ = {isa = PBXBuildFile; fileRef = 0465E8A7229B953900001CED /* LBXPermissionPhotos.m */; };
+		0465E8B5229B953900001CED /* LBXPermissionReminders.m in Sources */ = {isa = PBXBuildFile; fileRef = 0465E8A9229B953900001CED /* LBXPermissionReminders.m */; };
+		0465E8B6229B953900001CED /* LBXPermissionSetting.m in Sources */ = {isa = PBXBuildFile; fileRef = 0465E8AB229B953900001CED /* LBXPermissionSetting.m */; };
 		04B17E7F22955667004FB510 /* NSFileManager+Vanke.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B17E7E22955667004FB510 /* NSFileManager+Vanke.m */; };
 		04C7F97D2282AA1900FD9C51 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C7F97C2282AA1900FD9C51 /* AppDelegate.m */; };
 		04C7F9802282AA1900FD9C51 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C7F97F2282AA1900FD9C51 /* ViewController.m */; };
@@ -284,6 +300,38 @@
 		0465E87F229B6FBD00001CED /* VAScanViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VAScanViewController.m; sourceTree = "<group>"; };
 		0465E881229B707900001CED /* VAScanResultViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VAScanResultViewController.h; sourceTree = "<group>"; };
 		0465E882229B707900001CED /* VAScanResultViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VAScanResultViewController.m; sourceTree = "<group>"; };
+		0465E886229B842900001CED /* UIActionSheet+LBXAlertAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIActionSheet+LBXAlertAction.h"; sourceTree = "<group>"; };
+		0465E887229B842900001CED /* UIActionSheet+LBXAlertAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIActionSheet+LBXAlertAction.m"; sourceTree = "<group>"; };
+		0465E888229B842900001CED /* UIAlertController+supportedInterfaceOrientations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertController+supportedInterfaceOrientations.h"; sourceTree = "<group>"; };
+		0465E889229B842900001CED /* UIAlertController+supportedInterfaceOrientations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertController+supportedInterfaceOrientations.m"; sourceTree = "<group>"; };
+		0465E88A229B842900001CED /* UIAlertView+LBXAlertAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertView+LBXAlertAction.h"; sourceTree = "<group>"; };
+		0465E88B229B842900001CED /* UIAlertView+LBXAlertAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertView+LBXAlertAction.m"; sourceTree = "<group>"; };
+		0465E88C229B842900001CED /* UIWindow+LBXHierarchy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWindow+LBXHierarchy.h"; sourceTree = "<group>"; };
+		0465E88D229B842900001CED /* UIWindow+LBXHierarchy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWindow+LBXHierarchy.m"; sourceTree = "<group>"; };
+		0465E88E229B842900001CED /* LBXAlertAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LBXAlertAction.h; sourceTree = "<group>"; };
+		0465E88F229B842900001CED /* LBXAlertAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LBXAlertAction.m; sourceTree = "<group>"; };
+		0465E896229B953900001CED /* LBXPermission.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LBXPermission.h; sourceTree = "<group>"; };
+		0465E897229B953900001CED /* LBXPermission.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LBXPermission.m; sourceTree = "<group>"; };
+		0465E898229B953900001CED /* LBXPermissionCalendar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LBXPermissionCalendar.h; sourceTree = "<group>"; };
+		0465E899229B953900001CED /* LBXPermissionCalendar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LBXPermissionCalendar.m; sourceTree = "<group>"; };
+		0465E89A229B953900001CED /* LBXPermissionCamera.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LBXPermissionCamera.h; sourceTree = "<group>"; };
+		0465E89B229B953900001CED /* LBXPermissionCamera.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LBXPermissionCamera.m; sourceTree = "<group>"; };
+		0465E89C229B953900001CED /* LBXPermissionContacts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LBXPermissionContacts.h; sourceTree = "<group>"; };
+		0465E89D229B953900001CED /* LBXPermissionContacts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LBXPermissionContacts.m; sourceTree = "<group>"; };
+		0465E89E229B953900001CED /* LBXPermissionHealth.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LBXPermissionHealth.h; sourceTree = "<group>"; };
+		0465E89F229B953900001CED /* LBXPermissionHealth.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LBXPermissionHealth.m; sourceTree = "<group>"; };
+		0465E8A0229B953900001CED /* LBXPermissionLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LBXPermissionLocation.h; sourceTree = "<group>"; };
+		0465E8A1229B953900001CED /* LBXPermissionLocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LBXPermissionLocation.m; sourceTree = "<group>"; };
+		0465E8A2229B953900001CED /* LBXPermissionMicrophone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LBXPermissionMicrophone.h; sourceTree = "<group>"; };
+		0465E8A3229B953900001CED /* LBXPermissionMicrophone.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LBXPermissionMicrophone.m; sourceTree = "<group>"; };
+		0465E8A4229B953900001CED /* LBXPermissionNetwork.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LBXPermissionNetwork.h; sourceTree = "<group>"; };
+		0465E8A5229B953900001CED /* LBXPermissionNetwork.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LBXPermissionNetwork.m; sourceTree = "<group>"; };
+		0465E8A6229B953900001CED /* LBXPermissionPhotos.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LBXPermissionPhotos.h; sourceTree = "<group>"; };
+		0465E8A7229B953900001CED /* LBXPermissionPhotos.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LBXPermissionPhotos.m; sourceTree = "<group>"; };
+		0465E8A8229B953900001CED /* LBXPermissionReminders.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LBXPermissionReminders.h; sourceTree = "<group>"; };
+		0465E8A9229B953900001CED /* LBXPermissionReminders.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LBXPermissionReminders.m; sourceTree = "<group>"; };
+		0465E8AA229B953900001CED /* LBXPermissionSetting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LBXPermissionSetting.h; sourceTree = "<group>"; };
+		0465E8AB229B953900001CED /* LBXPermissionSetting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LBXPermissionSetting.m; sourceTree = "<group>"; };
 		04B17E7D22955667004FB510 /* NSFileManager+Vanke.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSFileManager+Vanke.h"; sourceTree = "<group>"; };
 		04B17E7E22955667004FB510 /* NSFileManager+Vanke.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSFileManager+Vanke.m"; sourceTree = "<group>"; };
 		04C7F9782282AA1900FD9C51 /* DailyFresh.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DailyFresh.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -667,6 +715,60 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		0465E884229B842900001CED /* LBXAlertAction */ = {
+			isa = PBXGroup;
+			children = (
+				0465E885229B842900001CED /* Class */,
+				0465E88E229B842900001CED /* LBXAlertAction.h */,
+				0465E88F229B842900001CED /* LBXAlertAction.m */,
+			);
+			path = LBXAlertAction;
+			sourceTree = "<group>";
+		};
+		0465E885229B842900001CED /* Class */ = {
+			isa = PBXGroup;
+			children = (
+				0465E886229B842900001CED /* UIActionSheet+LBXAlertAction.h */,
+				0465E887229B842900001CED /* UIActionSheet+LBXAlertAction.m */,
+				0465E888229B842900001CED /* UIAlertController+supportedInterfaceOrientations.h */,
+				0465E889229B842900001CED /* UIAlertController+supportedInterfaceOrientations.m */,
+				0465E88A229B842900001CED /* UIAlertView+LBXAlertAction.h */,
+				0465E88B229B842900001CED /* UIAlertView+LBXAlertAction.m */,
+				0465E88C229B842900001CED /* UIWindow+LBXHierarchy.h */,
+				0465E88D229B842900001CED /* UIWindow+LBXHierarchy.m */,
+			);
+			path = Class;
+			sourceTree = "<group>";
+		};
+		0465E895229B953900001CED /* LBXPermissions */ = {
+			isa = PBXGroup;
+			children = (
+				0465E896229B953900001CED /* LBXPermission.h */,
+				0465E897229B953900001CED /* LBXPermission.m */,
+				0465E898229B953900001CED /* LBXPermissionCalendar.h */,
+				0465E899229B953900001CED /* LBXPermissionCalendar.m */,
+				0465E89A229B953900001CED /* LBXPermissionCamera.h */,
+				0465E89B229B953900001CED /* LBXPermissionCamera.m */,
+				0465E89C229B953900001CED /* LBXPermissionContacts.h */,
+				0465E89D229B953900001CED /* LBXPermissionContacts.m */,
+				0465E89E229B953900001CED /* LBXPermissionHealth.h */,
+				0465E89F229B953900001CED /* LBXPermissionHealth.m */,
+				0465E8A0229B953900001CED /* LBXPermissionLocation.h */,
+				0465E8A1229B953900001CED /* LBXPermissionLocation.m */,
+				0465E8A2229B953900001CED /* LBXPermissionMicrophone.h */,
+				0465E8A3229B953900001CED /* LBXPermissionMicrophone.m */,
+				0465E8A4229B953900001CED /* LBXPermissionNetwork.h */,
+				0465E8A5229B953900001CED /* LBXPermissionNetwork.m */,
+				0465E8A6229B953900001CED /* LBXPermissionPhotos.h */,
+				0465E8A7229B953900001CED /* LBXPermissionPhotos.m */,
+				0465E8A8229B953900001CED /* LBXPermissionReminders.h */,
+				0465E8A9229B953900001CED /* LBXPermissionReminders.m */,
+				0465E8AA229B953900001CED /* LBXPermissionSetting.h */,
+				0465E8AB229B953900001CED /* LBXPermissionSetting.m */,
+			);
+			path = LBXPermissions;
+			sourceTree = "<group>";
+		};
 		04B17E7C22955645004FB510 /* NSFileManager */ = {
 			isa = PBXGroup;
 			children = (
@@ -744,6 +846,8 @@
 		04C7F9AD2282B9ED00FD9C51 /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
+				0465E895229B953900001CED /* LBXPermissions */,
+				0465E884229B842900001CED /* LBXAlertAction */,
 				04333F2622852A5400ECC489 /* Components */,
 			);
 			path = Vendor;
@@ -1491,8 +1595,10 @@
 				04C7F9C62282BA0600FD9C51 /* BaseViewController.m in Sources */,
 				04C7F9DA2282BA1600FD9C51 /* UINavigationBar+bgColor.m in Sources */,
 				04D1A358228C130B00C3F597 /* SGPageTitleViewConfigure.m in Sources */,
+				0465E8B1229B953900001CED /* LBXPermissionLocation.m in Sources */,
 				04F5C0EF22854EE300EE1D5A /* HomeSubViewController.m in Sources */,
 				04C7F9D82282BA1600FD9C51 /* UIControl+clickRepeatedly.m in Sources */,
+				0465E8B5229B953900001CED /* LBXPermissionReminders.m in Sources */,
 				04D1A353228C130B00C3F597 /* UIView+SGPagingView.m in Sources */,
 				04F7DD3922850E98008261C4 /* VAConsts.m in Sources */,
 				0465E883229B707900001CED /* VAScanResultViewController.m in Sources */,
@@ -1505,14 +1611,19 @@
 				04C7F9D62282BA1600FD9C51 /* NSObject+Unicode.m in Sources */,
 				04F45DAA2297D82E00331784 /* MineItemModel.m in Sources */,
 				04108D5D228D4C420065FB4F /* ClassifyRightViewController.m in Sources */,
+				0465E8B3229B953900001CED /* LBXPermissionNetwork.m in Sources */,
+				0465E892229B842900001CED /* UIAlertView+LBXAlertAction.m in Sources */,
 				04C7F9FE2282C3AB00FD9C51 /* ShoppingCartViewController.m in Sources */,
 				04333F3E22852A5400ECC489 /* DLScrollTabbarView.m in Sources */,
 				04333F3A22852A5400ECC489 /* DLLRUCache.m in Sources */,
 				04D1A35E228D0CB700C3F597 /* ClassifyNavView.m in Sources */,
+				0465E893229B842900001CED /* UIWindow+LBXHierarchy.m in Sources */,
 				04019C992293CA5100338A64 /* VAMJRefreshGifHeader.m in Sources */,
 				04333F3C22852A5400ECC489 /* DLSlideView.m in Sources */,
 				04C7F9C42282BA0600FD9C51 /* BaseModel.m in Sources */,
 				04F5C0F5228561F100EE1D5A /* HomeHeaderMenuView.m in Sources */,
+				0465E8B0229B953900001CED /* LBXPermissionHealth.m in Sources */,
+				0465E8AC229B953900001CED /* LBXPermission.m in Sources */,
 				04CBE7EB228E4AD200AB1D5B /* SecondCateView.m in Sources */,
 				04333F3B22852A5400ECC489 /* DLCustomSlideView.m in Sources */,
 				04C7F9F22282C34B00FD9C51 /* DiscoveryViewController.m in Sources */,
@@ -1523,7 +1634,9 @@
 				04108D60228D5BE90065FB4F /* LeftTableViewCell.m in Sources */,
 				04019C872292933A00338A64 /* HomeTopAdModel.m in Sources */,
 				04D1A35B228CF0EA00C3F597 /* TestViewController.m in Sources */,
+				0465E8AE229B953900001CED /* LBXPermissionCamera.m in Sources */,
 				04C7FA012282C3CA00FD9C51 /* ClassifyViewController.m in Sources */,
+				0465E890229B842900001CED /* UIActionSheet+LBXAlertAction.m in Sources */,
 				04E6C328228ABB5B007C9548 /* HomeVerListSection.m in Sources */,
 				04019CD62293D87900338A64 /* CartTableViewCell.m in Sources */,
 				04F5C10B2285747100EE1D5A /* NSDate+TimeAgo.m in Sources */,
@@ -1531,17 +1644,21 @@
 				04EB85BE2296452100E7319D /* CartSettlingView.m in Sources */,
 				04F45DA42297D54800331784 /* MineServiceItemView.m in Sources */,
 				04F45D922297984B00331784 /* MinePropertySectionView.m in Sources */,
+				0465E8B6229B953900001CED /* LBXPermissionSetting.m in Sources */,
 				04019C7222927A3200338A64 /* HomeVerItemCell.m in Sources */,
 				04F5C10F2285747100EE1D5A /* UIButton+SGImagePosition.m in Sources */,
 				04C7F9D92282BA1600FD9C51 /* UIImage+tool.m in Sources */,
 				04C7F97D2282AA1900FD9C51 /* AppDelegate.m in Sources */,
+				0465E8AD229B953900001CED /* LBXPermissionCalendar.m in Sources */,
 				04D1A356228C130B00C3F597 /* SGPageContentScrollView.m in Sources */,
 				04019C8C2292AFF600338A64 /* DiscoveryTableViewCell.m in Sources */,
+				0465E891229B842900001CED /* UIAlertController+supportedInterfaceOrientations.m in Sources */,
 				0465E880229B6FBD00001CED /* VAScanViewController.m in Sources */,
 				04F5C10D2285747100EE1D5A /* UIButton+SGCountdown.m in Sources */,
 				04F5C0FB2285709A00EE1D5A /* UIColor+Additions.m in Sources */,
 				040A4A9022895C60001A8083 /* VAHorCollectionCell.m in Sources */,
 				04EB85BB2296301B00E7319D /* CartEmptyView.m in Sources */,
+				0465E8AF229B953900001CED /* LBXPermissionContacts.m in Sources */,
 				04E6C325228A6941007C9548 /* VAMockDataSource.m in Sources */,
 				04019C922292E3F800338A64 /* DisArticalModel.m in Sources */,
 				040A4A9722895F34001A8083 /* GoodsItemModel.m in Sources */,
@@ -1567,9 +1684,12 @@
 				04D1A352228C130B00C3F597 /* UIButton+SGPagingView.m in Sources */,
 				04F45D952297A15D00331784 /* MinePropertyItemView.m in Sources */,
 				040A4A9D228965B7001A8083 /* HomeHorCollectionViewCell.m in Sources */,
+				0465E8B4229B953900001CED /* LBXPermissionPhotos.m in Sources */,
 				04C7F9EF2282C33B00FD9C51 /* HomeViewController.m in Sources */,
 				04F5C0F22285600E00EE1D5A /* HomeMenuGridItem.m in Sources */,
+				0465E894229B842900001CED /* LBXAlertAction.m in Sources */,
 				04C7FA042282C41300FD9C51 /* VATabBarViewController.m in Sources */,
+				0465E8B2229B953900001CED /* LBXPermissionMicrophone.m in Sources */,
 				040A4A8D22895C40001A8083 /* VAHorCollectionView.m in Sources */,
 				04F45DA72297D58400331784 /* MineOrderServiceItemView.m in Sources */,
 				040E3420228EAF5C0050756B /* ClassifyRightHeaderView.m in Sources */,

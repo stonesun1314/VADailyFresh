@@ -8,11 +8,19 @@
 
 #import <UIKit/UIKit.h>
 
+typedef void(^VAHandleScanCodeBlock)(void);
+typedef void(^VAHandleLocationBlock)(void);
+
 NS_ASSUME_NONNULL_BEGIN
+
+
 
 @interface HomeNavigationBar : UIView
 
 @property (nonatomic, strong) SGPageTitleView *pageTitleView;
+
+@property (nonatomic, strong) VAHandleScanCodeBlock handleScanBlock;
+@property (nonatomic, strong) VAHandleLocationBlock handleLocationBlock;
 
 @end
 

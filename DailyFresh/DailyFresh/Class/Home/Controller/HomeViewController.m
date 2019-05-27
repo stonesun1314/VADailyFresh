@@ -17,6 +17,7 @@
 #import "HomeHeaderModel.h"
 #import "HomeLimTimeSectionModel.h"
 #import "HomeFeatureSectionModel.h"
+#import "VAScanViewController.h"
 
 
 @interface HomeViewController ()<SGPageTitleViewDelegate, SGPageContentScrollViewDelegate>
@@ -117,21 +118,38 @@
 
 
 - (void)setupUI{
-    
+    WeakSelf
     _headerView = [[UIView alloc] init];
     [self.view addSubview:_headerView];
     
-    _headerView.sd_layout.leftEqualToView(self.view).rightEqualToView(self.view).topSpaceToView(self.view, Height_StatusBar).heightIs(124.f);
+    _headerView.sd_layout.leftEqualToView(self.view).rightEqualToView(self.view)
+    .topSpaceToView(self.view, Height_StatusBar).heightIs(124.f);
     
     _navigationBar = [[HomeNavigationBar alloc] init];
 //    _navigationBar.backgroundColor = [UIColor whiteColor];
+    _navigationBar.handleLocationBlock = ^{
+//        VAScanViewController *vc = [[VAScanViewController alloc] init];
+//        self
+    };
+    _navigationBar.handleScanBlock = ^{
+        
+        [LBXPermission authorizeWithType:LBXPermissionType_Camera completion:^(BOOL granted, BOOL firstTime) {
+            if (granted) {
+                [weakSelf scanVC];
+            }
+            else if(!firstTime)
+            {
+                [LBXPermissionSetting showAlertToDislayPrivacySettingWithTitle:@"提示" msg:@"没有相机权限，是否前往设置" cancel:@"取消" setting:@"设置" ];
+            }
+        }];
+    };
     [_headerView addSubview:_navigationBar];
     
-    _navigationBar.sd_layout.leftEqualToView(_headerView).rightEqualToView(_headerView).topSpaceToView(_headerView, 0).heightIs(80.f);
+    _navigationBar.sd_layout.leftEqualToView(_headerView).rightEqualToView(_headerView)
+    .topSpaceToView(_headerView, 0).heightIs(80.f);
     
     [_headerView updateLayout];
     
-
     NSArray *titleArr = @[@"热卖",@"会员特价",@"0元菜场",@"冰凉小卖铺",@"每日优鲜，2小时送达",@"荔枝来了"];
     SGPageTitleViewConfigure *configure = [SGPageTitleViewConfigure pageTitleViewConfigure];
     configure.showIndicator = NO;
@@ -193,6 +211,35 @@
 
 - (void)pageContentScrollView:(SGPageContentScrollView *)pageContentScrollView progress:(CGFloat)progress originalIndex:(NSInteger)originalIndex targetIndex:(NSInteger)targetIndex {
     [self.pageTitleView setPageTitleViewWithProgress:progress originalIndex:originalIndex targetIndex:targetIndex];
+}
+
+- (void)scanVC {
+    
+    //设置扫码区域参数
+    LBXScanViewStyle *style = [[LBXScanViewStyle alloc]init];
+    style.centerUpOffset = 44;
+    style.photoframeAngleStyle = LBXScanViewPhotoframeAngleStyle_On;
+    style.photoframeLineW = 6;
+    style.photoframeAngleW = 24;
+    style.photoframeAngleH = 24;
+    style.isNeedShowRetangle = YES;
+    style.colorAngle = kMainColor;
+    style.anmiationStyle = LBXScanViewAnimationStyle_NetGrid;
+    
+    //使用的支付宝里面网格图片
+    UIImage *imgPartNet = [UIImage imageNamed:@"df_scaner_inner"];
+    style.animationImage = imgPartNet;
+    
+    style.notRecoginitonArea = [UIColor colorWithRed:0 green:0 blue:0 alpha:0.6];
+    
+    VAScanViewController *vc = [VAScanViewController new];
+    vc.style = style;
+    vc.isOpenInterestRect = YES;
+    vc.libraryType = SLT_Native;
+    vc.scanCodeType = SCT_QRCode;
+    vc.hidesBottomBarWhenPushed = YES;
+    
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 
