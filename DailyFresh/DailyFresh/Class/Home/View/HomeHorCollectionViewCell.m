@@ -83,7 +83,7 @@
     [_imageView sd_setImageWithURL:[NSURL URLWithString:model.img] placeholderImage:[UIImage imageNamed:@"df_discover_avatar"]];
     _titleLabel.text = model.name;
     _priceLabel.text = [VANStringUtil converCurrnecyFormate:model.price];// model.price;
-    _originPriceLabel.text = [VANStringUtil converCurrnecyFormate:model.originalPrice]; 
+    [_originPriceLabel setMiddleLine:[VANStringUtil converCurrnecyFormate:model.originalPrice]]; 
 }
 
 - (void)handleAdd:(UIButton *)sender {

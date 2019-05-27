@@ -100,6 +100,8 @@
 		0465E8B6229B953900001CED /* LBXPermissionSetting.m in Sources */ = {isa = PBXBuildFile; fileRef = 0465E8AB229B953900001CED /* LBXPermissionSetting.m */; };
 		0465E8BD229BB55200001CED /* VALocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0465E8BC229BB55200001CED /* VALocationViewController.m */; };
 		0465E8BF229BB7B200001CED /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0465E8BE229BB7B200001CED /* CoreLocation.framework */; };
+		0465E8C4229BC5B900001CED /* UnderlineTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 0465E8C3229BC5B900001CED /* UnderlineTextField.m */; };
+		0465E8F8229BCD8400001CED /* UILabel+Line.m in Sources */ = {isa = PBXBuildFile; fileRef = 0465E8F7229BCD8300001CED /* UILabel+Line.m */; };
 		04B17E7F22955667004FB510 /* NSFileManager+Vanke.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B17E7E22955667004FB510 /* NSFileManager+Vanke.m */; };
 		04C7F97D2282AA1900FD9C51 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C7F97C2282AA1900FD9C51 /* AppDelegate.m */; };
 		04C7F9802282AA1900FD9C51 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C7F97F2282AA1900FD9C51 /* ViewController.m */; };
@@ -337,6 +339,10 @@
 		0465E8BB229BB55200001CED /* VALocationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VALocationViewController.h; sourceTree = "<group>"; };
 		0465E8BC229BB55200001CED /* VALocationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VALocationViewController.m; sourceTree = "<group>"; };
 		0465E8BE229BB7B200001CED /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		0465E8C2229BC5B900001CED /* UnderlineTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UnderlineTextField.h; sourceTree = "<group>"; };
+		0465E8C3229BC5B900001CED /* UnderlineTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UnderlineTextField.m; sourceTree = "<group>"; };
+		0465E8F6229BCD8300001CED /* UILabel+Line.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UILabel+Line.h"; sourceTree = "<group>"; };
+		0465E8F7229BCD8300001CED /* UILabel+Line.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UILabel+Line.m"; sourceTree = "<group>"; };
 		04B17E7D22955667004FB510 /* NSFileManager+Vanke.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSFileManager+Vanke.h"; sourceTree = "<group>"; };
 		04B17E7E22955667004FB510 /* NSFileManager+Vanke.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSFileManager+Vanke.m"; sourceTree = "<group>"; };
 		04C7F9782282AA1900FD9C51 /* DailyFresh.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DailyFresh.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -608,6 +614,7 @@
 		04333F2622852A5400ECC489 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				0465E8C1229BC5B900001CED /* UnderlineTextField */,
 				04019C962293CA0C00338A64 /* MJCustomer */,
 				04D1A33E228C130A00C3F597 /* SGPagingView */,
 				040A4A8A22895C1D001A8083 /* VAHorCollectionView */,
@@ -806,6 +813,24 @@
 			children = (
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		0465E8C1229BC5B900001CED /* UnderlineTextField */ = {
+			isa = PBXGroup;
+			children = (
+				0465E8C2229BC5B900001CED /* UnderlineTextField.h */,
+				0465E8C3229BC5B900001CED /* UnderlineTextField.m */,
+			);
+			path = UnderlineTextField;
+			sourceTree = "<group>";
+		};
+		0465E8F5229BCD5900001CED /* UILabel */ = {
+			isa = PBXGroup;
+			children = (
+				0465E8F6229BCD8300001CED /* UILabel+Line.h */,
+				0465E8F7229BCD8300001CED /* UILabel+Line.m */,
+			);
+			path = UILabel;
 			sourceTree = "<group>";
 		};
 		04B17E7C22955645004FB510 /* NSFileManager */ = {
@@ -1120,6 +1145,7 @@
 		04C7F9C72282BA1600FD9C51 /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				0465E8F5229BCD5900001CED /* UILabel */,
 				04B17E7C22955645004FB510 /* NSFileManager */,
 				04F5C0FC2285747100EE1D5A /* NSDate */,
 				04F5C1022285747100EE1D5A /* SGEasyButton */,
@@ -1675,6 +1701,7 @@
 				04108D60228D5BE90065FB4F /* LeftTableViewCell.m in Sources */,
 				04019C872292933A00338A64 /* HomeTopAdModel.m in Sources */,
 				04D1A35B228CF0EA00C3F597 /* TestViewController.m in Sources */,
+				0465E8C4229BC5B900001CED /* UnderlineTextField.m in Sources */,
 				0465E8AE229B953900001CED /* LBXPermissionCamera.m in Sources */,
 				04C7FA012282C3CA00FD9C51 /* ClassifyViewController.m in Sources */,
 				0465E890229B842900001CED /* UIActionSheet+LBXAlertAction.m in Sources */,
@@ -1709,6 +1736,7 @@
 				04F45DAD2297D9F800331784 /* MineScrollSectionView.m in Sources */,
 				040E77C72284090E00CDED15 /* HomeVerListView.m in Sources */,
 				04333F3D22852A5400ECC489 /* DLFixedTabbarView.m in Sources */,
+				0465E8F8229BCD8400001CED /* UILabel+Line.m in Sources */,
 				04F45D8622969BAB00331784 /* HomeFeatureSection.m in Sources */,
 				04108D63228D5BF50065FB4F /* RightTableViewCell.m in Sources */,
 				04108D5A228D4C350065FB4F /* ClassifyLeftViewController.m in Sources */,
