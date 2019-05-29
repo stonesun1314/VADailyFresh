@@ -111,5 +111,10 @@
 //    VALog(@"%@",_contentView);
 }
 
+- (void)setTitleStr:(NSString *)titleStr{
+    _titleStr = titleStr;
+    _titleLabel.text = _titleStr;
+}
+
 
 @end

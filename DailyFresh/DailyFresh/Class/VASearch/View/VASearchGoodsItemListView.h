@@ -1,19 +1,17 @@
 //
-//  HomeVerListSection.h
+//  VASearchGoodsItemListView.h
 //  DailyFresh
 //
-//  Created by Mac on 2019/5/14.
+//  Created by Mac on 2019/5/29.
 //  Copyright © 2019年 Mac. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
-#import "GoodsItemModel.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface HomeVerListSection : UIView
+@interface VASearchGoodsItemListView : UIView
 
-@property (nonatomic, strong) NSString *titleStr;
 @property (nonatomic, strong) NSArray <GoodsItemModel *>*goodsItemList;
 
 @end

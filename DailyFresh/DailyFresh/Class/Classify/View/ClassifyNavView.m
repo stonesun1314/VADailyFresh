@@ -53,13 +53,10 @@
     _locationArrow.image = [UIImage imageNamed:@"df_orderDownImage"];
     [self addSubview:_locationArrow];
     
-    
     _scanBtn = [[UIButton alloc] init];
     [_scanBtn setImage:[UIImage imageNamed:@"df_qrcode_black"] forState:UIControlStateNormal];
     [self addSubview:_scanBtn];
 
-
-    
     _searchBar = [[UISearchBar alloc] init];
     _searchBar.searchBarStyle = UISearchBarStyleMinimal;
     [self addSubview:_searchBar];
@@ -111,8 +108,6 @@
         make.centerY.mas_equalTo(self);
     }];
     
-    
-    
 }
 
 - (void)handleLocation:(UIButton *)sender {
@@ -123,9 +118,7 @@
 
 - (void)setLocationStr:(NSString *)locationStr{
     _locationStr = locationStr;
-    
     [_locationBtn setTitle:_locationStr forState:UIControlStateNormal];
 }
-
 
 @end

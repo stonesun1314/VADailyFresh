@@ -19,6 +19,7 @@
 #import "HomeFeatureSectionModel.h"
 #import "VAScanViewController.h"
 #import "VALocationViewController.h"
+#import "VAsearchViewController.h"
 
 
 @interface HomeViewController ()<SGPageTitleViewDelegate, SGPageContentScrollViewDelegate>
@@ -102,7 +103,6 @@
         }
     }
     
-    
     NSDictionary *dictionary = [[VAMockDataSource shareInstance] readJsonFromFileName:@"index_recommend.json"];
     
     NSArray *goodsItemList = [[dictionary objectForKey:@"data"] objectForKey:@"goods"];
@@ -113,7 +113,6 @@
         GoodsItemModel *model = [GoodsItemModel yy_modelWithJSON:dict];
         [_verGoodsItemList addObject:model];
     }
-    
 }
 
 
@@ -131,7 +130,6 @@
         [weakSelf goLocationVC];
     };
     _navigationBar.handleScanBlock = ^{
-        
         [LBXPermission authorizeWithType:LBXPermissionType_Camera completion:^(BOOL granted, BOOL firstTime) {
             if (granted) {
                 [weakSelf goScanVC];
@@ -141,6 +139,10 @@
                 [LBXPermissionSetting showAlertToDislayPrivacySettingWithTitle:@"提示" msg:@"没有相机权限，是否前往设置" cancel:@"取消" setting:@"设置" ];
             }
         }];
+    };
+    
+    _navigationBar.beiginEditSearchBlock = ^{
+        [weakSelf goSearchVC];
     };
     [_headerView addSubview:_navigationBar];
     
@@ -247,6 +249,12 @@
     vc.selectLocationBlock = ^(NSString *text) {
         weakSelf.navigationBar.locationStr = text;
     };
+    vc.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:vc animated:YES];
+}
+
+- (void)goSearchVC {
+    VAsearchViewController *vc = [[VAsearchViewController alloc] init];
     vc.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:vc animated:YES];
 }

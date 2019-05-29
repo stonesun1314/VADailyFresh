@@ -10,6 +10,7 @@
 
 typedef void(^VAHandleScanCodeBlock)(void);
 typedef void(^VAHandleLocationBlock)(void);
+typedef void(^VABeginEditSearchBlock)(void);
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -21,6 +22,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, strong) VAHandleScanCodeBlock handleScanBlock;
 @property (nonatomic, strong) VAHandleLocationBlock handleLocationBlock;
+@property (nonatomic, strong) VABeginEditSearchBlock beiginEditSearchBlock;
 
 @property (nonatomic, strong) NSString *locationStr;
 

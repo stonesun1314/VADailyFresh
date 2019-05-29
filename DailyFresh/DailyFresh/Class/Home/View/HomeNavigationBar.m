@@ -8,14 +8,13 @@
 
 #import "HomeNavigationBar.h"
 
-@interface HomeNavigationBar ()
+@interface HomeNavigationBar ()<UISearchBarDelegate>
 
 @property (nonatomic, strong) UIImageView *iconImageView;
 @property (nonatomic, strong) UIButton *locationBtn;
 @property (nonatomic, strong) UIImageView *locationArrow;
 
 @property (nonatomic, strong) UIButton *scanBtn;
-
 
 @property (nonatomic, strong) UISearchBar *searchBar;
 
@@ -74,7 +73,9 @@
     _scanBtn.sd_layout.rightSpaceToView(self, VAMargin).centerYEqualToView(_iconImageView).widthIs(48.f).heightIs(48.f);
     
     _searchBar = [[UISearchBar alloc] init];
+    _searchBar.delegate = self;
 //    _searchBar.barStyle = UIBarStyleBlack;
+    
     _searchBar.searchBarStyle = UISearchBarStyleMinimal;
 //    [self.searchBar setImage:[UIImage imageNamed:@"df_searchIconImage"]
 //                  forSearchBarIcon:UISearchBarIconSearch
@@ -101,6 +102,25 @@
 - (void)setLocationStr:(NSString *)locationStr{
     _locationStr = locationStr;
     [_locationBtn setTitle:_locationStr forState:UIControlStateNormal];
+}
+
+//- (BOOL)searchBarShouldBeginEditing:(UISearchBar *)searchBar;                      // return NO to not become first responder
+//- (void)searchBarTextDidBeginEditing:(UISearchBar *)searchBar;                     // called when text starts editing
+//- (BOOL)searchBarShouldEndEditing:(UISearchBar *)searchBar;                        // return NO to not resign first responder
+//- (void)searchBarTextDidEndEditing:(UISearchBar *)searchBar;                       // called when text ends editing
+//- (void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText;
+
+
+- (BOOL)searchBarShouldBeginEditing:(UISearchBar *)searchBar{
+    if (self.beiginEditSearchBlock) {
+        self.beiginEditSearchBlock();
+    }
+    
+    return NO;
+}
+
+- (void)searchBarTextDidBeginEditing:(UISearchBar *)searchBar{
+
 }
 
 @end

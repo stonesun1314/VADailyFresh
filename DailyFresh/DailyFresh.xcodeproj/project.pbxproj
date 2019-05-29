@@ -105,6 +105,9 @@
 		0465E8FB229BD08400001CED /* SettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0465E8FA229BD08400001CED /* SettingViewController.m */; };
 		046BBB1D229CCF3D006AA158 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 046BBB1A229CCF3D006AA158 /* LoginViewController.m */; };
 		046BBB21229CCFBD006AA158 /* PasswordTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 046BBB20229CCFBD006AA158 /* PasswordTextField.m */; };
+		04863698229E1E7E0081C1B4 /* VAsearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04863697229E1E7E0081C1B4 /* VAsearchViewController.m */; };
+		0486369B229E34AC0081C1B4 /* VASearchGoodsItemListView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0486369A229E34AC0081C1B4 /* VASearchGoodsItemListView.m */; };
+		0486369E229E58BB0081C1B4 /* VASearchOptionsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0486369D229E58BB0081C1B4 /* VASearchOptionsView.m */; };
 		04B17E7F22955667004FB510 /* NSFileManager+Vanke.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B17E7E22955667004FB510 /* NSFileManager+Vanke.m */; };
 		04C7F97D2282AA1900FD9C51 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C7F97C2282AA1900FD9C51 /* AppDelegate.m */; };
 		04C7F9802282AA1900FD9C51 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C7F97F2282AA1900FD9C51 /* ViewController.m */; };
@@ -352,6 +355,12 @@
 		046BBB1A229CCF3D006AA158 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		046BBB1F229CCFBD006AA158 /* PasswordTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PasswordTextField.h; sourceTree = "<group>"; };
 		046BBB20229CCFBD006AA158 /* PasswordTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PasswordTextField.m; sourceTree = "<group>"; };
+		04863696229E1E7E0081C1B4 /* VAsearchViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VAsearchViewController.h; sourceTree = "<group>"; };
+		04863697229E1E7E0081C1B4 /* VAsearchViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VAsearchViewController.m; sourceTree = "<group>"; };
+		04863699229E34AC0081C1B4 /* VASearchGoodsItemListView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VASearchGoodsItemListView.h; sourceTree = "<group>"; };
+		0486369A229E34AC0081C1B4 /* VASearchGoodsItemListView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VASearchGoodsItemListView.m; sourceTree = "<group>"; };
+		0486369C229E58BB0081C1B4 /* VASearchOptionsView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VASearchOptionsView.h; sourceTree = "<group>"; };
+		0486369D229E58BB0081C1B4 /* VASearchOptionsView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VASearchOptionsView.m; sourceTree = "<group>"; };
 		04B17E7D22955667004FB510 /* NSFileManager+Vanke.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSFileManager+Vanke.h"; sourceTree = "<group>"; };
 		04B17E7E22955667004FB510 /* NSFileManager+Vanke.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSFileManager+Vanke.m"; sourceTree = "<group>"; };
 		04C7F9782282AA1900FD9C51 /* DailyFresh.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DailyFresh.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -719,6 +728,8 @@
 		0465E87B229B6FA200001CED /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				04863696229E1E7E0081C1B4 /* VAsearchViewController.h */,
+				04863697229E1E7E0081C1B4 /* VAsearchViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -733,6 +744,10 @@
 		0465E87D229B6FA200001CED /* View */ = {
 			isa = PBXGroup;
 			children = (
+				04863699229E34AC0081C1B4 /* VASearchGoodsItemListView.h */,
+				0486369A229E34AC0081C1B4 /* VASearchGoodsItemListView.m */,
+				0486369C229E58BB0081C1B4 /* VASearchOptionsView.h */,
+				0486369D229E58BB0081C1B4 /* VASearchOptionsView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1773,6 +1788,7 @@
 				0465E8B6229B953900001CED /* LBXPermissionSetting.m in Sources */,
 				04019C7222927A3200338A64 /* HomeVerItemCell.m in Sources */,
 				04F5C10F2285747100EE1D5A /* UIButton+SGImagePosition.m in Sources */,
+				0486369B229E34AC0081C1B4 /* VASearchGoodsItemListView.m in Sources */,
 				04C7F9D92282BA1600FD9C51 /* UIImage+tool.m in Sources */,
 				04C7F97D2282AA1900FD9C51 /* AppDelegate.m in Sources */,
 				0465E8AD229B953900001CED /* LBXPermissionCalendar.m in Sources */,
@@ -1789,6 +1805,7 @@
 				04019C922292E3F800338A64 /* DisArticalModel.m in Sources */,
 				040A4A9722895F34001A8083 /* GoodsItemModel.m in Sources */,
 				04019C7E229290D000338A64 /* HomeCateSectionModel.m in Sources */,
+				0486369E229E58BB0081C1B4 /* VASearchOptionsView.m in Sources */,
 				04C7F9F52282C35D00FD9C51 /* MineViewController.m in Sources */,
 				04B17E7F22955667004FB510 /* NSFileManager+Vanke.m in Sources */,
 				04F45DAD2297D9F800331784 /* MineScrollSectionView.m in Sources */,
@@ -1807,6 +1824,7 @@
 				04EB85C122966B5200E7319D /* VANStringUtil.m in Sources */,
 				0465E8BD229BB55200001CED /* VALocationViewController.m in Sources */,
 				04019C84229292D300338A64 /* HomeBannerModel.m in Sources */,
+				04863698229E1E7E0081C1B4 /* VAsearchViewController.m in Sources */,
 				04F45D8922969BBF00331784 /* HomeFeatureSectionModel.m in Sources */,
 				040A4A9A22896333001A8083 /* HomeHorListSection.m in Sources */,
 				04D1A352228C130B00C3F597 /* UIButton+SGPagingView.m in Sources */,
