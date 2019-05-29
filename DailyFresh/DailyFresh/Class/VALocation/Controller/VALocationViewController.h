@@ -8,9 +8,14 @@
 
 #import "BaseViewController.h"
 
+typedef void(^VASelectedLocationBlock)(NSString *text);
+
+
 NS_ASSUME_NONNULL_BEGIN
 
 @interface VALocationViewController : BaseViewController
+
+@property (nonatomic, strong) VASelectedLocationBlock selectLocationBlock;
 
 @end
 

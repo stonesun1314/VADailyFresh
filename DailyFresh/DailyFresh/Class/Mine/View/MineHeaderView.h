@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
+typedef void(^VALoginBlock)(void);
+
 NS_ASSUME_NONNULL_BEGIN
 
 @interface MineHeaderView : UIView
@@ -16,6 +18,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong) UIImageView *avatarImageView;
 @property (nonatomic, strong) UIButton *loginBtn;
 @property (nonatomic, strong) UIButton *messageBtn;
+
+@property (nonatomic, strong) VALoginBlock loginBlock;
 
 @end
 

@@ -143,6 +143,18 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    if (indexPath.section == 0) {
+        if (self.selectLocationBlock) {
+            self.selectLocationBlock(_currentLocation);
+        }
+    }else if (indexPath.section == 1){
+        if (self.selectLocationBlock) {
+            NSString *str = [_dataList objectAtIndex:indexPath.row];
+            self.selectLocationBlock(str);
+        }
+    }
+
+    
     
     [self.navigationController popViewControllerAnimated:YES];
 }

@@ -82,7 +82,9 @@
 
 
 - (void)handleLogin:(UIButton *)sender{
-    
+    if (self.loginBlock) {
+        self.loginBlock();
+    }
 }
 
 //- (void)me

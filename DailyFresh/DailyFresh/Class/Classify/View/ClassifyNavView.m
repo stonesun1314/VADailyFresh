@@ -26,9 +26,14 @@
 - (instancetype)initWithFrame:(CGRect)frame{
     self = [super initWithFrame:frame];
     if (self) {
+        [self initDataSource];
         [self setupUI];
     }
     return self;
+}
+
+- (void)initDataSource{
+    _locationStr = @"万科大厦";
 }
 
 - (void)setupUI{
@@ -38,7 +43,7 @@
     [self addSubview:_iconImageView];
     
     _locationBtn = [[UIButton alloc] init];
-    [_locationBtn setTitle:@"万科大厦" forState:UIControlStateNormal];
+    [_locationBtn setTitle:_locationStr forState:UIControlStateNormal];
     [_locationBtn setTitleColor:kUITitleColor forState:UIControlStateNormal];
     _locationBtn.titleLabel.font = [UIFont systemFontOfSize:kUISubtitleFontSize];
     [_locationBtn addTarget:self action:@selector(handleLocation:) forControlEvents:UIControlEventTouchUpInside];
@@ -114,6 +119,12 @@
     if (self.handleLocationBlock) {
         self.handleLocationBlock();
     }
+}
+
+- (void)setLocationStr:(NSString *)locationStr{
+    _locationStr = locationStr;
+    
+    [_locationBtn setTitle:_locationStr forState:UIControlStateNormal];
 }
 
 

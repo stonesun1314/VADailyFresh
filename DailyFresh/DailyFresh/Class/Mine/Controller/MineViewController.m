@@ -13,6 +13,7 @@
 #import "MineScrollSectionView.h"
 #import "MineServiceSectionView.h"
 #import "SettingViewController.h"
+#import "LoginViewController.h"
 
 @interface MineViewController ()
 
@@ -92,6 +93,9 @@
     VALog(@"%@",_scrollView);
     
     _headerView = [[MineHeaderView alloc] init];
+    _headerView.loginBlock = ^{
+        [weakSelf goLoginVC];
+    };
     [_scrollView addSubview:_headerView];
     
     _propertySectionView = [[MinePropertySectionView alloc] init];
@@ -134,6 +138,12 @@
 
 - (void)goSettingVC{
     SettingViewController *vc = [[SettingViewController alloc] init];
+    vc.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:vc animated:YES];
+}
+
+- (void)goLoginVC{
+    LoginViewController *vc = [[LoginViewController alloc] init];
     vc.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:vc animated:YES];
 }

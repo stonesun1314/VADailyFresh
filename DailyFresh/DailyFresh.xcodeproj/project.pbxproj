@@ -103,6 +103,8 @@
 		0465E8C4229BC5B900001CED /* UnderlineTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 0465E8C3229BC5B900001CED /* UnderlineTextField.m */; };
 		0465E8F8229BCD8400001CED /* UILabel+Line.m in Sources */ = {isa = PBXBuildFile; fileRef = 0465E8F7229BCD8300001CED /* UILabel+Line.m */; };
 		0465E8FB229BD08400001CED /* SettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0465E8FA229BD08400001CED /* SettingViewController.m */; };
+		046BBB1D229CCF3D006AA158 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 046BBB1A229CCF3D006AA158 /* LoginViewController.m */; };
+		046BBB21229CCFBD006AA158 /* PasswordTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 046BBB20229CCFBD006AA158 /* PasswordTextField.m */; };
 		04B17E7F22955667004FB510 /* NSFileManager+Vanke.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B17E7E22955667004FB510 /* NSFileManager+Vanke.m */; };
 		04C7F97D2282AA1900FD9C51 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C7F97C2282AA1900FD9C51 /* AppDelegate.m */; };
 		04C7F9802282AA1900FD9C51 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C7F97F2282AA1900FD9C51 /* ViewController.m */; };
@@ -346,6 +348,10 @@
 		0465E8F7229BCD8300001CED /* UILabel+Line.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UILabel+Line.m"; sourceTree = "<group>"; };
 		0465E8F9229BD08400001CED /* SettingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SettingViewController.h; sourceTree = "<group>"; };
 		0465E8FA229BD08400001CED /* SettingViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SettingViewController.m; sourceTree = "<group>"; };
+		046BBB19229CCF3D006AA158 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		046BBB1A229CCF3D006AA158 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		046BBB1F229CCFBD006AA158 /* PasswordTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PasswordTextField.h; sourceTree = "<group>"; };
+		046BBB20229CCFBD006AA158 /* PasswordTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PasswordTextField.m; sourceTree = "<group>"; };
 		04B17E7D22955667004FB510 /* NSFileManager+Vanke.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSFileManager+Vanke.h"; sourceTree = "<group>"; };
 		04B17E7E22955667004FB510 /* NSFileManager+Vanke.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSFileManager+Vanke.m"; sourceTree = "<group>"; };
 		04C7F9782282AA1900FD9C51 /* DailyFresh.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DailyFresh.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -836,6 +842,48 @@
 			path = UILabel;
 			sourceTree = "<group>";
 		};
+		046BBB17229CCF3D006AA158 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				046BBB18229CCF3D006AA158 /* Controller */,
+				046BBB1B229CCF3D006AA158 /* Model */,
+				046BBB1C229CCF3D006AA158 /* View */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		046BBB18229CCF3D006AA158 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				046BBB19229CCF3D006AA158 /* LoginViewController.h */,
+				046BBB1A229CCF3D006AA158 /* LoginViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		046BBB1B229CCF3D006AA158 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		046BBB1C229CCF3D006AA158 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		046BBB1E229CCFBD006AA158 /* Password */ = {
+			isa = PBXGroup;
+			children = (
+				046BBB1F229CCFBD006AA158 /* PasswordTextField.h */,
+				046BBB20229CCFBD006AA158 /* PasswordTextField.m */,
+			);
+			path = Password;
+			sourceTree = "<group>";
+		};
 		04B17E7C22955645004FB510 /* NSFileManager */ = {
 			isa = PBXGroup;
 			children = (
@@ -913,6 +961,7 @@
 		04C7F9AD2282B9ED00FD9C51 /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
+				046BBB1E229CCFBD006AA158 /* Password */,
 				0465E895229B953900001CED /* LBXPermissions */,
 				0465E884229B842900001CED /* LBXAlertAction */,
 				04333F2622852A5400ECC489 /* Components */,
@@ -932,6 +981,7 @@
 		04C7F9AF2282B9FE00FD9C51 /* Class */ = {
 			isa = PBXGroup;
 			children = (
+				046BBB17229CCF3D006AA158 /* Login */,
 				0465E8B7229BB52F00001CED /* VALocation */,
 				0465E87A229B6FA200001CED /* VASearch */,
 				0465E876229B6F9C00001CED /* VASCan */,
@@ -1660,6 +1710,7 @@
 				04C7F9DC2282BA1600FD9C51 /* UIView+tool.m in Sources */,
 				04333F4022852A5400ECC489 /* DLUtility.m in Sources */,
 				04E6DCB6228E83AF00A7A5A6 /* NSString+Size.m in Sources */,
+				046BBB21229CCFBD006AA158 /* PasswordTextField.m in Sources */,
 				040E77BE228408B100CDED15 /* HomeHeaderView.m in Sources */,
 				0465E8FB229BD08400001CED /* SettingViewController.m in Sources */,
 				04C7F9802282AA1900FD9C51 /* ViewController.m in Sources */,
@@ -1695,6 +1746,7 @@
 				04333F3C22852A5400ECC489 /* DLSlideView.m in Sources */,
 				04C7F9C42282BA0600FD9C51 /* BaseModel.m in Sources */,
 				04F5C0F5228561F100EE1D5A /* HomeHeaderMenuView.m in Sources */,
+				046BBB1D229CCF3D006AA158 /* LoginViewController.m in Sources */,
 				0465E8B0229B953900001CED /* LBXPermissionHealth.m in Sources */,
 				0465E8AC229B953900001CED /* LBXPermission.m in Sources */,
 				04CBE7EB228E4AD200AB1D5B /* SecondCateView.m in Sources */,

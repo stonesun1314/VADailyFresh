@@ -127,6 +127,9 @@
 
 - (void)goLocationVC{
     VALocationViewController *vc = [[VALocationViewController alloc] init];
+    vc.selectLocationBlock = ^(NSString *text) {
+        _navView.locationStr = text;
+    };
     vc.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:vc animated:YES];
 }

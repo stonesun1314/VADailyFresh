@@ -27,9 +27,14 @@
 - (instancetype)initWithFrame:(CGRect)frame{
     self = [super initWithFrame:frame];
     if (self) {
+        [self initDataSource];
         [self setupUI];
     }
     return self;
+}
+
+- (void)initDataSource {
+    _locationStr = @"万科大厦";
 }
 
 - (void)setupUI{
@@ -38,9 +43,11 @@
     _iconImageView.contentMode = UIViewContentModeScaleAspectFit;
     [self addSubview:_iconImageView];
     
+    
+    
     _locationBtn = [[UIButton alloc] init];
 //    [_locationBtn setImage:[UIImage imageNamed:@"df_orderDownImage"] forState:UIControlStateNormal];
-    [_locationBtn setTitle:@"万科大厦" forState:UIControlStateNormal];
+    [_locationBtn setTitle:_locationStr forState:UIControlStateNormal];
     [_locationBtn setTitleColor:kUITitleColor forState:UIControlStateNormal];
     _locationBtn.titleLabel.font = [UIFont systemFontOfSize:kUISubtitleFontSize];
     [_locationBtn addTarget:self action:@selector(handleLocation:) forControlEvents:UIControlEventTouchUpInside];
@@ -50,14 +57,10 @@
     _locationArrow.image = [UIImage imageNamed:@"df_orderDownImage"];
     [self addSubview:_locationArrow];
     
-    
-
-    
     _scanBtn = [[UIButton alloc] init];
     [_scanBtn setImage:[UIImage imageNamed:@"df_qrcode_black"] forState:UIControlStateNormal];
     [_scanBtn addTarget:self action:@selector(handleScan:) forControlEvents:UIControlEventTouchUpInside];
     [self addSubview:_scanBtn];
-    
     
     _iconImageView.sd_layout.leftSpaceToView(self, VAMargin).topSpaceToView(self, 10.f).widthIs(55).heightIs(30.f);
     _locationBtn.sd_layout.leftSpaceToView(_iconImageView, 0.f).centerYEqualToView(_iconImageView).heightIs(40.f);
@@ -93,6 +96,11 @@
     if (self.handleLocationBlock) {
         self.handleLocationBlock();
     }
+}
+
+- (void)setLocationStr:(NSString *)locationStr{
+    _locationStr = locationStr;
+    [_locationBtn setTitle:_locationStr forState:UIControlStateNormal];
 }
 
 @end

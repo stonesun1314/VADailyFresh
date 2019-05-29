@@ -242,7 +242,11 @@
 }
 
 - (void)goLocationVC {
+    WeakSelf
     VALocationViewController *vc = [[VALocationViewController alloc] init];
+    vc.selectLocationBlock = ^(NSString *text) {
+        weakSelf.navigationBar.locationStr = text;
+    };
     vc.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:vc animated:YES];
 }
