@@ -23,6 +23,8 @@
 @property (nonatomic, strong) UIButton *loginBtn;
 @property (nonatomic, strong) UIButton *registerBtn;
 
+@property (nonatomic, strong) UIButton *wechatLogin;
+
 @end
 
 @implementation LoginViewController
@@ -98,6 +100,22 @@
         make.height.mas_equalTo(50);
         make.top.mas_equalTo(weakSelf.passwordTextField.mas_bottom).offset(50.f);
     }];
+    
+    _wechatLogin = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 120, 120)];
+    [_wechatLogin setImage:[UIImage imageNamed:@"df_wechat_login_icon"] forState:UIControlStateNormal];
+    [_wechatLogin setTitle:@"微信登录" forState:UIControlStateNormal];
+    [_wechatLogin setTitleColor:kUISubTitleColor forState:UIControlStateNormal];
+    _wechatLogin.titleLabel.font = [UIFont systemFontOfSize:12.f];
+    [self.view addSubview:_wechatLogin];
+    
+    [_wechatLogin SG_imagePositionStyle:SGImagePositionStyleTop spacing:10.f imagePositionBlock:^(UIButton *button) {
+        
+    }];
+    
+    _wechatLogin.sd_layout.centerXEqualToView(self.view).bottomSpaceToView(self.view, 100.f).widthIs(120.f).heightIs(120.f);
+    
+    
+    
     
 }
 
