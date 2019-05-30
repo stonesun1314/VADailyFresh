@@ -8,7 +8,7 @@
 
 #import "ClassifyNavView.h"
 
-@interface ClassifyNavView ()
+@interface ClassifyNavView ()<UISearchBarDelegate>
 
 @property (nonatomic, strong) UIImageView *iconImageView;
 @property (nonatomic, strong) UIButton *locationBtn;
@@ -58,6 +58,7 @@
     [self addSubview:_scanBtn];
 
     _searchBar = [[UISearchBar alloc] init];
+    _searchBar.delegate = self;
     _searchBar.searchBarStyle = UISearchBarStyleMinimal;
     [self addSubview:_searchBar];
 //
@@ -119,6 +120,18 @@
 - (void)setLocationStr:(NSString *)locationStr{
     _locationStr = locationStr;
     [_locationBtn setTitle:_locationStr forState:UIControlStateNormal];
+}
+
+- (BOOL)searchBarShouldBeginEditing:(UISearchBar *)searchBar{
+    if (self.beiginEditSearchBlock) {
+        self.beiginEditSearchBlock();
+    }
+    
+    return NO;
+}
+
+- (void)searchBarTextDidBeginEditing:(UISearchBar *)searchBar{
+    
 }
 
 @end

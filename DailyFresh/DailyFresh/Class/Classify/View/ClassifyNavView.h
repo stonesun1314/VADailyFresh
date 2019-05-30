@@ -9,12 +9,14 @@
 #import <UIKit/UIKit.h>
 
 typedef void(^VAHandleLocationBlock)(void);
+typedef void(^VABeginEditSearchBlock)(void);
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface ClassifyNavView : UIView
 
 @property (nonatomic, strong) VAHandleLocationBlock handleLocationBlock;
+@property (nonatomic, strong) VABeginEditSearchBlock beiginEditSearchBlock;
 
 @property (nonatomic, strong) NSString *locationStr;
 

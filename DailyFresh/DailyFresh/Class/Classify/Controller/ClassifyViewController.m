@@ -13,6 +13,7 @@
 #import "ClassifyRightViewController.h"
 #import "SecondCateModel.h"
 #import "VALocationViewController.h"
+#import "VAsearchViewController.h"
 
 
 
@@ -72,6 +73,9 @@
     _navView = [[ClassifyNavView alloc] init];
     _navView.handleLocationBlock = ^{
         [weakSelf goLocationVC];
+    };
+    _navView.beiginEditSearchBlock = ^{
+        [weakSelf goSearchVC];
     };
     [self.view addSubview:_navView];
     
@@ -133,5 +137,13 @@
     vc.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:vc animated:YES];
 }
+
+
+- (void)goSearchVC {
+    VAsearchViewController *vc = [[VAsearchViewController alloc] init];
+    vc.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:vc animated:YES];
+}
+
 
 @end
