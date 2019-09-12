@@ -22,6 +22,8 @@
     [self initTabbarController];
     
     return YES;
+    
+    
 }
 
 
